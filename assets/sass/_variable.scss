@@ -1,0 +1,68 @@
+//
+$enable-grid-classes:         true !default;
+$enable-important-utilities:  true !default;
+
+$grid-columns:                4 !default;
+$grid-gutter-width:           2.5rem !default;
+$container-padding-x:         $grid-gutter-width * .5 !default;
+
+$grid-breakpoints: (
+	'': 0px,
+	xs: 414px,
+	sm: 768px,
+	md: 1024px,
+	lg: 1280px,
+	xl: 1440px,
+) !default;
+
+$container-max-widths: (
+	xs: 100%,
+	sm: 100%,
+	md: 960px,
+	lg: 1170px,
+	xl: 1300px
+) !default;
+
+$spacer:                      0.0625rem; //1px
+$spacers: (
+	"0": 0px,
+	"10": 10px,
+	"15": 15px,
+	"20": 20px,
+	"30": 30px,
+	"auto": auto,
+);
+
+//
+$h1: $spacer*48;      //48px
+$h2: $spacer*32;      //32px
+$h3: $spacer*28;      //27px
+$h4: $spacer*22;      //21px
+$h5: $spacer*18;      //18px
+$h6: $spacer*16;      //16px
+
+//
+$h1-m: $spacer*48;    //48px
+$h2-m: $spacer*32;    //32px
+$h3-m: $spacer*27;    //27px
+$h4-m: $spacer*22;    //21px
+$h5-m: $spacer*18;    //18px
+$h6-m: $spacer*16;    //16px
+
+//
+$white:         #fff !default; //background
+$gray-100:      #EEEEEE !default;
+$gray-200:      #D9D9D9 !default;
+$gray-300:      #7F7F7F !default;
+$gray-400:      #393939 !default;
+$gray-500:      #2C2C2C !default;
+$black:         #000 !default;
+
+//
+$facebook:      #1877f2 !default;
+$line:          #00c200 !default;
+$instagram:     #dd2a7b !default;
+$weibo:         #e6162d !default;
+$rss:           #ff5700 !default;
+$twitter:       #00acee !default;
+$whatapp:       #4fce5d !default;

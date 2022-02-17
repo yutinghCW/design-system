@@ -1,0 +1,44 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: 0;
+}
+
+*::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: 0;
+}
+
+a, button {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+  a, button {
+    -webkit-transition: padding 0.3s, color 0.3s, background 0.3s, border 0.3s;
+    transition: padding 0.3s, color 0.3s, background 0.3s, border 0.3s;
+  }
+}
+
+img {
+  display: block;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.sr-only {
+  position: absolute !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  font-size: 0 !important;
+}
+/*# sourceMappingURL=cw.css.map */

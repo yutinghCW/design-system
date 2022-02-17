@@ -1,0 +1,27 @@
+@import "mixins/breakpoint";
+@import "mixins/container";
+@import "mixins/grid";
+@import "mixins/utilities";
+
+@mixin list($margin, $padding, $style) {
+    margin: $margin;
+    padding: $padding;
+    list-style: $style;
+}
+
+@mixin beforeafter($content, $display) {
+    content: $content;
+    display: $display;
+}
+
+@mixin clear() {
+    @include beforeafter('', table);
+    clear: both;
+}
+
+@mixin lineclamp($line) {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+}
