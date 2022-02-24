@@ -1,6 +1,8 @@
-@import "variable";
-@import "mixin";
+@import "import";
+
 @import "common";
 
+@import "iconography/font";
 @import "iconography/hamburger";
+
 @import "tab";
