@@ -11,7 +11,7 @@
 a, button {
   text-decoration: none;
   @media screen and (min-width: 1024px) {
-    transition: padding 0.3s, color 0.3s, background 0.3s, border 0.3s;
+    transition: color 0.3s, background 0.3s, border-color 0.3s;
   }
 }
 

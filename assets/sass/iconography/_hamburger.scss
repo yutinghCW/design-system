@@ -1,5 +1,5 @@
 $hamburger: (
-  width: 40px,
+  width: 20px,
   unit:  3px,
   gap:   4px
 );
@@ -7,7 +7,7 @@ $hamburger: (
 .hamburger {
   position: relative;
   width: map-get($hamburger, width);
-  padding: 10px;
+  padding: 0;
   border: 0;
   background-color: transparent;
   cursor: pointer;
