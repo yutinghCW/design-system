@@ -1,177 +1,177 @@
 $utilities: () !default;
 $utilities: map-merge(
-	(
-		"margin":
-			(
-				responsive: true,
-				property: margin,
-				class: m,
-				values:
-					map-merge(
-						$spacers,
-						(
-							auto: auto,
-						)
-					),
-			),
-		"margin-x": (
-			responsive: true,
-			property: margin-right margin-left,
-			class: mx,
-			values:
-				map-merge(
-					$spacers,
-					(
-						auto: auto,
-					)
-				),
-		),
-		"margin-y": (
-			responsive: true,
-			property: margin-top margin-bottom,
-			class: my,
-			values:
-				map-merge(
-					$spacers,
-					(
-						auto: auto,
-					)
-				),
-		),
-		"margin-top": (
-			responsive: true,
-			property: margin-top,
-			class: mt,
-			values:
-				map-merge(
-					$spacers,
-					(
-						auto: auto,
-					)
-				),
-		),
-		"margin-end": (
-			responsive: true,
-			property: margin-right,
-			class: me,
-			values:
-				map-merge(
-					$spacers,
-					(
-						auto: auto,
-					)
-				),
-		),
-		"margin-bottom": (
-			responsive: true,
-			property: margin-bottom,
-			class: mb,
-			values:
-				map-merge(
-					$spacers,
-					(
-						auto: auto,
-					)
-				),
-		),
-		"margin-start": (
-			responsive: true,
-			property: margin-left,
-			class: ms,
-			values:
-				map-merge(
-					$spacers,
-					(
-						auto: auto,
-					)
-				),
-		),
-		"padding":
-			(
-				responsive: true,
-				property: padding,
-				class: p,
-				values: $spacers,
-			),
-		"padding-x": (
-			responsive: true,
-			property: padding-right padding-left,
-			class: px,
-			values: $spacers,
-		),
-		"padding-y": (
-			responsive: true,
-			property: padding-top padding-bottom,
-			class: py,
-			values: $spacers,
-		),
-		"padding-top": (
-			responsive: true,
-			property: padding-top,
-			class: pt,
-			values: $spacers,
-		),
-		"padding-end": (
-			responsive: true,
-			property: padding-right,
-			class: pe,
-			values: $spacers,
-		),
-		"padding-bottom": (
-			responsive: true,
-			property: padding-bottom,
-			class: pb,
-			values: $spacers,
-		),
-		"padding-start": (
-			responsive: true,
-			property: padding-left,
-			class: ps,
-			values: $spacers,
-		),
-		"text-align": (
-			responsive: true,
-			property: text-align,
-			class: text,
-			values: (
-				start: left,
-				end: right,
-				center: center,
-			),
-		),
-		// "color": (
-		// 	property: color,
-		// 	class: text,
-		// 	local-vars: (
-		// 		"text-opacity": 1,
-		// 	),
-		// 	values:
-		// 		map-merge(
-		// 			$utilities-text-colors,
-		// 			(
-		// 				"muted": $text-muted,
-		// 				"black-50": rgba($black, 0.5),
-		// 				// deprecated
-		// 				"white-50": rgba($white, 0.5),
-		// 				// deprecated
-		// 				"reset": inherit,
-		// 			)
-		// 		),
-		// ),
-		// "background-color": (
-		// 	property: background-color,
-		// 	class: bg,
-		// 	local-vars: (
-		// 		"bg-opacity": 1,
-		// 	),
-		// 	values:
-		// 		map-merge(
-		// 			$utilities-bg-colors,
-		// 			(
-		// 				"transparent": transparent,
-		// 			)
-		// 		),
-		// ),
-	),
-	$utilities
+  (
+    "margin":
+      (
+        responsive: true,
+        property: margin,
+        class: m,
+        values:
+          map-merge(
+            $spacers,
+            (
+              auto: auto,
+            )
+          ),
+      ),
+    "margin-x": (
+      responsive: true,
+      property: margin-right margin-left,
+      class: mx,
+      values:
+        map-merge(
+          $spacers,
+          (
+            auto: auto,
+          )
+        ),
+    ),
+    "margin-y": (
+      responsive: true,
+      property: margin-top margin-bottom,
+      class: my,
+      values:
+        map-merge(
+          $spacers,
+          (
+            auto: auto,
+          )
+        ),
+    ),
+    "margin-top": (
+      responsive: true,
+      property: margin-top,
+      class: mt,
+      values:
+        map-merge(
+          $spacers,
+          (
+            auto: auto,
+          )
+        ),
+    ),
+    "margin-end": (
+      responsive: true,
+      property: margin-right,
+      class: me,
+      values:
+        map-merge(
+          $spacers,
+          (
+            auto: auto,
+          )
+        ),
+    ),
+    "margin-bottom": (
+      responsive: true,
+      property: margin-bottom,
+      class: mb,
+      values:
+        map-merge(
+          $spacers,
+          (
+            auto: auto,
+          )
+        ),
+    ),
+    "margin-start": (
+      responsive: true,
+      property: margin-left,
+      class: ms,
+      values:
+        map-merge(
+          $spacers,
+          (
+            auto: auto,
+          )
+        ),
+    ),
+    "padding":
+      (
+        responsive: true,
+        property: padding,
+        class: p,
+        values: $spacers,
+      ),
+    "padding-x": (
+      responsive: true,
+      property: padding-right padding-left,
+      class: px,
+      values: $spacers,
+    ),
+    "padding-y": (
+      responsive: true,
+      property: padding-top padding-bottom,
+      class: py,
+      values: $spacers,
+    ),
+    "padding-top": (
+      responsive: true,
+      property: padding-top,
+      class: pt,
+      values: $spacers,
+    ),
+    "padding-end": (
+      responsive: true,
+      property: padding-right,
+      class: pe,
+      values: $spacers,
+    ),
+    "padding-bottom": (
+      responsive: true,
+      property: padding-bottom,
+      class: pb,
+      values: $spacers,
+    ),
+    "padding-start": (
+      responsive: true,
+      property: padding-left,
+      class: ps,
+      values: $spacers,
+    ),
+    "text-align": (
+      responsive: true,
+      property: text-align,
+      class: text,
+      values: (
+        start: left,
+        end: right,
+        center: center,
+      ),
+    ),
+    // "color": (
+    //   property: color,
+    //   class: text,
+    //   local-vars: (
+    //     "text-opacity": 1,
+    //   ),
+    //   values:
+    //     map-merge(
+    //       $utilities-text-colors,
+    //       (
+    //         "muted": $text-muted,
+    //         "black-50": rgba($black, 0.5),
+    //         // deprecated
+    //         "white-50": rgba($white, 0.5),
+    //         // deprecated
+    //         "reset": inherit,
+    //       )
+    //     ),
+    // ),
+    // "background-color": (
+    //   property: background-color,
+    //   class: bg,
+    //   local-vars: (
+    //     "bg-opacity": 1,
+    //   ),
+    //   values:
+    //     map-merge(
+    //       $utilities-bg-colors,
+    //       (
+    //         "transparent": transparent,
+    //       )
+    //     ),
+    // ),
+  ),
+  $utilities
 );

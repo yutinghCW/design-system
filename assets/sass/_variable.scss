@@ -7,30 +7,30 @@ $grid-gutter-width:           2.5rem !default;
 $container-padding-x:         $grid-gutter-width * .5 !default;
 
 $grid-breakpoints: (
-	'': 0px,
-	xs: 414px,
-	sm: 768px,
-	md: 1024px,
-	lg: 1280px,
-	xl: 1440px,
+  '': 0px,
+  xs: 414px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1280px,
+  xl: 1440px,
 ) !default;
 
 $container-max-widths: (
-	xs: 100%,
-	sm: 100%,
-	md: 960px,
-	lg: 1170px,
-	xl: 1300px
+  xs: 100%,
+  sm: 100%,
+  md: 960px,
+  lg: 1170px,
+  xl: 1300px
 ) !default;
 
 $spacer:                      0.0625rem; //1px
 $spacers: (
-	"0": 0px,
-	"10": 10px,
-	"15": 15px,
-	"20": 20px,
-	"30": 30px,
-	"auto": auto,
+  "0": 0px,
+  "10": 10px,
+  "15": 15px,
+  "20": 20px,
+  "30": 30px,
+  "auto": auto,
 );
 
 //
