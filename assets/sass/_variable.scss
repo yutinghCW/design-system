@@ -2,10 +2,12 @@
 $enable-grid-classes:         true !default;
 $enable-important-utilities:  true !default;
 
-$grid-columns:                4 !default;
-$grid-gutter-width:           2.5rem !default;
-$container-padding-x:         $grid-gutter-width * .5 !default;
+// 欄位設定
+$grid-columns:        4 !default;
+$grid-gutter-width:   2.5rem !default;
+$container-padding-x: $grid-gutter-width * .5 !default;
 
+// breakpoint
 $grid-breakpoints: (
   '': 0px,
   xs: 414px,
@@ -15,6 +17,7 @@ $grid-breakpoints: (
   xl: 1440px,
 ) !default;
 
+// breakpoint 內，內文寬度
 $container-max-widths: (
   xs: 100%,
   sm: 100%,
@@ -23,7 +26,8 @@ $container-max-widths: (
   xl: 1300px
 ) !default;
 
-$spacer:                      0.0625rem; //1px
+// 間距設定
+$spacer:  0.0625rem; //1px
 $spacers: (
   "0": 0px,
   "10": 10px,
@@ -33,44 +37,96 @@ $spacers: (
   "auto": auto,
 );
 
-//
-$h1:                          $spacer*32; //32px
-$h2:                          $spacer*22; //22px
-$h3:                          $spacer*18; //18px
-$h4:                          $spacer*16; //16px
-$h5:                          $spacer*14; //14px
+// header text 設定
+$h1:    $spacer*32; //32px
+$h2:    $spacer*22; //22px
+$h3:    $spacer*18; //18px
+$h4:    $spacer*16; //16px
+$h5:    $spacer*14; //14px
 
-//
-$h1-m:                        $spacer*28; //28px
-$h2-m:                        $spacer*20; //20px
-$h3-m:                        $spacer*18; //18px
-$h4-m:                        $spacer*16; //16px
-$h5-m:                        $spacer*14; //14px
+$h1-m:  $spacer*28; //28px
+$h2-m:  $spacer*20; //20px
+$h3-m:  $spacer*18; //18px
+$h4-m:  $spacer*16; //16px
+$h5-m:  $spacer*14; //14px
 
-$gray-100:                  #EEEEEE !default;
-$gray-200:                  #D3D5D7 !default;
-$gray-300:                  #939EA7 !default; //secondary
-$gray-400:                  #6B7780 !default;
-$gray-500:                  #48545D !default; //secondary-variant
+// 灰色階色碼
+$gray-100:         #EEEEEE !default;
+$gray-200:         #D3D5D7 !default;
+$gray-300:         #939EA7 !default; //secondary
+$gray-400:         #6B7780 !default;
+$gray-500:         #48545D !default; //secondary-variant
+$gray-600:         #394148 !default; //dark
 
-//
-$red-100:                   #FEEBEC !default;
-$red-200:                   #EE969B !default;
-$red-300:                   #D60C18 !default; //primary
-$red-400:                   #BE0B15 !default;
-$red-500:                   #9D0505 !default; //primary-variant
+// 紅色階色碼
+$red-100:         #FEEBEC !default;
+$red-200:         #EE969B !default;
+$red-300:         #D60C18 !default; //primary
+$red-400:         #BE0B15 !default;
+$red-500:         #9D0505 !default; //primary-variant
 
-//
-$white:                     #ffffff !default; //background
-$gray:                      #fafafa !default;
-$black:                     #171717 !default;
-$dark:                      #394148 !default;
+// 無彩色色碼
+$white:           #ffffff !default; //background
+$gray:            #fafafa !default;
+$black:           #171717 !default;
+$dark:              $gray-600 !default;
 
-//
-$facebook:                  #1877f2 !default;
-$line:                      #00c200 !default;
-$instagram:                 #dd2a7b !default;
-$weibo:                     #e6162d !default;
-$rss:                       #ff5700 !default;
-$twitter:                   #00acee !default;
-$whatapp:                   #4fce5d !default;
+// 語易化色碼
+$surface:         #003a9f;
+$primary:           $red-300 !default;
+$primary-variant:   $red-500 !default;
+$secondary:         $gray-300 !default;
+$secondary-variant: $gray-500 !default;
+$error:             $primary-variant !default;
+$background:        $white !default;
+$text:              $black !default;
+
+// 社群軟體色碼
+$facebook:        #1877f2 !default;
+$google:          #EA4335 !default;
+$line:            #00c200 !default;
+$instagram:       #dd2a7b !default;
+$weibo:           #e6162d !default;
+$rss:             #ff5700 !default;
+$twitter:         #00acee !default;
+$whatapp:         #4fce5d !default;
+$mail:              $surface !default;
+
+// 灰色階色碼 map
+$grays: () !default;
+$grays: map-merge((
+  "100": ($gray-100, $dark),
+  "200": ($gray-200, $dark),
+  "300": ($gray-300, $white),
+  "400": ($gray-400, $white),
+  "500": ($gray-500, $white)
+), $grays);
+
+// 紅色階色碼 map
+$reds: () !default;
+$reds: map-merge((
+  "100": ($red-100, $dark),
+  "200": ($red-200, $dark),
+  "300": ($red-300, $white),
+  "400": ($red-400, $white),
+  "500": ($red-500, $white)
+), $reds);
+
+// 無彩色色碼 map
+$bks: () !default;
+$bks: map-merge((
+  "white": ($white, $dark, $gray-200),
+  "black": ($black, $white, $black)
+), $bks);
+
+// 語易化色碼 map
+$cw-colors: () !default;
+$cw-colors: map-merge((
+  "surface":            ($surface,            $white),
+  "primary":            ($primary,            $white),
+  "primary-variant":    ($primary-variant,    $white),
+  "secondary":          ($secondary,          $white),
+  "secondary-variant":  ($secondary-variant,  $white),
+  "error":              ($error,              $white),
+  "background":         ($background,         $white)
+), $cw-colors);
