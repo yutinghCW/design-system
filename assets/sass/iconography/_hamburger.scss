@@ -1,0 +1,29 @@
+$hamburger: (
+  width: 40px,
+  unit:  3px,
+  gap:   4px
+);
+
+.hamburger {
+  position: relative;
+  width: map-get($hamburger, width);
+  padding: 10px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  span {
+    display: block;
+    width: 100%;
+    height: map-get($hamburger, unit);
+    background-color: $gray-500;
+    + span {
+      margin-top: map-get($hamburger, gap);
+    }
+    @at-root {
+      .active#{&},
+      :hover#{&} {
+        background-color: $black;
+      }
+    }
+  }
+}
