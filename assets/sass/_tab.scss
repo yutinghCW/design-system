@@ -9,15 +9,18 @@
       display: flex;
       flex-wrap: wrap;
       li {
-        flex: 1 0 0%;
-        flex-shrink: 0;
         padding: 0 20px;
         font-size: 1rem;
         line-height: 3.1875;
         text-align: center;
         border-bottom: 3px solid transparent;
         cursor: pointer;
+        @include media-breakpoint-up(xs) {
+          flex: 1 0 0%;
+          flex-shrink: 0;
+        }
         @include media-breakpoint-up(md) {
+          min-width: 8.75rem;
           transition: color 0.3s;
         }
         &.active {
