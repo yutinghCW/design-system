@@ -1,4 +1,5 @@
 .tab {
+  position: relative;
   .tab__nav {
     margin-bottom: -1px;
     border: solid $gray-200;
@@ -8,14 +9,22 @@
       @include list(0, 0, none);
       display: flex;
       flex-wrap: wrap;
+      @include media-breakpoint-up(sm) {
+        width: auto !important;
+        margin-left: 0 !important;
+      }
+      @include media-breakpoint-down(sm) {
+        transition: margin 0.3s;
+      }
       li {
         padding: 0 20px;
         font-size: 1rem;
         line-height: 3.1875;
         text-align: center;
+        white-space: nowrap;
         border-bottom: 3px solid transparent;
         cursor: pointer;
-        @include media-breakpoint-up(xs) {
+        @include media-breakpoint-up(sm) {
           flex: 1 0 0%;
           flex-shrink: 0;
         }
@@ -30,10 +39,49 @@
         &:hover {
           color: $primary;
         }
+        span {
+          display: block;
+        }
+      }
+    }
+    &.tab__nav--scroll {
+      @include media-breakpoint-down(sm) {
+        padding-left: 50px;
+        padding-right: 30px;
+        + .tab__nav--next {
+          display: block;
+        }
+      }
+    }
+    &.tab__nav--static {
+      ul {
+        @include media-breakpoint-down(sm) {
+          li {
+            flex: 1 0 0%;
+            flex-shrink: 0;
+          }
+        }
       }
     }
     &--next {
       display: none;
+      position: absolute;
+      top: 1px;
+      width: 2.5em;
+      color: $gray-300;
+      font-size: 0.75rem;
+      line-height: 3.3125rem;
+      text-align: center;
+      background-color: $white;
+      border-bottom: 1px solid $gray-200;
+      cursor: not-allowed;
+      &:not(.tab__nav--prev) {
+        right: 1px;
+      }
+      &.tab__nav--prev {
+        left: 1px;
+        transform: scaleX(-1);
+      }
     }
   }
 
