@@ -1,0 +1,66 @@
+// 標題
+$h-size: $h1, $h2, $h3, $h4, $h5, $h6;
+$h-m-size: $h1-m, $h2-m, $h3-m, $h4-m, $h5-m, $h6-m;
+
+%typo-margin {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+@mixin typo-weight {
+    font-weight: 600;
+    @include media-breakpoint-up(sm) {
+        font-weight: 500;
+    }
+}
+
+%typo-weight {
+    font-weight: 600;
+    @include media-breakpoint-up(sm) {
+        font-weight: 500;
+    }
+}
+
+%heading-icon {
+    .heading__icon {
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 0.9em;
+        vertical-align: middle;
+        &--correct {
+            color: $surface;
+        }
+        &--notice {
+            color: $primary;
+        }
+        &--error {
+            color: $primary;
+        }
+    }
+    .heading__text {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1.25;
+    }
+}
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        @extend %typo-weight;
+    }
+    h#{$i},
+    .h#{$i} {
+        @extend %typo-margin;
+        @extend %heading-icon;
+    }
+}
+
+@for $i from 1 through 6 {
+    h#{$i},
+    .h#{$i} {
+        font-size: nth($h-m-size, $i);
+        @include media-breakpoint-up(sm) {
+            font-size: nth($h-size, $i);
+        }
+    }
+}

@@ -3,6 +3,11 @@ const view = {
   height: Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0),
 };
 
+function footerType() {
+  let bodyClass = document.querySelector('body').classList;
+  document.querySelector('footer .container').children.length < 2 ? bodyClass.add('footer--simple') : bodyClass.add('footer--complete');
+}
+
 // Tab 切換：Start
 function changTab() {
   const tab = document.querySelectorAll('.tab');
@@ -77,6 +82,7 @@ function changTab() {
 // Tab 切換：End
 
 function init() {
+  footerType();
   changTab();
 }
 
