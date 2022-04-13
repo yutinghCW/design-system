@@ -30,6 +30,7 @@ $container-max-widths: (
 $spacer:  0.0625rem; //1px
 $spacers: (
   "0":  $spacer * 0,
+  "5":  $spacer * 5,
   "10": $spacer * 10,
   "15": $spacer * 15,
   "20": $spacer * 20,

@@ -1,0 +1,30 @@
+button,
+a {
+    background-color: transparent;
+    align-self: baseline;
+    border-radius: 0;
+    appearance: none;
+    &:focus {
+        outline: 0;
+    }
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    min-width: 115px;
+    padding: 0.6875em 1em;
+    font-size: 1rem;
+    line-height: 1.25;
+    vertical-align: middle;
+    word-break: keep-all;
+    border: 1px solid;
+    overflow: hidden;
+    &.w-100 {
+        width: 100%;
+    }
+    &.btn--outlined {
+        color: $surface;
+        border-color: $surface;
+    }
+}

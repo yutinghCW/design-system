@@ -12,4 +12,11 @@
 @import "logo";
 @import "footer";
 
+@import "button";
 @import "tab";
+
+hr {
+    height: 1px;
+    background-color: $gray-200;
+    border: 0;
+}
