@@ -22,8 +22,8 @@ $container-max-widths: (
   xs: 100%,
   sm: 100%,
   md: 960px,
-  lg: 1170px,
-  xl: 1300px
+  lg: 1200px,
+  xl: 1200px
 ) !default;
 
 // 間距設定
@@ -56,6 +56,9 @@ $h6-m:  $spacer * 12; //12px
 
 // ---------------------------------------------------------
 
+// 藍色色碼
+$blue:             #003a9f !default;
+
 // 灰色階色碼
 $gray-100:         #EEEEEE !default;
 $gray-200:         #D3D5D7 !default;
@@ -78,7 +81,7 @@ $black:           #171717 !default;
 $dark:              $gray-600 !default;
 
 // 語易化色碼
-$surface:         #003a9f;
+$surface:           $blue;
 $primary:           $red-300 !default;
 $primary-variant:   $red-500 !default;
 $secondary:         $gray-300 !default;
@@ -101,18 +104,18 @@ $mail:              $surface !default;
 // 灰色階色碼 map
 $grays: () !default;
 $grays: map-merge((
-  "100": ($gray-100, $dark),
-  "200": ($gray-200, $dark),
-  "300": ($gray-300, $white),
-  "400": ($gray-400, $white),
+  "100": ($gray, $black),
+  "200": ($gray-100, $black),
+  "300": ($gray-200, $black),
+  "400": ($gray-300, $white),
   "500": ($gray-500, $white)
 ), $grays);
 
 // 紅色階色碼 map
 $reds: () !default;
 $reds: map-merge((
-  "100": ($red-100, $dark),
-  "200": ($red-200, $dark),
+  "100": ($red-100, $black),
+  "200": ($red-200, $black),
   "300": ($red-300, $white),
   "400": ($red-400, $white),
   "500": ($red-500, $white)
@@ -121,7 +124,7 @@ $reds: map-merge((
 // 無彩色色碼 map
 $bks: () !default;
 $bks: map-merge((
-  "white": ($white, $dark, $gray-200),
+  "white": ($white, $black, $gray-200),
   "black": ($black, $white, $black)
 ), $bks);
 

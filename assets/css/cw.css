@@ -1,4 +1,90 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600&family=Roboto:wght@300;400;500;700&display=swap");
+.bg-red-100 {
+  color: #171717;
+  background-color: #FEEBEC;
+}
+
+.bg-red-200 {
+  color: #171717;
+  background-color: #EE969B;
+}
+
+.bg-red-300 {
+  color: #ffffff;
+  background-color: #D60C18;
+}
+
+.bg-red-400 {
+  color: #ffffff;
+  background-color: #BE0B15;
+}
+
+.bg-red-500 {
+  color: #ffffff;
+  background-color: #9D0505;
+}
+
+.bg-gray-100 {
+  color: #171717;
+  background-color: #fafafa;
+}
+
+.bg-gray-200 {
+  color: #171717;
+  background-color: #EEEEEE;
+}
+
+.bg-gray-300 {
+  color: #171717;
+  background-color: #D3D5D7;
+}
+
+.bg-gray-400 {
+  color: #ffffff;
+  background-color: #939EA7;
+}
+
+.bg-gray-500 {
+  color: #ffffff;
+  background-color: #48545D;
+}
+
+.bg-surface {
+  color: #ffffff;
+  background-color: #003a9f;
+}
+
+.bg-primary {
+  color: #ffffff;
+  background-color: #D60C18;
+}
+
+.bg-primary-variant {
+  color: #ffffff;
+  background-color: #9D0505;
+}
+
+.bg-secondary {
+  color: #ffffff;
+  background-color: #939EA7;
+}
+
+.bg-secondary-variant {
+  color: #ffffff;
+  background-color: #48545D;
+}
+
+.bg-error {
+  color: #ffffff;
+  background-color: #9D0505;
+}
+
+.bg-background {
+  color: #ffffff;
+  background-color: #ffffff;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -13,22 +99,41 @@
 
 html, body {
   height: 100%;
-  line-height: 1.25;
+}
+
+body {
+  font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+  line-height: 1.5;
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-weight: 300;
+  }
+}
+
+.serif {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 600;
+}
+
+main {
+  min-height: calc(100% - 104px);
 }
 
 .footer--complete main {
-  min-height: calc(100% - 472px);
+  min-height: calc(100% - 476px);
 }
 
 .footer--simple main {
-  min-height: calc(100% - 100px);
+  min-height: calc(100% - 104px);
 }
 
 a, button {
   text-decoration: none;
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   a, button {
     -webkit-transition: color 0.3s, background 0.3s, border-color 0.3s;
     transition: color 0.3s, background 0.3s, border-color 0.3s;
