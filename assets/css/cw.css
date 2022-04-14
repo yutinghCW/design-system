@@ -16,6 +16,18 @@ html, body {
   height: 100%;
 }
 
+html {
+  font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Roboto', 'Noto Sans TC', sans-serif;
   line-height: 1.5;
@@ -100,6 +112,10 @@ textarea {
   margin: 1.875rem !important;
 }
 
+.m-40 {
+  margin: 2.5rem !important;
+}
+
 .m-auto {
   margin: auto !important;
 }
@@ -132,6 +148,11 @@ textarea {
 .mx-30 {
   margin-right: 1.875rem !important;
   margin-left: 1.875rem !important;
+}
+
+.mx-40 {
+  margin-right: 2.5rem !important;
+  margin-left: 2.5rem !important;
 }
 
 .mx-auto {
@@ -169,6 +190,11 @@ textarea {
   margin-bottom: 1.875rem !important;
 }
 
+.my-40 {
+  margin-top: 2.5rem !important;
+  margin-bottom: 2.5rem !important;
+}
+
 .my-auto {
   margin-top: auto !important;
   margin-bottom: auto !important;
@@ -196,6 +222,10 @@ textarea {
 
 .mt-30 {
   margin-top: 1.875rem !important;
+}
+
+.mt-40 {
+  margin-top: 2.5rem !important;
 }
 
 .mt-auto {
@@ -226,6 +256,10 @@ textarea {
   margin-right: 1.875rem !important;
 }
 
+.me-40 {
+  margin-right: 2.5rem !important;
+}
+
 .me-auto {
   margin-right: auto !important;
 }
@@ -252,6 +286,10 @@ textarea {
 
 .mb-30 {
   margin-bottom: 1.875rem !important;
+}
+
+.mb-40 {
+  margin-bottom: 2.5rem !important;
 }
 
 .mb-auto {
@@ -282,6 +320,10 @@ textarea {
   margin-left: 1.875rem !important;
 }
 
+.ms-40 {
+  margin-left: 2.5rem !important;
+}
+
 .ms-auto {
   margin-left: auto !important;
 }
@@ -308,6 +350,10 @@ textarea {
 
 .p-30 {
   padding: 1.875rem !important;
+}
+
+.p-40 {
+  padding: 2.5rem !important;
 }
 
 .p-auto {
@@ -342,6 +388,11 @@ textarea {
 .px-30 {
   padding-right: 1.875rem !important;
   padding-left: 1.875rem !important;
+}
+
+.px-40 {
+  padding-right: 2.5rem !important;
+  padding-left: 2.5rem !important;
 }
 
 .px-auto {
@@ -379,6 +430,11 @@ textarea {
   padding-bottom: 1.875rem !important;
 }
 
+.py-40 {
+  padding-top: 2.5rem !important;
+  padding-bottom: 2.5rem !important;
+}
+
 .py-auto {
   padding-top: auto !important;
   padding-bottom: auto !important;
@@ -406,6 +462,10 @@ textarea {
 
 .pt-30 {
   padding-top: 1.875rem !important;
+}
+
+.pt-40 {
+  padding-top: 2.5rem !important;
 }
 
 .pt-auto {
@@ -436,6 +496,10 @@ textarea {
   padding-right: 1.875rem !important;
 }
 
+.pe-40 {
+  padding-right: 2.5rem !important;
+}
+
 .pe-auto {
   padding-right: auto !important;
 }
@@ -464,6 +528,10 @@ textarea {
   padding-bottom: 1.875rem !important;
 }
 
+.pb-40 {
+  padding-bottom: 2.5rem !important;
+}
+
 .pb-auto {
   padding-bottom: auto !important;
 }
@@ -490,6 +558,10 @@ textarea {
 
 .ps-30 {
   padding-left: 1.875rem !important;
+}
+
+.ps-40 {
+  padding-left: 2.5rem !important;
 }
 
 .ps-auto {
@@ -527,6 +599,9 @@ textarea {
   .m-xs-30 {
     margin: 1.875rem !important;
   }
+  .m-xs-40 {
+    margin: 2.5rem !important;
+  }
   .m-xs-auto {
     margin: auto !important;
   }
@@ -553,6 +628,10 @@ textarea {
   .mx-xs-30 {
     margin-right: 1.875rem !important;
     margin-left: 1.875rem !important;
+  }
+  .mx-xs-40 {
+    margin-right: 2.5rem !important;
+    margin-left: 2.5rem !important;
   }
   .mx-xs-auto {
     margin-right: auto !important;
@@ -582,6 +661,10 @@ textarea {
     margin-top: 1.875rem !important;
     margin-bottom: 1.875rem !important;
   }
+  .my-xs-40 {
+    margin-top: 2.5rem !important;
+    margin-bottom: 2.5rem !important;
+  }
   .my-xs-auto {
     margin-top: auto !important;
     margin-bottom: auto !important;
@@ -604,6 +687,9 @@ textarea {
   .mt-xs-30 {
     margin-top: 1.875rem !important;
   }
+  .mt-xs-40 {
+    margin-top: 2.5rem !important;
+  }
   .mt-xs-auto {
     margin-top: auto !important;
   }
@@ -624,6 +710,9 @@ textarea {
   }
   .me-xs-30 {
     margin-right: 1.875rem !important;
+  }
+  .me-xs-40 {
+    margin-right: 2.5rem !important;
   }
   .me-xs-auto {
     margin-right: auto !important;
@@ -646,6 +735,9 @@ textarea {
   .mb-xs-30 {
     margin-bottom: 1.875rem !important;
   }
+  .mb-xs-40 {
+    margin-bottom: 2.5rem !important;
+  }
   .mb-xs-auto {
     margin-bottom: auto !important;
   }
@@ -667,6 +759,9 @@ textarea {
   .ms-xs-30 {
     margin-left: 1.875rem !important;
   }
+  .ms-xs-40 {
+    margin-left: 2.5rem !important;
+  }
   .ms-xs-auto {
     margin-left: auto !important;
   }
@@ -687,6 +782,9 @@ textarea {
   }
   .p-xs-30 {
     padding: 1.875rem !important;
+  }
+  .p-xs-40 {
+    padding: 2.5rem !important;
   }
   .p-xs-auto {
     padding: auto !important;
@@ -714,6 +812,10 @@ textarea {
   .px-xs-30 {
     padding-right: 1.875rem !important;
     padding-left: 1.875rem !important;
+  }
+  .px-xs-40 {
+    padding-right: 2.5rem !important;
+    padding-left: 2.5rem !important;
   }
   .px-xs-auto {
     padding-right: auto !important;
@@ -743,6 +845,10 @@ textarea {
     padding-top: 1.875rem !important;
     padding-bottom: 1.875rem !important;
   }
+  .py-xs-40 {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
   .py-xs-auto {
     padding-top: auto !important;
     padding-bottom: auto !important;
@@ -765,6 +871,9 @@ textarea {
   .pt-xs-30 {
     padding-top: 1.875rem !important;
   }
+  .pt-xs-40 {
+    padding-top: 2.5rem !important;
+  }
   .pt-xs-auto {
     padding-top: auto !important;
   }
@@ -785,6 +894,9 @@ textarea {
   }
   .pe-xs-30 {
     padding-right: 1.875rem !important;
+  }
+  .pe-xs-40 {
+    padding-right: 2.5rem !important;
   }
   .pe-xs-auto {
     padding-right: auto !important;
@@ -807,6 +919,9 @@ textarea {
   .pb-xs-30 {
     padding-bottom: 1.875rem !important;
   }
+  .pb-xs-40 {
+    padding-bottom: 2.5rem !important;
+  }
   .pb-xs-auto {
     padding-bottom: auto !important;
   }
@@ -827,6 +942,9 @@ textarea {
   }
   .ps-xs-30 {
     padding-left: 1.875rem !important;
+  }
+  .ps-xs-40 {
+    padding-left: 2.5rem !important;
   }
   .ps-xs-auto {
     padding-left: auto !important;
@@ -861,6 +979,9 @@ textarea {
   .m-sm-30 {
     margin: 1.875rem !important;
   }
+  .m-sm-40 {
+    margin: 2.5rem !important;
+  }
   .m-sm-auto {
     margin: auto !important;
   }
@@ -887,6 +1008,10 @@ textarea {
   .mx-sm-30 {
     margin-right: 1.875rem !important;
     margin-left: 1.875rem !important;
+  }
+  .mx-sm-40 {
+    margin-right: 2.5rem !important;
+    margin-left: 2.5rem !important;
   }
   .mx-sm-auto {
     margin-right: auto !important;
@@ -916,6 +1041,10 @@ textarea {
     margin-top: 1.875rem !important;
     margin-bottom: 1.875rem !important;
   }
+  .my-sm-40 {
+    margin-top: 2.5rem !important;
+    margin-bottom: 2.5rem !important;
+  }
   .my-sm-auto {
     margin-top: auto !important;
     margin-bottom: auto !important;
@@ -938,6 +1067,9 @@ textarea {
   .mt-sm-30 {
     margin-top: 1.875rem !important;
   }
+  .mt-sm-40 {
+    margin-top: 2.5rem !important;
+  }
   .mt-sm-auto {
     margin-top: auto !important;
   }
@@ -958,6 +1090,9 @@ textarea {
   }
   .me-sm-30 {
     margin-right: 1.875rem !important;
+  }
+  .me-sm-40 {
+    margin-right: 2.5rem !important;
   }
   .me-sm-auto {
     margin-right: auto !important;
@@ -980,6 +1115,9 @@ textarea {
   .mb-sm-30 {
     margin-bottom: 1.875rem !important;
   }
+  .mb-sm-40 {
+    margin-bottom: 2.5rem !important;
+  }
   .mb-sm-auto {
     margin-bottom: auto !important;
   }
@@ -1001,6 +1139,9 @@ textarea {
   .ms-sm-30 {
     margin-left: 1.875rem !important;
   }
+  .ms-sm-40 {
+    margin-left: 2.5rem !important;
+  }
   .ms-sm-auto {
     margin-left: auto !important;
   }
@@ -1021,6 +1162,9 @@ textarea {
   }
   .p-sm-30 {
     padding: 1.875rem !important;
+  }
+  .p-sm-40 {
+    padding: 2.5rem !important;
   }
   .p-sm-auto {
     padding: auto !important;
@@ -1048,6 +1192,10 @@ textarea {
   .px-sm-30 {
     padding-right: 1.875rem !important;
     padding-left: 1.875rem !important;
+  }
+  .px-sm-40 {
+    padding-right: 2.5rem !important;
+    padding-left: 2.5rem !important;
   }
   .px-sm-auto {
     padding-right: auto !important;
@@ -1077,6 +1225,10 @@ textarea {
     padding-top: 1.875rem !important;
     padding-bottom: 1.875rem !important;
   }
+  .py-sm-40 {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
   .py-sm-auto {
     padding-top: auto !important;
     padding-bottom: auto !important;
@@ -1099,6 +1251,9 @@ textarea {
   .pt-sm-30 {
     padding-top: 1.875rem !important;
   }
+  .pt-sm-40 {
+    padding-top: 2.5rem !important;
+  }
   .pt-sm-auto {
     padding-top: auto !important;
   }
@@ -1119,6 +1274,9 @@ textarea {
   }
   .pe-sm-30 {
     padding-right: 1.875rem !important;
+  }
+  .pe-sm-40 {
+    padding-right: 2.5rem !important;
   }
   .pe-sm-auto {
     padding-right: auto !important;
@@ -1141,6 +1299,9 @@ textarea {
   .pb-sm-30 {
     padding-bottom: 1.875rem !important;
   }
+  .pb-sm-40 {
+    padding-bottom: 2.5rem !important;
+  }
   .pb-sm-auto {
     padding-bottom: auto !important;
   }
@@ -1161,6 +1322,9 @@ textarea {
   }
   .ps-sm-30 {
     padding-left: 1.875rem !important;
+  }
+  .ps-sm-40 {
+    padding-left: 2.5rem !important;
   }
   .ps-sm-auto {
     padding-left: auto !important;
@@ -1195,6 +1359,9 @@ textarea {
   .m-md-30 {
     margin: 1.875rem !important;
   }
+  .m-md-40 {
+    margin: 2.5rem !important;
+  }
   .m-md-auto {
     margin: auto !important;
   }
@@ -1221,6 +1388,10 @@ textarea {
   .mx-md-30 {
     margin-right: 1.875rem !important;
     margin-left: 1.875rem !important;
+  }
+  .mx-md-40 {
+    margin-right: 2.5rem !important;
+    margin-left: 2.5rem !important;
   }
   .mx-md-auto {
     margin-right: auto !important;
@@ -1250,6 +1421,10 @@ textarea {
     margin-top: 1.875rem !important;
     margin-bottom: 1.875rem !important;
   }
+  .my-md-40 {
+    margin-top: 2.5rem !important;
+    margin-bottom: 2.5rem !important;
+  }
   .my-md-auto {
     margin-top: auto !important;
     margin-bottom: auto !important;
@@ -1272,6 +1447,9 @@ textarea {
   .mt-md-30 {
     margin-top: 1.875rem !important;
   }
+  .mt-md-40 {
+    margin-top: 2.5rem !important;
+  }
   .mt-md-auto {
     margin-top: auto !important;
   }
@@ -1292,6 +1470,9 @@ textarea {
   }
   .me-md-30 {
     margin-right: 1.875rem !important;
+  }
+  .me-md-40 {
+    margin-right: 2.5rem !important;
   }
   .me-md-auto {
     margin-right: auto !important;
@@ -1314,6 +1495,9 @@ textarea {
   .mb-md-30 {
     margin-bottom: 1.875rem !important;
   }
+  .mb-md-40 {
+    margin-bottom: 2.5rem !important;
+  }
   .mb-md-auto {
     margin-bottom: auto !important;
   }
@@ -1335,6 +1519,9 @@ textarea {
   .ms-md-30 {
     margin-left: 1.875rem !important;
   }
+  .ms-md-40 {
+    margin-left: 2.5rem !important;
+  }
   .ms-md-auto {
     margin-left: auto !important;
   }
@@ -1355,6 +1542,9 @@ textarea {
   }
   .p-md-30 {
     padding: 1.875rem !important;
+  }
+  .p-md-40 {
+    padding: 2.5rem !important;
   }
   .p-md-auto {
     padding: auto !important;
@@ -1382,6 +1572,10 @@ textarea {
   .px-md-30 {
     padding-right: 1.875rem !important;
     padding-left: 1.875rem !important;
+  }
+  .px-md-40 {
+    padding-right: 2.5rem !important;
+    padding-left: 2.5rem !important;
   }
   .px-md-auto {
     padding-right: auto !important;
@@ -1411,6 +1605,10 @@ textarea {
     padding-top: 1.875rem !important;
     padding-bottom: 1.875rem !important;
   }
+  .py-md-40 {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
   .py-md-auto {
     padding-top: auto !important;
     padding-bottom: auto !important;
@@ -1433,6 +1631,9 @@ textarea {
   .pt-md-30 {
     padding-top: 1.875rem !important;
   }
+  .pt-md-40 {
+    padding-top: 2.5rem !important;
+  }
   .pt-md-auto {
     padding-top: auto !important;
   }
@@ -1453,6 +1654,9 @@ textarea {
   }
   .pe-md-30 {
     padding-right: 1.875rem !important;
+  }
+  .pe-md-40 {
+    padding-right: 2.5rem !important;
   }
   .pe-md-auto {
     padding-right: auto !important;
@@ -1475,6 +1679,9 @@ textarea {
   .pb-md-30 {
     padding-bottom: 1.875rem !important;
   }
+  .pb-md-40 {
+    padding-bottom: 2.5rem !important;
+  }
   .pb-md-auto {
     padding-bottom: auto !important;
   }
@@ -1495,6 +1702,9 @@ textarea {
   }
   .ps-md-30 {
     padding-left: 1.875rem !important;
+  }
+  .ps-md-40 {
+    padding-left: 2.5rem !important;
   }
   .ps-md-auto {
     padding-left: auto !important;
@@ -1529,6 +1739,9 @@ textarea {
   .m-lg-30 {
     margin: 1.875rem !important;
   }
+  .m-lg-40 {
+    margin: 2.5rem !important;
+  }
   .m-lg-auto {
     margin: auto !important;
   }
@@ -1555,6 +1768,10 @@ textarea {
   .mx-lg-30 {
     margin-right: 1.875rem !important;
     margin-left: 1.875rem !important;
+  }
+  .mx-lg-40 {
+    margin-right: 2.5rem !important;
+    margin-left: 2.5rem !important;
   }
   .mx-lg-auto {
     margin-right: auto !important;
@@ -1584,6 +1801,10 @@ textarea {
     margin-top: 1.875rem !important;
     margin-bottom: 1.875rem !important;
   }
+  .my-lg-40 {
+    margin-top: 2.5rem !important;
+    margin-bottom: 2.5rem !important;
+  }
   .my-lg-auto {
     margin-top: auto !important;
     margin-bottom: auto !important;
@@ -1606,6 +1827,9 @@ textarea {
   .mt-lg-30 {
     margin-top: 1.875rem !important;
   }
+  .mt-lg-40 {
+    margin-top: 2.5rem !important;
+  }
   .mt-lg-auto {
     margin-top: auto !important;
   }
@@ -1626,6 +1850,9 @@ textarea {
   }
   .me-lg-30 {
     margin-right: 1.875rem !important;
+  }
+  .me-lg-40 {
+    margin-right: 2.5rem !important;
   }
   .me-lg-auto {
     margin-right: auto !important;
@@ -1648,6 +1875,9 @@ textarea {
   .mb-lg-30 {
     margin-bottom: 1.875rem !important;
   }
+  .mb-lg-40 {
+    margin-bottom: 2.5rem !important;
+  }
   .mb-lg-auto {
     margin-bottom: auto !important;
   }
@@ -1669,6 +1899,9 @@ textarea {
   .ms-lg-30 {
     margin-left: 1.875rem !important;
   }
+  .ms-lg-40 {
+    margin-left: 2.5rem !important;
+  }
   .ms-lg-auto {
     margin-left: auto !important;
   }
@@ -1689,6 +1922,9 @@ textarea {
   }
   .p-lg-30 {
     padding: 1.875rem !important;
+  }
+  .p-lg-40 {
+    padding: 2.5rem !important;
   }
   .p-lg-auto {
     padding: auto !important;
@@ -1716,6 +1952,10 @@ textarea {
   .px-lg-30 {
     padding-right: 1.875rem !important;
     padding-left: 1.875rem !important;
+  }
+  .px-lg-40 {
+    padding-right: 2.5rem !important;
+    padding-left: 2.5rem !important;
   }
   .px-lg-auto {
     padding-right: auto !important;
@@ -1745,6 +1985,10 @@ textarea {
     padding-top: 1.875rem !important;
     padding-bottom: 1.875rem !important;
   }
+  .py-lg-40 {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
   .py-lg-auto {
     padding-top: auto !important;
     padding-bottom: auto !important;
@@ -1767,6 +2011,9 @@ textarea {
   .pt-lg-30 {
     padding-top: 1.875rem !important;
   }
+  .pt-lg-40 {
+    padding-top: 2.5rem !important;
+  }
   .pt-lg-auto {
     padding-top: auto !important;
   }
@@ -1787,6 +2034,9 @@ textarea {
   }
   .pe-lg-30 {
     padding-right: 1.875rem !important;
+  }
+  .pe-lg-40 {
+    padding-right: 2.5rem !important;
   }
   .pe-lg-auto {
     padding-right: auto !important;
@@ -1809,6 +2059,9 @@ textarea {
   .pb-lg-30 {
     padding-bottom: 1.875rem !important;
   }
+  .pb-lg-40 {
+    padding-bottom: 2.5rem !important;
+  }
   .pb-lg-auto {
     padding-bottom: auto !important;
   }
@@ -1829,6 +2082,9 @@ textarea {
   }
   .ps-lg-30 {
     padding-left: 1.875rem !important;
+  }
+  .ps-lg-40 {
+    padding-left: 2.5rem !important;
   }
   .ps-lg-auto {
     padding-left: auto !important;
@@ -1863,6 +2119,9 @@ textarea {
   .m-xl-30 {
     margin: 1.875rem !important;
   }
+  .m-xl-40 {
+    margin: 2.5rem !important;
+  }
   .m-xl-auto {
     margin: auto !important;
   }
@@ -1889,6 +2148,10 @@ textarea {
   .mx-xl-30 {
     margin-right: 1.875rem !important;
     margin-left: 1.875rem !important;
+  }
+  .mx-xl-40 {
+    margin-right: 2.5rem !important;
+    margin-left: 2.5rem !important;
   }
   .mx-xl-auto {
     margin-right: auto !important;
@@ -1918,6 +2181,10 @@ textarea {
     margin-top: 1.875rem !important;
     margin-bottom: 1.875rem !important;
   }
+  .my-xl-40 {
+    margin-top: 2.5rem !important;
+    margin-bottom: 2.5rem !important;
+  }
   .my-xl-auto {
     margin-top: auto !important;
     margin-bottom: auto !important;
@@ -1940,6 +2207,9 @@ textarea {
   .mt-xl-30 {
     margin-top: 1.875rem !important;
   }
+  .mt-xl-40 {
+    margin-top: 2.5rem !important;
+  }
   .mt-xl-auto {
     margin-top: auto !important;
   }
@@ -1960,6 +2230,9 @@ textarea {
   }
   .me-xl-30 {
     margin-right: 1.875rem !important;
+  }
+  .me-xl-40 {
+    margin-right: 2.5rem !important;
   }
   .me-xl-auto {
     margin-right: auto !important;
@@ -1982,6 +2255,9 @@ textarea {
   .mb-xl-30 {
     margin-bottom: 1.875rem !important;
   }
+  .mb-xl-40 {
+    margin-bottom: 2.5rem !important;
+  }
   .mb-xl-auto {
     margin-bottom: auto !important;
   }
@@ -2003,6 +2279,9 @@ textarea {
   .ms-xl-30 {
     margin-left: 1.875rem !important;
   }
+  .ms-xl-40 {
+    margin-left: 2.5rem !important;
+  }
   .ms-xl-auto {
     margin-left: auto !important;
   }
@@ -2023,6 +2302,9 @@ textarea {
   }
   .p-xl-30 {
     padding: 1.875rem !important;
+  }
+  .p-xl-40 {
+    padding: 2.5rem !important;
   }
   .p-xl-auto {
     padding: auto !important;
@@ -2050,6 +2332,10 @@ textarea {
   .px-xl-30 {
     padding-right: 1.875rem !important;
     padding-left: 1.875rem !important;
+  }
+  .px-xl-40 {
+    padding-right: 2.5rem !important;
+    padding-left: 2.5rem !important;
   }
   .px-xl-auto {
     padding-right: auto !important;
@@ -2079,6 +2365,10 @@ textarea {
     padding-top: 1.875rem !important;
     padding-bottom: 1.875rem !important;
   }
+  .py-xl-40 {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
   .py-xl-auto {
     padding-top: auto !important;
     padding-bottom: auto !important;
@@ -2101,6 +2391,9 @@ textarea {
   .pt-xl-30 {
     padding-top: 1.875rem !important;
   }
+  .pt-xl-40 {
+    padding-top: 2.5rem !important;
+  }
   .pt-xl-auto {
     padding-top: auto !important;
   }
@@ -2121,6 +2414,9 @@ textarea {
   }
   .pe-xl-30 {
     padding-right: 1.875rem !important;
+  }
+  .pe-xl-40 {
+    padding-right: 2.5rem !important;
   }
   .pe-xl-auto {
     padding-right: auto !important;
@@ -2143,6 +2439,9 @@ textarea {
   .pb-xl-30 {
     padding-bottom: 1.875rem !important;
   }
+  .pb-xl-40 {
+    padding-bottom: 2.5rem !important;
+  }
   .pb-xl-auto {
     padding-bottom: auto !important;
   }
@@ -2163,6 +2462,9 @@ textarea {
   }
   .ps-xl-30 {
     padding-left: 1.875rem !important;
+  }
+  .ps-xl-40 {
+    padding-left: 2.5rem !important;
   }
   .ps-xl-auto {
     padding-left: auto !important;

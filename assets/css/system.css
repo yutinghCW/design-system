@@ -424,6 +424,7 @@ aside {
   padding-bottom: 40px;
   padding-right: 40px;
   background-color: #fafafa;
+  width: 100%;
 }
 
 aside ul {
@@ -467,7 +468,7 @@ aside > ul {
 
 @media (min-width: 1024px) {
   aside > ul {
-    max-width: 250px;
+    min-width: 245px !important;
   }
 }
 
@@ -496,5 +497,66 @@ aside > ul a:hover, aside > ul span:hover {
 
 aside > ul a.active, aside > ul span.active {
   color: #D60C18;
+}
+
+.tab .tab__nav {
+  border-width: 0 0 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+@media (min-width: 1024px) {
+  .tab .tab__nav {
+    padding-left: 100px;
+    padding-right: calc((100vw - 1160px) / 2);
+    margin-left: -100px;
+    margin-right: calc((100vw - 1160px) / 2 * -1);
+  }
+}
+
+.tab .tab__nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .tab .tab__nav ul li {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 150px;
+  }
+}
+
+.tab .tab__nav ul li svg {
+  width: 1rem;
+  height: auto;
+  margin-right: 10px;
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
+}
+
+.tab .tab__nav ul li:hover svg, .tab .tab__nav ul li.active svg {
+  fill: #D60C18;
+}
+
+.tab .tab__content {
+  border-width: 0;
+}
+
+@media (max-width: 1023px) {
+  .tab .tab__content .tab__content__pane {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 /*# sourceMappingURL=system.css.map */

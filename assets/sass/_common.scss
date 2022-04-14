@@ -14,6 +14,15 @@ html, body {
   height: 100%;
 }
 
+html {
+  font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Roboto', 'Noto Sans TC', sans-serif;
   line-height: 1.5;

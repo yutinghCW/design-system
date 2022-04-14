@@ -14,6 +14,7 @@ function naviByLink() {
       element.classList.add('active');
       element.parentElement.parentElement.parentElement.classList.add('opened');
       element.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add('opened');
+      element.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add('opened');
     }
   });
 }
