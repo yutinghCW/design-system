@@ -20,6 +20,9 @@ main {
     > .row {
       min-height: 100%;
       > article {
+        @include media-breakpoint-up(md) {
+          max-width: calc(100% - 285px);
+        }
         > section {
           @include media-breakpoint-up(md) {
             padding-left: 100px;
@@ -81,6 +84,9 @@ aside {
     padding-left: 0;
     width: 100%;
     @include media-breakpoint-up(md) {
+      position: sticky;
+      top: 20px;
+      left: 0;
       min-width: 245px !important;
     }
     ul {
@@ -144,9 +150,49 @@ aside {
   .tab__content {
     border-width: 0;
     .tab__content__pane {
-      @include media-breakpoint-down(md) {
-        padding-left: 0;
-        padding-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.dont {
+  padding-bottom: 10px;
+  color: $primary;
+  border-bottom: 2px solid $primary;
+}
+
+table {
+  width: 100%;
+  border: 1px solid $gray-100;
+  border-collapse: collapse;
+  th, td {
+    padding: 12px 0;
+    &:first-child {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    + th, + td {
+      border-left: 1px solid $gray-100;
+    }
+  }
+  th {
+    @include body-weight;
+    background-color: $gray;
+  }
+  tr {
+    + tr {
+      + tr {
+        td {
+          border-top: 1px solid $gray-100;
+        }
+      }
+    }
+  }
+  &.table-btn {
+    th {
+      &:nth-child(2) ~ th {
+        width: calc((100% - 135px) / 3);
       }
     }
   }

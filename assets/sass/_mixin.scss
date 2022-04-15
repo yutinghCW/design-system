@@ -25,3 +25,29 @@
   -webkit-line-clamp: $line;
   -webkit-box-orient: vertical;
 }
+
+%typo-margin {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+@mixin typo-weight {
+  font-weight: 600;
+  @include media-breakpoint-up(sm) {
+      font-weight: 500;
+  }
+}
+
+@mixin body-weight {
+  font-weight: 400;
+  @include media-breakpoint-up(sm) {
+      font-weight: 300;
+  }
+}
+
+%typo-weight {
+  font-weight: 600;
+  @include media-breakpoint-up(sm) {
+      font-weight: 500;
+  }
+}

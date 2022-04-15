@@ -376,8 +376,8 @@
 }
 
 .bg-background {
-  color: #ffffff;
-  background-color: #ffffff;
+  color: #171717;
+  background-color: #fafafa;
 }
 
 main {
@@ -402,6 +402,12 @@ main > .container::before {
 
 main > .container > .row {
   min-height: 100%;
+}
+
+@media (min-width: 1024px) {
+  main > .container > .row > article {
+    max-width: calc(100% - 285px);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -468,6 +474,10 @@ aside > ul {
 
 @media (min-width: 1024px) {
   aside > ul {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    left: 0;
     min-width: 245px !important;
   }
 }
@@ -553,10 +563,52 @@ aside > ul a.active, aside > ul span.active {
   border-width: 0;
 }
 
-@media (max-width: 1023px) {
-  .tab .tab__content .tab__content__pane {
-    padding-left: 0;
-    padding-right: 0;
+.tab .tab__content .tab__content__pane {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.dont {
+  padding-bottom: 10px;
+  color: #D60C18;
+  border-bottom: 2px solid #D60C18;
+}
+
+table {
+  width: 100%;
+  border: 1px solid #EEEEEE;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 12px 0;
+}
+
+table th:first-child, table td:first-child {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+table th + th, table th + td, table td + th, table td + td {
+  border-left: 1px solid #EEEEEE;
+}
+
+table th {
+  font-weight: 400;
+  background-color: #fafafa;
+}
+
+@media (min-width: 768px) {
+  table th {
+    font-weight: 300;
   }
+}
+
+table tr + tr + tr td {
+  border-top: 1px solid #EEEEEE;
+}
+
+table.table-btn th:nth-child(2) ~ th {
+  width: calc((100% - 135px) / 3);
 }
 /*# sourceMappingURL=system.css.map */

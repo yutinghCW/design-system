@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>警示框 Alert</title>
+    <title>按鈕 Buttons</title>
     <link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="../assets/css/cw.css">
@@ -109,9 +109,16 @@
                 </aside>
                 <article class="col-md ps-md-0">
                     <section>
-                        <h1 class="mt-0 mb-10">警示框 Alert</h1>
+                        <h1 class="mt-0 mb-10">按鈕 Buttons</h1>
                         <p>
-                            有警告使用者的意思，需要對當前問題執行動作，按鈕動作通常為「確定」及「返回」或「取消」。
+                            按鈕（Button）讓使用者只需要點擊一下，行動呼籲（Call to Action，以下簡稱 cta）及做出選擇。
+                            <br/><br/>
+                            原則<br/>
+                            按鈕應以「識別功能」、「易於找到」和「狀態清楚」為原則
+                            <br/><br/>
+                            識別功能：要清楚地讓使用者知道，點擊按鈕時會發生什麼動作<br/>
+                            易於找到：要在畫面之中，能讓使用者容易找到按鈕，當然也包括其他動作的按鈕<br/>
+                            狀態清楚：一個完整的按鈕，應該要清楚地具備它所有的互動狀態
                         </p>
                     </section>
                     <section>
@@ -129,64 +136,78 @@
                             <i class="icon icon-right tab__nav--next"></i>
                             <div class="tab__content py-20">
                                 <div class="tab__content__pane active">
-                                    <h2 class="mt-0 mb-10">Usage</h2>
+                                    <h2 class="mt-0 mb-10">Types</h2>
                                     <p class="mt-10 mb-20">
-                                        有警告使用者的意思，需要對當前問題執行動作，按鈕動作通常為「確定」及「返回」或「取消」。
+                                        Buttons 有三種尺寸及三種樣式。
                                     </p>
-                                    <img src="../assets/system/alert-usage-desktop.png" width="100%" alt="">
-                                    <div class="d-md-block"></div>
-                                    <hr class="my-40">
-                                    <h2 class="mt-0 mb-10">Ｗhen to use</h2>
-                                    <p class="mt-10 mb-20">
-                                        Notification 的干擾小，傳達簡單的消息。
-                                    </p>
-                                    <table class="my-20">
+                                    <table class="table-btn my-20 text-center">
                                         <tr>
-                                            <th width="145">元件</th>
-                                            <th>動作</th>
+                                            <th width="120">Size</th>
+                                            <th>Large</th>
+                                            <th>Standard</th>
+                                            <th>Small</th>
                                         </tr>
                                         <tr>
-                                            <td>Alert</td>
-                                            <td>有警告意味，使用者需選擇動作才會消失</td>
+                                            <td>Contained</td>
+                                            <td><button type="button" class="btn btn--large btn--contained">按鈕</button></td>
+                                            <td><button type="button" class="btn btn--contained">按鈕</button></td>
+                                            <td><button type="button" class="btn btn--small btn--contained">按鈕</button></td>
                                         </tr>
                                         <tr>
-                                            <td>Dialog</td>
-                                            <td>使用者需做選擇動作或按關閉 icon 才會消失</td>
+                                            <td>Outline</td>
+                                            <td><button type="button" class="btn btn--large btn--outlined">按鈕</button></td>
+                                            <td><button type="button" class="btn btn--outlined">按鈕</button></td>
+                                            <td><button type="button" class="btn btn--small btn--outlined">按鈕</button></td>
                                         </tr>
                                         <tr>
-                                            <td>Notification</td>
-                                            <td>使用者不需做任何動作，會自動消失</td>
+                                            <td>Text</td>
+                                            <td><button type="button" class="btn btn--large btn--text">按鈕</button></td>
+                                            <td><button type="button" class="btn btn--text">按鈕</button></td>
+                                            <td><button type="button" class="btn btn--small btn--text">按鈕</button></td>
                                         </tr>
                                     </table>
-                                    <a href="../digital/notification.html" class="btn btn--outlined">
-                                        Notification
-                                    </a>
-                                    <a href="../digital/dialog.html" class="btn btn--outlined">
-                                        Dialog
-                                    </a>
-                                    <hr class="my-40">
-                                    <h2 class="mt-0 mb-10">Anatomy</h2>
-                                    <p class="mt-10 mb-20">
-                                        Alert 包含了一段說明文字及兩個按鈕。
-                                    </p>
-                                    <img src="../assets/system/alert-anatomy-desktop.svg" width="100%" alt="">
+                                    <table class="table-btn my-20 text-center">
+                                        <tr>
+                                            <th width="120">State</th>
+                                            <th>Default</th>
+                                            <th>Hover</th>
+                                            <th>Pressed</th>
+                                            <th>Disable</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Contained</td>
+                                            <td><button type="button" class="btn btn--contained">按鈕</button></td>
+                                            <td><button type="button" class="btn btn--contained">按鈕</button></td>
+                                            <td><button type="button" class="btn btn--contained">按鈕</button></td>
+                                            <td><button type="button" class="btn btn--contained">按鈕</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Outline</td>
+                                            <td><button type="button" class="btn btn--outlined">按鈕</button></td>
+                                            <td><button type="button" class="btn btn--outlined">按鈕</button></td>
+                                            <td><button type="button" class="btn btn--outlined">按鈕</button></td>
+                                            <td><button type="button" class="btn btn--outlined">按鈕</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Text</td>
+                                            <td><button type="button" class="btn btn--text">按鈕</button></td>
+                                            <td><button type="button" class="btn btn--text">按鈕</button></td>
+                                            <td><button type="button" class="btn btn--text">按鈕</button></td>
+                                            <td><button type="button" class="btn btn--text">按鈕</button></td>
+                                        </tr>
+                                    </table>
+                                    <h2 class="dont mt-40 mb-20">Don't</h2>
+                                    <div class="bg-background">
+                                        <img class="mx-auto" src="../assets/system/button-anatomy-desktop.svg" alt="">
+                                    </div>
                                     <h2 class="dont mt-40 mb-20">Don't</h2>
                                     <div class="p-40 bg-background">
-                                        <div class="message message--alert">
-                                            <div class="message__container">
-                                                <div class="message__txt">
-                                                    <p>您確定要刪除收藏此篇文章嗎？</p>
-                                                </div>
-                                                <div class="message__btn">
-                                                    <a href="#!" class="btn btn--outlined">取消</a>
-                                                    <a href="#!" class="btn btn--contained">確定</a>
-                                                    <a href="#!" class="btn btn--contained">考慮一下</a>
-                                                </div>
-                                            </div>
-                                        </div>                                        
                                     </div>
                                     <p class="mt-20 mb-0">
-                                        不能加入 icon、無法使用叉叉關閉、不能使用多個按鈕。
+                                        不要截斷文字內容<br/>
+                                        文字內容不換行<br/>
+                                        不要在按鈕加 icon<br/>
+                                        不要加陰影
                                     </p>
                                 </div>
                                 <div class="tab__content__pane">

@@ -1,5 +1,26 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600&family=Roboto:wght@300;400;500;700&display=swap");
+h1,
+.h1, h2,
+.h2, h3,
+.h3, h4,
+.h4, h5,
+.h5, h6,
+.h6 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2480,27 +2501,6 @@ textarea {
   }
 }
 
-h1,
-.h1, h2,
-.h2, h3,
-.h3, h4,
-.h4, h5,
-.h5, h6,
-.h6 {
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-}
-
-@media (min-width: 768px) {
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: 500;
-  }
-}
-
 h1 .heading__icon, .h1 .heading__icon, h2 .heading__icon, .h2 .heading__icon, h3 .heading__icon, .h3 .heading__icon, h4 .heading__icon, .h4 .heading__icon, h5 .heading__icon, .h5 .heading__icon, h6 .heading__icon, .h6 .heading__icon {
   display: inline-block;
   margin-right: 10px;
@@ -2965,13 +2965,15 @@ footer {
 
 button,
 a {
-  background-color: transparent;
+  padding: 0;
   -ms-flex-item-align: baseline;
       align-self: baseline;
+  background-color: transparent;
   border-radius: 0;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  outline: 0;
 }
 
 button:focus,
@@ -2982,23 +2984,131 @@ a:focus {
 .btn {
   position: relative;
   display: inline-block;
-  min-width: 115px;
-  padding: 0.6875em 1em;
-  font-size: 1rem;
-  line-height: 1.25;
   vertical-align: middle;
-  word-break: keep-all;
-  border: 1px solid;
+  text-align: center;
   overflow: hidden;
+  z-index: 0;
+}
+
+.btn > span {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: ripples 1s linear infinite;
+          animation: ripples 1s linear infinite;
+  z-index: -1;
 }
 
 .btn.w-100 {
   width: 100%;
 }
 
+.btn.btn--text {
+  color: #003a9f;
+  border: 0;
+}
+
+.btn.btn--text:hover {
+  color: #9D0505;
+}
+
+.btn.btn--large {
+  font-size: 1.125rem;
+}
+
+.btn.btn--small {
+  font-size: 0.875rem;
+}
+
+.btn.btn--outlined, .btn.btn--contained {
+  min-width: 115px;
+  padding: 0.6875em 1em;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.25;
+  border: 1px solid;
+}
+
+@media (min-width: 768px) {
+  .btn.btn--outlined, .btn.btn--contained {
+    min-width: 135px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .btn.btn--outlined, .btn.btn--contained {
+    min-width: 140px;
+    padding: 0.875em 1em;
+  }
+}
+
+.btn.btn--outlined.btn--large, .btn.btn--contained.btn--large {
+  min-width: 180px;
+  padding: 0.8em 1rem 0.923em;
+  line-height: 1.5;
+}
+
+.btn.btn--outlined.btn--small, .btn.btn--contained.btn--small {
+  min-width: 72px;
+  padding: 0.7em 1em;
+  line-height: 1;
+}
+
 .btn.btn--outlined {
   color: #003a9f;
   border-color: #003a9f;
+}
+
+.btn.btn--outlined > span {
+  background-color: #FEEBEC;
+}
+
+.btn.btn--outlined:hover {
+  color: #9D0505;
+  border-color: #9D0505;
+}
+
+.btn.btn--contained {
+  color: #ffffff;
+  background-color: #003a9f;
+  border-color: #003a9f;
+}
+
+.btn.btn--contained > span {
+  background-color: #D60C18;
+}
+
+.btn.btn--contained:hover {
+  background-color: #9D0505;
+  border-color: #9D0505;
+}
+
+@-webkit-keyframes ripples {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 1;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+
+@keyframes ripples {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 1;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
 }
 
 .tab {

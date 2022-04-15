@@ -8,6 +8,23 @@ function footerType() {
   document.querySelector('footer .container').children.length < 2 ? bodyClass.add('footer--simple') : bodyClass.add('footer--complete');
 }
 
+function buttonRipple() {
+  const buttons = document.querySelectorAll(".btn");
+  buttons.forEach((button) => {
+    button.onclick = function(e){
+      let x = e.layerX;
+      let y = e.layerY;
+      let ripple = document.createElement("span");
+      ripple.style.left = `${x}px`;
+      ripple.style.top = `${y}px`;
+      this.appendChild(ripple);
+      setTimeout(function(){
+        ripple.remove();
+      }, 1000); // 1second = 1000ms
+    }
+  });
+}
+
 // Tab 切換：Start
 function changTab() {
   const tab = document.querySelectorAll('.tab');
@@ -83,6 +100,7 @@ function changTab() {
 
 function init() {
   footerType();
+  buttonRipple();
   changTab();
 }
 
