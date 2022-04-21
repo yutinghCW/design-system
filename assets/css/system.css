@@ -574,6 +574,10 @@ aside > ul a.active, aside > ul span.active {
   border-bottom: 2px solid #D60C18;
 }
 
+.table--scroll {
+  overflow: scroll;
+}
+
 table {
   width: 100%;
   border: 1px solid #EEEEEE;
@@ -581,7 +585,7 @@ table {
 }
 
 table th, table td {
-  padding: 12px 0;
+  padding: 12px;
 }
 
 table th:first-child, table td:first-child {
@@ -608,7 +612,57 @@ table tr + tr + tr td {
   border-top: 1px solid #EEEEEE;
 }
 
-table.table-btn th:nth-child(2) ~ th {
-  width: calc((100% - 135px) / 3);
+.bg-background img {
+  max-width: 100%;
+}
+
+.border-gray-100 {
+  border: 1px solid #EEEEEE;
+}
+
+.btn.btn--text.hover, .btn.btn--text.pressed {
+  color: #9D0505;
+}
+
+.btn.btn--outlined.pressed::before, .btn.btn--contained.pressed::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  padding-top: 70%;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.btn.btn--outlined.hover {
+  color: #9D0505;
+  border-color: #9D0505;
+}
+
+.btn.btn--outlined.pressed {
+  color: #9D0505;
+  border-color: #9D0505;
+}
+
+.btn.btn--outlined.pressed::before {
+  background-color: #FEEBEC;
+}
+
+.btn.btn--contained.hover {
+  background-color: #9D0505;
+  border-color: #9D0505;
+}
+
+.btn.btn--contained.pressed {
+  background-color: #9D0505;
+  border-color: #9D0505;
+}
+
+.btn.btn--contained.pressed::before {
+  background-color: #D60C18;
 }
 /*# sourceMappingURL=system.css.map */

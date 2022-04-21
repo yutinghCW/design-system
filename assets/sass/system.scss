@@ -162,12 +162,16 @@ aside {
   border-bottom: 2px solid $primary;
 }
 
+.table--scroll {
+  overflow: scroll;
+}
+
 table {
   width: 100%;
   border: 1px solid $gray-100;
   border-collapse: collapse;
   th, td {
-    padding: 12px 0;
+    padding: 12px;
     &:first-child {
       padding-left: 20px;
       padding-right: 20px;
@@ -189,10 +193,63 @@ table {
       }
     }
   }
-  &.table-btn {
-    th {
-      &:nth-child(2) ~ th {
-        width: calc((100% - 135px) / 3);
+}
+
+.bg-background {
+  img {
+    max-width: 100%;
+  }
+}
+
+.border-gray-100 {
+  border: 1px solid $gray-100;
+}
+
+.btn {
+  &.btn--text {
+    &.hover, &.pressed {
+      color: $primary-variant;
+    }
+  }
+  &.btn--outlined,
+  &.btn--contained {
+    &.pressed {
+      &::before {
+        @include beforeafter('', block);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 70%;
+        padding-top: 70%;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+    }
+  }
+  &.btn--outlined {
+    &.hover {
+      color: $primary-variant;
+      border-color: $primary-variant;
+    }
+    &.pressed {
+      color: $primary-variant;
+      border-color: $primary-variant;
+      &::before {
+        background-color: $red-100;
+      }
+    }
+  }
+  &.btn--contained {
+    &.hover {
+      background-color: $primary-variant;
+      border-color: $primary-variant;
+    }
+    &.pressed {
+      background-color: $primary-variant;
+      border-color: $primary-variant;
+      &::before {
+        background-color: $primary;
       }
     }
   }

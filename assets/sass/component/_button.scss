@@ -29,11 +29,19 @@ a {
     &.w-100 {
         width: 100%;
     }
+    &:disabled,
+    &[disabled]{
+        cursor: not-allowed;
+    }
     &.btn--text {
         color: $surface;
         border: 0;
         &:hover {
             color: $primary-variant;
+        }
+        &:disabled,
+        &[disabled]{
+            color: $gray-200;
         }
     }
     &.btn--large {
@@ -78,6 +86,11 @@ a {
             color: $primary-variant;
             border-color: $primary-variant;
         }
+        &:disabled,
+        &[disabled]{
+            color: $gray-200;
+            border-color: $gray-200;
+        }
     }
     &.btn--contained {
         color: $white;
@@ -90,6 +103,22 @@ a {
             background-color: $primary-variant;
             border-color: $primary-variant;
         }
+        &:disabled,
+        &[disabled]{
+            color: $white;
+            border-color: $gray-200;
+            background-color: $gray-200;
+        }
+    }
+}
+
+.btn--link {
+    color: $surface;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-thickness: from-font;
+    &:hover {
+        color: $primary-variant;
     }
 }
 

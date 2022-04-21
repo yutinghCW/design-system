@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>按鈕 Buttons</title>
+    <title>折疊選單 Accordion</title>
     <link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/base16/unikitty-light.min.css">
     <link rel="stylesheet" href="../assets/css/cw.css">
     <link rel="stylesheet" href="../assets/css/system.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
 </head>
 <body>
     <header>
@@ -57,83 +57,87 @@
                                     <p class="mt-10 mb-20">
                                         Buttons 有三種尺寸及三種樣式。
                                     </p>
-                                    <table class="table-btn my-20 text-center">
-                                        <tr>
-                                            <th width="120">Size</th>
-                                            <th>Large</th>
-                                            <th>Standard</th>
-                                            <th>Small</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Contained</td>
-                                            <td><button type="button" class="btn btn--large btn--contained">按鈕</button></td>
-                                            <td><button type="button" class="btn btn--contained">按鈕</button></td>
-                                            <td><button type="button" class="btn btn--small btn--contained">按鈕</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Outline</td>
-                                            <td><button type="button" class="btn btn--large btn--outlined">按鈕</button></td>
-                                            <td><button type="button" class="btn btn--outlined">按鈕</button></td>
-                                            <td><button type="button" class="btn btn--small btn--outlined">按鈕</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Text</td>
-                                            <td><button type="button" class="btn btn--large btn--text">按鈕</button></td>
-                                            <td><button type="button" class="btn btn--text">按鈕</button></td>
-                                            <td><button type="button" class="btn btn--small btn--text">按鈕</button></td>
-                                        </tr>
-                                    </table>
-                                    <table class="table-btn my-20 text-center">
-                                        <tr>
-                                            <th width="120">State</th>
-                                            <th>Default</th>
-                                            <th>Hover</th>
-                                            <th>Pressed</th>
-                                            <th>Disable</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Contained</td>
-                                            <td><button type="button" class="btn btn--contained">按鈕</button></td>
-                                            <td><button type="button" class="btn btn--contained">按鈕</button></td>
-                                            <td><button type="button" class="btn btn--contained">按鈕</button></td>
-                                            <td><button type="button" class="btn btn--contained">按鈕</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Outline</td>
-                                            <td><button type="button" class="btn btn--outlined">按鈕</button></td>
-                                            <td><button type="button" class="btn btn--outlined">按鈕</button></td>
-                                            <td><button type="button" class="btn btn--outlined">按鈕</button></td>
-                                            <td><button type="button" class="btn btn--outlined">按鈕</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Text</td>
-                                            <td><button type="button" class="btn btn--text">按鈕</button></td>
-                                            <td><button type="button" class="btn btn--text">按鈕</button></td>
-                                            <td><button type="button" class="btn btn--text">按鈕</button></td>
-                                            <td><button type="button" class="btn btn--text">按鈕</button></td>
-                                        </tr>
-                                    </table>
+                                    <div class="table--scroll">
+                                        <table class="table-btn my-20 text-center">
+                                            <tr>
+                                                <th width="120">Size</th>
+                                                <th width="225">Large</th>
+                                                <th width="225">Standard</th>
+                                                <th>Small</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Contained</td>
+                                                <td><button type="button" class="btn btn--large btn--contained">按鈕</button></td>
+                                                <td><button type="button" class="btn btn--contained">按鈕</button></td>
+                                                <td><button type="button" class="btn btn--small btn--contained">按鈕</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Outline</td>
+                                                <td><button type="button" class="btn btn--large btn--outlined">按鈕</button></td>
+                                                <td><button type="button" class="btn btn--outlined">按鈕</button></td>
+                                                <td><button type="button" class="btn btn--small btn--outlined">按鈕</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Text</td>
+                                                <td><button type="button" class="btn btn--large btn--text">按鈕</button></td>
+                                                <td><button type="button" class="btn btn--text">按鈕</button></td>
+                                                <td><button type="button" class="btn btn--small btn--text">按鈕</button></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="table--scroll">
+                                        <table class="table-btn my-20 text-center">
+                                            <tr>
+                                                <th width="120">State</th>
+                                                <th>Default</th>
+                                                <th>Hover</th>
+                                                <th>Pressed</th>
+                                                <th>Disable</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Contained</td>
+                                                <td><button type="button" class="btn btn--contained">按鈕</button></td>
+                                                <td><button type="button" class="btn btn--contained hover">按鈕</button></td>
+                                                <td><button type="button" class="btn btn--contained pressed">按鈕</button></td>
+                                                <td><button type="button" class="btn btn--contained" disabled>按鈕</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Outline</td>
+                                                <td><button type="button" class="btn btn--outlined">按鈕</button></td>
+                                                <td><button type="button" class="btn btn--outlined hover">按鈕</button></td>
+                                                <td><button type="button" class="btn btn--outlined pressed">按鈕</button></td>
+                                                <td><button type="button" class="btn btn--outlined" disabled>按鈕</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Text</td>
+                                                <td><button type="button" class="btn btn--text">按鈕</button></td>
+                                                <td><button type="button" class="btn btn--text hover">按鈕</button></td>
+                                                <td><button type="button" class="btn btn--text pressed">按鈕</button></td>
+                                                <td><button type="button" class="btn btn--text" disabled>按鈕</button></td>
+                                            </tr>
+                                        </table>
+                                    </div>
                                     <h2 class="dont mt-40 mb-20">Don't</h2>
                                     <div class="bg-background">
-                                        <img class="mx-auto" src="../assets/system/button-anatomy-desktop.svg" alt="">
+                                        <img class="d-md-block d-none mx-auto" src="../assets/system/button-anatomy-desktop.svg" alt="">
+                                        <img class="d-md-none mx-auto" src="../assets/system/button-anatomy-mobile.svg" alt="">
                                     </div>
                                     <h2 class="dont mt-40 mb-20">Don't</h2>
-                                    <div class="p-40 bg-background">
+                                    <div class="bg-background">
+                                        <img class="d-md-block d-none mx-auto" src="../assets/system/button-dont-desktop.svg" alt="">
+                                        <img class="d-md-none mx-auto" src="../assets/system/button-dont-mobile.svg" alt="">
                                     </div>
                                     <p class="mt-20 mb-0">
-                                        不要截斷文字內容<br/>
-                                        文字內容不換行<br/>
-                                        不要在按鈕加 icon<br/>
-                                        不要加陰影
+                                        <span class="d-inline-block mr-20">不要截斷文字內容</span>
+                                        <span class="d-inline-block mr-20">文字內容不換行</span>
+                                        <span class="d-inline-block mr-20">不要在按鈕加 icon</span>
+                                        <span class="d-inline-block mr-20">不要加陰影</span>
                                     </p>
                                 </div>
                                 <div class="tab__content__pane">
-<pre><code class="javascript">
-    var a = 1;
-    function example () {
-        console.log("Hello World");
-    }
-
+<pre><code class="language-xml p-20 bg-background">&lt;button type="button" class="btn btn--contained"&gt;按鈕&lt;/button&gt;
+&lt;button type="button" class="btn btn--outlined"&gt;按鈕&lt;/button&gt;
+&lt;button type="button" class="btn btn--text"&gt;按鈕&lt;/button&gt;
 </code></pre>
 <script type="text/javascript">
     hljs.initHighlightingOnLoad();

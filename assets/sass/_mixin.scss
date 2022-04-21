@@ -34,20 +34,41 @@
 @mixin typo-weight {
   font-weight: 600;
   @include media-breakpoint-up(sm) {
-      font-weight: 500;
+    font-weight: 500;
   }
 }
 
 @mixin body-weight {
   font-weight: 400;
   @include media-breakpoint-up(sm) {
-      font-weight: 300;
+    font-weight: 300;
   }
 }
 
 %typo-weight {
   font-weight: 600;
   @include media-breakpoint-up(sm) {
-      font-weight: 500;
+    font-weight: 500;
+  }
+}
+
+%selection {
+  display: block;
+  position: relative;
+  font-size: 0;
+  cursor: pointer;
+  z-index: 1;
+  user-select: none;
+  span {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1.25;
+    transition: all 0.3s;
+  }
+  .form__group {
+    display: block;
+    max-width: none;
+    margin-top: 10px;
+    padding-left: calc(20px + 0.5rem);
   }
 }

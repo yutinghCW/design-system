@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>警示框 Alert</title>
+    <title>單選按鈕 Radio Buttons</title>
     <link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/base16/unikitty-light.min.css">
     <link rel="stylesheet" href="../assets/css/cw.css">
     <link rel="stylesheet" href="../assets/css/system.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
 </head>
 <body>
     <header>
@@ -26,9 +26,9 @@
                 <aside class="col-md-auto"></aside>
                 <article class="col-md pl-md-0">
                     <section>
-                        <h1 class="mt-0 mb-10">警示框 Alert</h1>
+                        <h1 class="mt-0 mb-10">單選按鈕 Radio Buttons</h1>
                         <p>
-                            有警告使用者的意思，需要對當前問題執行動作，按鈕動作通常為「確定」及「返回」或「取消」。
+                            選取工具（Radio Buttons）提供使用者選擇單個選項。
                         </p>
                     </section>
                     <section>
@@ -48,70 +48,55 @@
                                 <div class="tab__content__pane active">
                                     <h2 class="mt-0 mb-10">Usage</h2>
                                     <p class="mt-10 mb-20">
-                                        有警告使用者的意思，需要對當前問題執行動作，按鈕動作通常為「確定」及「返回」或「取消」。
+                                        當使用者瀏覽網頁，而《天下》有預選項目時，已選取項目的視覺需要比未選取項目更突出。
                                     </p>
-                                    <img src="../assets/system/alert-usage-desktop.png" width="100%" alt="">
+                                    <img src="../assets/system/pagination-usage-desktop.png" width="100%" alt="">
                                     <hr class="my-40">
-                                    <h2 class="mt-0 mb-10">Ｗhen to use</h2>
-                                    <p class="mt-10 mb-20">
-                                        Notification 的干擾小，傳達簡單的消息。
-                                    </p>
-                                    <table class="my-20">
-                                        <tr>
-                                            <th width="145">元件</th>
-                                            <th>動作</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Alert</td>
-                                            <td>有警告意味，使用者需選擇動作才會消失</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Dialog</td>
-                                            <td>使用者需做選擇動作或按關閉 icon 才會消失</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Notification</td>
-                                            <td>使用者不需做任何動作，會自動消失</td>
-                                        </tr>
-                                    </table>
-                                    <a href="../digital/notification.html" class="btn btn--outlined">
-                                        Notification
-                                    </a>
-                                    <a href="../digital/dialog.html" class="btn btn--outlined">
-                                        Dialog
-                                    </a>
+                                    <h2 class="mt-0 mb-10">Interactive Demo</h2>
+                                    <div class="py-40 border-gray-100">
+                                        <ul class="pagination py-40">
+                                            <li class="pagination__item active">1</li>
+                                            <li class="pagination__item">
+                                                <a href="#!">2</a>
+                                            </li>
+                                            <li class="pagination__item">
+                                                <a href="#!">3</a>
+                                            </li>
+                                            <li class="pagination__item">
+                                                <a href="#!">4</a>
+                                            </li>
+                                            <li class="pagination__item">...</li>
+                                            <li class="pagination__item">
+                                                <a href="#!">6</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                     <hr class="my-40">
                                     <h2 class="mt-0 mb-10">Anatomy</h2>
                                     <p class="mt-10 mb-20">
-                                        Alert 包含了一段說明文字及兩個按鈕。
+                                        Pagination 包含了
                                     </p>
-                                    <img src="../assets/system/alert-anatomy-desktop.svg" width="100%" alt="">
-                                    <h2 class="dont mt-40 mb-20">Don't</h2>
-                                    <div class="p-40 bg-background">
-                                        <div class="message message--alert">
-                                            <div class="message__container">
-                                                <div class="message__txt">
-                                                    <p>您確定要刪除收藏此篇文章嗎？</p>
-                                                </div>
-                                                <div class="message__btn">
-                                                    <a href="#!" class="btn btn--outlined">取消</a>
-                                                    <a href="#!" class="btn btn--contained">確定</a>
-                                                    <a href="#!" class="btn btn--contained">考慮一下</a>
-                                                </div>
-                                            </div>
-                                        </div>                                        
+                                    <div class="bg-background">
+                                        <img src="../assets/system/pagination-anatomy.svg" class="mx-auto" alt="">
                                     </div>
-                                    <p class="mt-20 mb-0">
-                                        不能加入 icon、無法使用叉叉關閉、不能使用多個按鈕。
-                                    </p>
                                 </div>
                                 <div class="tab__content__pane">
-<pre><code class="javascript">
-    var a = 1;
-    function example () {
-        console.log("Hello World");
-    }
-
+<pre><code class="language-xml p-20 bg-background">&lt;ul class="pagination"&gt;
+  &lt;li class="pagination__item active"&gt;1&lt;/li&gt;
+  &lt;li class="pagination__item"&gt;
+    &lt;a href="#!"&gt;2&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="pagination__item"&gt;
+    &lt;a href="#!"&gt;3&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="pagination__item"&gt;
+    &lt;a href="#!"&gt;4&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="pagination__item"&gt;...&lt;/li&gt;
+  &lt;li class="pagination__item"&gt;
+    &lt;a href="#!"&gt;6&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 </code></pre>
 <script type="text/javascript">
     hljs.initHighlightingOnLoad();
