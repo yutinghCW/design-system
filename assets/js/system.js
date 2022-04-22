@@ -66,8 +66,8 @@ function insertAside() {
                     </li>
                     <li><span>Fields and Labels</span>
                         <ul>
-                            <li><a href="../digital/search-fields.html">Search Fields</a></li>
-                            <li><a href="../digital/text-fields.html">Text Fields</a></li>
+                            <li><a href="../digital/search-field.html">Search Fields</a></li>
+                            <li><a href="../digital/text-field.html">Text Fields</a></li>
                         </ul>
                     </li>
                 </ul>

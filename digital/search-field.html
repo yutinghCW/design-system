@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>折疊選單 Accordion</title>
+    <title>Search Fields 搜尋</title>
     <link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/base16/unikitty-light.min.css">
@@ -26,16 +26,9 @@
                 <aside class="col-md-auto"></aside>
                 <article class="col-md pl-md-0">
                     <section>
-                        <h1 class="mt-0 mb-10">按鈕 Buttons</h1>
+                        <h1 class="mt-0 mb-10">Search Fields 搜尋</h1>
                         <p>
-                            按鈕（Button）讓使用者只需要點擊一下，行動呼籲（Call to Action，以下簡稱 cta）及做出選擇。
-                            <br/><br/>
-                            原則<br/>
-                            按鈕應以「識別功能」、「易於找到」和「狀態清楚」為原則
-                            <br/><br/>
-                            識別功能：要清楚地讓使用者知道，點擊按鈕時會發生什麼動作<br/>
-                            易於找到：要在畫面之中，能讓使用者容易找到按鈕，當然也包括其他動作的按鈕<br/>
-                            狀態清楚：一個完整的按鈕，應該要清楚地具備它所有的互動狀態
+                            搜尋（Search）讓使用者可以在此輸入文字快速尋找內容。
                         </p>
                     </section>
                     <section>
@@ -53,6 +46,12 @@
                             <i class="icon icon-right tab__nav--next"></i>
                             <div class="tab__content py-20">
                                 <div class="tab__content__pane active">
+                                    <h2 class="mt-0 mb-10">Usage</h2>
+                                    <p class="mt-10 mb-20">
+                                        當使用者將鼠標懸停或點擊元素時，將顯示純文字提示使用者元素功能。
+                                    </p>
+                                    <img src="../assets/system/search-usage-desktop.png" width="100%" alt="">
+                                    <hr class="my-40">
                                     <h2 class="mt-0 mb-10">Types</h2>
                                     <p class="mt-10 mb-20">
                                         Buttons 有三種尺寸及三種樣式。
@@ -63,82 +62,79 @@
                                                 <th width="120">Size</th>
                                                 <th width="225">Large</th>
                                                 <th width="225">Standard</th>
-                                                <th>Small</th>
                                             </tr>
                                             <tr>
                                                 <td>Contained</td>
-                                                <td><button type="button" class="btn btn--large btn--contained">按鈕</button></td>
-                                                <td><button type="button" class="btn btn--contained">按鈕</button></td>
-                                                <td><button type="button" class="btn btn--small btn--contained">按鈕</button></td>
+                                                <td>
+                                                    <div class="search__group search__group--contained search__group--large">
+                                                        <input type="text" class="search__input" placeholder="請輸入關鍵字">
+                                                        <button type="submit" class="search__submit"><i class="icon icon-search"></i></button>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="search__group search__group--contained">
+                                                        <input type="text" class="search__input" placeholder="請輸入關鍵字">
+                                                        <button type="submit" class="search__submit"><i class="icon icon-search"></i></button>
+                                                    </div>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>Outlined</td>
-                                                <td><button type="button" class="btn btn--large btn--outlined">按鈕</button></td>
-                                                <td><button type="button" class="btn btn--outlined">按鈕</button></td>
-                                                <td><button type="button" class="btn btn--small btn--outlined">按鈕</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Text</td>
-                                                <td><button type="button" class="btn btn--large btn--text">按鈕</button></td>
-                                                <td><button type="button" class="btn btn--text">按鈕</button></td>
-                                                <td><button type="button" class="btn btn--small btn--text">按鈕</button></td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="table--scroll">
-                                        <table class="table-btn my-20 text-center">
-                                            <tr>
-                                                <th width="120">State</th>
-                                                <th>Default</th>
-                                                <th>Hover</th>
-                                                <th>Pressed</th>
-                                                <th>Disable</th>
-                                            </tr>
-                                            <tr>
-                                                <td>Contained</td>
-                                                <td><button type="button" class="btn btn--contained">按鈕</button></td>
-                                                <td><button type="button" class="btn btn--contained hover">按鈕</button></td>
-                                                <td><button type="button" class="btn btn--contained pressed">按鈕</button></td>
-                                                <td><button type="button" class="btn btn--contained" disabled>按鈕</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Outlined</td>
-                                                <td><button type="button" class="btn btn--outlined">按鈕</button></td>
-                                                <td><button type="button" class="btn btn--outlined hover">按鈕</button></td>
-                                                <td><button type="button" class="btn btn--outlined pressed">按鈕</button></td>
-                                                <td><button type="button" class="btn btn--outlined" disabled>按鈕</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Text</td>
-                                                <td><button type="button" class="btn btn--text">按鈕</button></td>
-                                                <td><button type="button" class="btn btn--text hover">按鈕</button></td>
-                                                <td><button type="button" class="btn btn--text pressed">按鈕</button></td>
-                                                <td><button type="button" class="btn btn--text" disabled>按鈕</button></td>
+                                                <td>
+                                                    <div class="search__group search__group--outlined search__group--large">
+                                                        <input type="text" class="search__input" placeholder="請輸入關鍵字" name="key">
+                                                        <button type="submit" class="search__submit" gtm-name="function" eventaction="submit_search"><i class="icon icon-search"></i></button>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="search__group search__group--outlined">
+                                                        <input type="text" class="search__input" placeholder="請輸入關鍵字" name="key">
+                                                        <button type="submit" class="search__submit" gtm-name="function" eventaction="submit_search"><i class="icon icon-search"></i></button>
+                                                    </div>
+                                                </td>
                                             </tr>
                                         </table>
                                     </div>
-                                    <h2 class="dont mt-40 mb-20">Don't</h2>
-                                    <div class="bg-background">
-                                        <img class="d-md-block d-none mx-auto" src="../assets/system/button-anatomy-desktop.svg" alt="">
-                                        <img class="d-md-none mx-auto" src="../assets/system/button-anatomy-mobile.svg" alt="">
-                                    </div>
-                                    <h2 class="dont mt-40 mb-20">Don't</h2>
-                                    <div class="bg-background">
-                                        <img class="d-md-block d-none mx-auto" src="../assets/system/button-dont-desktop.svg" alt="">
-                                        <img class="d-md-none mx-auto" src="../assets/system/button-dont-mobile.svg" alt="">
-                                    </div>
-                                    <p class="mt-20 mb-0">
-                                        <span class="d-inline-block mr-20">不要截斷文字內容</span>
-                                        <span class="d-inline-block mr-20">文字內容不換行</span>
-                                        <span class="d-inline-block mr-20">不要在按鈕加 icon</span>
-                                        <span class="d-inline-block mr-20">不要加陰影</span>
+                                    <hr class="my-40">
+                                    <h2 class="mt-0 mb-10">Anatomy</h2>
+                                    <p class="mt-10 mb-20">
+                                        Search Fields 包含了 placeholder、搜尋 icon 及分隔內容與搜尋 icon 間的分隔線。
                                     </p>
+                                    <div class="bg-background">
+                                        <img class="d-md-block d-none mx-auto" src="../assets/system/search-anatomy-desktop.svg" alt="">
+                                        <img class="d-md-none mx-auto" src="../assets/system/search-anatomy-mobile.svg" alt="">
+                                    </div>
                                 </div>
                                 <div class="tab__content__pane">
-<pre><code class="language-xml p-20 bg-background">&lt;button type="button" class="btn btn--contained"&gt;按鈕&lt;/button&gt;
-&lt;button type="button" class="btn btn--outlined"&gt;按鈕&lt;/button&gt;
-&lt;button type="button" class="btn btn--text"&gt;按鈕&lt;/button&gt;
-</code></pre>
+                                    <h2 class="mt-0 mb-10">Class</h2>
+                                    <div class="table--scroll">
+                                        <table class="table-btn text-center">
+                                            <tr>
+                                                <th width="120">Size</th>
+                                                <th width="225">Large</th>
+                                                <th width="225">Standard</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Contained</td>
+                                                <td><code class="h5 p-5 bg-background">search__group--contained search__group--large</code></td>
+                                                <td><code class="h5 p-5 bg-background">search__group--contained</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Outlined</td>
+                                                <td><code class="h5 p-5 bg-background">search__group--outlined search__group--large</code></td>
+                                                <td><code class="h5 p-5 bg-background">search__group--outlined</code></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <hr class="my-40">
+                                    <h2 class="mt-0 mb-10">Html</h2>
+<pre>
+<code class="language-xml p-20 bg-background">&lt;div class="search__group {{Classname}}"&gt;
+  &lt;input type="text" class="search__input" placeholder="請輸入關鍵字"&gt;
+  &lt;button type="submit" class="search__submit"&gt;&lt;i class="icon icon-search"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+</code>
+</pre>
 <script type="text/javascript">
     hljs.initHighlightingOnLoad();
 </script>
