@@ -620,6 +620,14 @@ table tr + tr + tr td {
   border: 1px solid #EEEEEE;
 }
 
+.btn__group {
+  font-size: 0;
+}
+
+.btn__group .btn + .btn {
+  margin-left: 15px;
+}
+
 .btn.btn--text.hover, .btn.btn--text.pressed {
   color: #9D0505;
 }

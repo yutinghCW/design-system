@@ -205,6 +205,13 @@ table {
   border: 1px solid $gray-100;
 }
 
+.btn__group {
+  font-size: 0;
+  .btn + .btn {
+    margin-left: 15px;
+  }
+}
+
 .btn {
   &.btn--text {
     &.hover, &.pressed {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>警示框 Alert</title>
+    <title>Cookies</title>
     <link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/base16/unikitty-light.min.css">
@@ -26,9 +26,9 @@
                 <aside class="col-md-auto"></aside>
                 <article class="col-md pl-md-0">
                     <section>
-                        <h1 class="mt-0 mb-10">警示框 Alert</h1>
+                        <h1 class="mt-0 mb-10">Cookies</h1>
                         <p>
-                            有警告使用者的意思，需要對當前問題執行動作，按鈕動作通常為「確定」及「返回」或「取消」。
+                            文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字
                         </p>
                     </section>
                     <section>
@@ -48,67 +48,38 @@
                                 <div class="tab__content__pane active">
                                     <h2 class="mt-0 mb-10">Usage</h2>
                                     <p class="mt-10 mb-20">
-                                        有警告使用者的意思，需要對當前問題執行動作，按鈕動作通常為「確定」及「返回」或「取消」。
+                                        出現在頁面左下角，點擊或滾動頁面，Cookies 才會消失。
                                     </p>
-                                    <img src="../assets/system/alert-usage-desktop.png" width="100%" alt="">
-                                    <hr class="my-40">
-                                    <h2 class="mt-0 mb-10">Ｗhen to use</h2>
-                                    <p class="mt-10 mb-20">
-                                        Notification 的干擾小，傳達簡單的消息。
-                                    </p>
-                                    <table class="my-20">
-                                        <tr>
-                                            <th width="145">元件</th>
-                                            <th>動作</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Alert</td>
-                                            <td>有警告意味，使用者需選擇動作才會消失</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Dialog</td>
-                                            <td>使用者需做選擇動作或按關閉 icon 才會消失</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Notification</td>
-                                            <td>使用者不需做任何動作，會自動消失</td>
-                                        </tr>
-                                    </table>
-                                    <div class="btn__group">
-                                        <a href="../digital/notification.html" class="btn btn--outlined">
-                                            Notification
-                                        </a>
-                                        <a href="../digital/dialog.html" class="btn btn--outlined">
-                                            Dialog
-                                        </a>
+                                    <div class="border-gray-100">
+                                        <img src="../assets/system/cookie-usage-desktop.png" width="100%" alt="">
                                     </div>
                                     <hr class="my-40">
                                     <h2 class="mt-0 mb-10">Anatomy</h2>
                                     <p class="mt-10 mb-20">
-                                        Alert 包含了一段說明文字及兩個按鈕。
+                                        Cookies 包含了一段說明文字、文字連結及一個按鈕。
                                     </p>
-                                    <div class="py-40 bg-background">
-                                        <img class="d-md-block d-none mx-auto" src="../assets/system/alert-anatomy-desktop.svg" width="100%" alt="">
-                                        <img class="d-md-none mx-auto" src="../assets/system/alert-anatomy-mobile.svg" width="100%" alt="">
+                                    <div class="bg-background">
+                                        <img class="d-md-block d-none mx-auto" src="../assets/system/cookie-anatomy-desktop.svg" width="100%" alt="">
+                                        <img class="d-md-none mx-auto" src="../assets/system/cookie-anatomy-mobile.svg" width="100%" alt="">
                                     </div>
                                     <h2 class="dont mt-40 mb-20">Don't</h2>
-                                    <div class="py-40 bg-background">
-                                        <img class="d-md-block d-none mx-auto" src="../assets/system/alert-dont-desktop.svg" width="100%" alt="">
-                                        <img class="d-md-none mx-auto" src="../assets/system/alert-dont-mobile.svg" width="100%" alt="">
+                                    <div class="bg-background">
+                                        <img class="mx-auto" src="../assets/system/cookie-dont.svg" alt="">
                                     </div>
                                     <p class="mt-20 mb-0">
-                                        不能加入 icon、無法使用叉叉關閉、不能使用多個按鈕。
+                                        不能加入 icon。無法使用叉叉關閉。不能使用多個按鈕。
                                     </p>
                                 </div>
                                 <div class="tab__content__pane">
-<pre><code class="language-xml p-20 bg-background">&lt;div class="message message--alert"&gt;
+<pre><code class="language-xml p-20 bg-background">&lt;div class="message message--cookie"&gt;
   &lt;div class="message__container"&gt;
     &lt;div class="message__txt"&gt;
-      &lt;p&gt;您確定要刪除收藏此篇文章嗎？&lt;/p&gt;
+      為提供您更多優質的內容，本網站使用 cookies 分析技術。
+      若繼續閱覽本網站內容，即表示您同意我們使用 cookies，關於更多 cookies 以及相關政策更新資訊
+      請閱讀我們的&lt;a href="#!" class="btn--link" target="_blank"&gt;隱私權政策&lt;/a&gt;。
     &lt;/div&gt;
     &lt;div class="message__btn"&gt;
-      &lt;button type="button" class="btn btn--outlined"&gt;取消&lt;/button&gt;
-      &lt;button type="button" class="btn btn--contained"&gt;確定&lt;/button&gt;
+      &lt;button class="btn btn--contained btn--small"&gt;我知道了&lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;

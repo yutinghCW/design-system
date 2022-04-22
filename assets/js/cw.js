@@ -25,6 +25,12 @@ function buttonRipple() {
   });
 }
 
+function createBlackTouch() {
+  const div = document.createElement('div');
+  div.classList.add('black');
+  document.body.appendChild(div);
+}
+
 // Tab 切換：Start
 function changTab() {
   const tab = document.querySelectorAll('.tab');
@@ -102,6 +108,7 @@ function init() {
   footerType();
   buttonRipple();
   changTab();
+  createBlackTouch();
 }
 
 init();

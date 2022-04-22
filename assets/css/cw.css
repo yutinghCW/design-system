@@ -3210,6 +3210,112 @@ footer {
   background-color: #EEEEEE;
 }
 
+.message .message__txt {
+  padding-bottom: 30px;
+}
+
+.message .message__txt > * {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.message .message__txt > *:first-child {
+  margin-top: 0;
+}
+
+.message .message__txt > *:last-child {
+  margin-bottom: 0;
+}
+
+.message .message__btn {
+  font-size: 0;
+  text-align: right;
+}
+
+.message .message__btn .btn + .btn {
+  margin-left: 15px;
+}
+
+.message.message--alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 560px;
+  width: calc(100% - 30px);
+  padding: 30px;
+  background-color: #ffffff;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 12;
+}
+
+.message.message--cookie {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 30px 30px 20px;
+  font-size: 0.875rem;
+  background-color: #EEEEEE;
+  border: 1px solid #D3D5D7;
+  -webkit-transition: bottom 1s;
+  transition: bottom 1s;
+  z-index: 4;
+}
+
+@media (min-width: 1024px) {
+  .message.message--cookie {
+    width: 265px;
+  }
+}
+
+.message.message--cookie.hide {
+  bottom: -100%;
+}
+
+.message.message--cookie .message__txt {
+  padding-bottom: 20px;
+}
+
+.message.message--cookie .message__btn {
+  text-align: center;
+}
+
+.opacity,
+.black,
+.touch__black {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
+.opacity.opened,
+.black.opened,
+.touch__black.opened {
+  width: 100%;
+  height: 100%;
+}
+
+.opacity {
+  z-index: 4;
+}
+
+.black,
+.touch__black {
+  background-color: rgba(23, 23, 23, 0.4);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  z-index: 9;
+}
+
+.black.opened,
+.touch__black.opened {
+  opacity: 1;
+}
+
 .accordion__group .accordion__item::before, .accordion__group .accordion__item::after {
   content: "";
   display: table;
@@ -3384,14 +3490,6 @@ a:focus {
   color: #D3D5D7;
 }
 
-.btn.btn--large {
-  font-size: 1.125rem;
-}
-
-.btn.btn--small {
-  font-size: 0.875rem;
-}
-
 .btn.btn--outlined, .btn.btn--contained {
   min-width: 115px;
   padding: 0.6875em 1em;
@@ -3464,6 +3562,14 @@ a:focus {
   color: #ffffff;
   border-color: #D3D5D7;
   background-color: #D3D5D7;
+}
+
+.btn.btn--large {
+  font-size: 1.125rem;
+}
+
+.btn.btn--small {
+  font-size: 0.875rem;
 }
 
 .btn--link {
@@ -3791,6 +3897,7 @@ input[type*='number']::-webkit-outer-spin-button {
 .search__group > * {
   display: inline-block;
   vertical-align: middle;
+  color: #171717;
   line-height: 1.3;
   background-color: transparent;
   border: 0;
