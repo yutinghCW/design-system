@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>頁籤 Tabs</title>
+    <title>工具提示框 Tooltips</title>
     <link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/base16/unikitty-light.min.css">
@@ -26,9 +26,9 @@
                 <aside class="col-md-auto"></aside>
                 <article class="col-md pl-md-0">
                     <section>
-                        <h1 class="mt-0 mb-10">頁籤 Tabs</h1>
+                        <h1 class="mt-0 mb-10">工具提示框 Tooltips</h1>
                         <p>
-                            分頁標籤（Tabs）將內容整理，分佈在不同的畫面、資料庫及其他的互動上。
+                            工具提示框（Tooltips）可以附加到任何元件上。當使用者將鼠標懸停或點擊元件時，將顯示純文字提示使用者元見的功能。
                         </p>
                     </section>
                     <section>
@@ -48,89 +48,78 @@
                                 <div class="tab__content__pane active">
                                     <h2 class="mt-0 mb-10">Usage</h2>
                                     <p class="mt-10 mb-20">
-                                        每個標籤的內容應該要與其他的分頁標籤有明顯的不同。例如：分頁標籤可以呈現不同類型、主題的內容，避免使用分頁標籤來比較標籤中的內容。
+                                        鼠標懸停或點擊元件時，工具提示框將會短暫出現在元件的四周。只要使用者長按或懸停在元件上，就會持續顯示工具提示框。
                                     </p>
-                                    <img src="../assets/system/tab-usage-desktop.png" width="100%" alt="">
+                                    <img src="../assets/system/tooltip-usage-desktop.png" width="100%" alt="">
                                     <hr class="my-40">
                                     <h2 class="mt-0 mb-10">Types</h2>
                                     <p class="mt-10 mb-20">
-                                        Tabs 包含兩種樣式：Fixed Tabs 固定標籤與Scrollable tabs 可滾動標籤。
+                                        Tooltips 有四個方向。
                                     </p>
                                     <div class="row">
-                                        <div class="col-md-2 mt-20 col-type">
-                                            <h3 class="mt-0 mb-10">Fixed tabs</h3>
-                                            <p class="mt-10 mb-20">
-                                                固定標籤：在螢幕上顯示所有的標籤，每個標籤的寬度固定。每個標籤的寬度由螢幕寬度除以標籤數。不會滾動以顯示更多標籤。
-                                            </p>
-                                            <div class="bg-background px-30 py-40 mt-auto">
-                                                <img src="../assets/system/tab-type-fixed.svg" alt="">
+                                        <div class="col-md-1 col-2 mt-20">
+                                            <h3 class="mt-0 mb-10">Bottom</h3>
+                                            <div class="bg-background">
+                                                <img src="../assets/system/tooltip-type-bottom.svg" alt="">
                                             </div>
                                         </div>
-                                        <div class="col-md-2 mt-20 col-type">
-                                            <h3 class="mt-0 mb-10">Scrollable tabs</h3>
-                                            <p class="mt-10 mb-20">
-                                                滾動標籤：標籤的顯示沒有固定寬度。它們是可滾動的，因此某些標籤在滾動之前將保持在屏幕外。
-                                            </p>
-                                            <div class="bg-background px-30 py-40 mt-auto">
-                                                <img src="../assets/system/tab-type-scrollable.svg" alt="">
+                                        <div class="col-md-1 col-2 mt-20">
+                                            <h3 class="mt-0 mb-10">Top</h3>
+                                            <div class="bg-background">
+                                                <img src="../assets/system/tooltip-type-top.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1 col-2 mt-20">
+                                            <h3 class="mt-0 mb-10">Right</h3>
+                                            <div class="bg-background">
+                                                <img src="../assets/system/tooltip-type-right.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1 col-2 mt-20">
+                                            <h3 class="mt-0 mb-10">Left</h3>
+                                            <div class="bg-background">
+                                                <img src="../assets/system/tooltip-type-left.svg" alt="">
                                             </div>
                                         </div>
                                     </div>
                                     <hr class="my-40">
                                     <h2 class="mt-0 mb-10">Anatomy</h2>
                                     <p class="mt-10 mb-20">
-                                        Tabs 包含兩種狀態：所在位置及其他位置，所在位置的狀態需變色即加上底線，以利區分。
+                                        Tooltips 包含了一段簡短的文字。
                                     </p>
                                     <div class="bg-background">
-                                        <img class="d-md-block d-none mx-auto" src="../assets/system/tab-anatomy-desktop.svg" alt="">
-                                        <img class="d-md-none mx-auto" src="../assets/system/tab-anatomy-mobile.svg" alt="">
+                                        <img class="mx-auto" src="../assets/system/tooltip-anatomy.svg" alt="">
                                     </div>
                                     <h2 class="dont mt-40 mb-20">Don't</h2>
-                                    <div class="bg-background py-md-40 p-20">
-                                        <img class="mx-auto" src="../assets/system/tab-dont.svg" alt="">
+                                    <div class="bg-background">
+                                        <img class="mx-auto" src="../assets/system/tooltip-dont.svg" alt="">
                                     </div>
                                     <p class="mt-20 mb-0">
-                                        標籤不可包含 icon。<br/>
-                                        文案應該清楚簡潔地描述它們所代表的內容。
+                                        項目文字不可變成兩行或截斷文字。
                                     </p>
                                 </div>
                                 <div class="tab__content__pane">
+                                    <h2 class="mt-0 mb-10">Class</h2>
+                                    <div class="table--scroll">
+                                        <table class="table-btn text-center">
+                                            <tr>
+                                                <th>Bottom</th>
+                                                <th>Top</th>
+                                                <th>Right</th>
+                                                <th>Left</th>
+                                            </tr>
+                                            <tr>
+                                                <td><code class="h5 p-5 bg-background">tooltips--bottom</code></td>
+                                                <td><code class="h5 p-5 bg-background">tooltips--top</code></td>
+                                                <td><code class="h5 p-5 bg-background">tooltips--right</code></td>
+                                                <td><code class="h5 p-5 bg-background">tooltips--left</code></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <hr class="my-40">
                                     <h2 class="mt-0 mb-10">Html</h2>
-<pre><code class="language-xml p-20 bg-background">&lt;div class="tab"&gt;
-  &lt;div class="tab__nav"&gt;
-    &lt;ul&gt;
-      &lt;li class="active"&gt;
-        &lt;span&gt;二聯發票&lt;/span&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;span&gt;公司發票&lt;/span&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;span&gt;捐贈發票&lt;/span&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-  &lt;i class="icon icon-right tab__nav--next"&gt;&lt;/i&gt;
-  &lt;div class="tab__content"&gt;
-    &lt;div class="tab__content__pane active"&gt;
-      &lt;h3 class="my-0"&gt;第一項標題假字&lt;/h3&gt;
-      &lt;p class="mb-0"&gt;
-          假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字。
-      &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="tab__content__pane"&gt;
-      &lt;h3 class="my-0"&gt;第二項標題假字&lt;/h3&gt;
-      &lt;p class="mb-0"&gt;
-          假字假字假字假字假字假字假字假字，假字假字假字假字假字假字假字假字假字假字假字假字假字。
-      &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="tab__content__pane"&gt;
-      &lt;h3 class="my-0"&gt;第三項標題假字&lt;/h3&gt;
-      &lt;p class="mb-0"&gt;
-          假字假字假字假字，假字假字假字假字假字假字假字，假字假字假字假字假字假字假字假字假字。假字假字假字。
-      &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+<pre><code class="language-xml p-20 bg-background">&lt;div class="tooltips {{Classname}}" data-tooltips="分享至Facebook"&gt;
+  ⋯⋯
 &lt;/div&gt;
 </code></pre>
 <script type="text/javascript">

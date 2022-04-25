@@ -3,6 +3,85 @@ const view = {
   height: Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0),
 };
 
+let slideUp = (target, duration = 500) => {
+  target.style.transitionProperty = 'height, margin, padding';
+  target.style.transitionDuration = duration + 'ms';
+  target.style.boxSizing = 'border-box';
+  target.style.height = target.offsetHeight + 'px';
+  target.offsetHeight;
+  target.style.overflow = 'hidden';
+  target.style.height = 0;
+  target.style.paddingTop = 0;
+  target.style.paddingBottom = 0;
+  target.style.marginTop = 0;
+  target.style.marginBottom = 0;
+  window.setTimeout( () => {
+    target.style.display = 'none';
+    target.style.removeProperty('height');
+    target.style.removeProperty('padding-top');
+    target.style.removeProperty('padding-bottom');
+    target.style.removeProperty('margin-top');
+    target.style.removeProperty('margin-bottom');
+    target.style.removeProperty('overflow');
+    target.style.removeProperty('transition-duration');
+    target.style.removeProperty('transition-property');
+  }, duration);
+}
+
+let slideDown = (target, duration = 500) => {
+  target.style.removeProperty('display');
+  let display = window.getComputedStyle(target).display;
+  if (display === 'none') {
+    display = 'block';
+  }
+  target.style.display = display;
+  let height = target.offsetHeight;
+  target.style.overflow = 'hidden';
+  target.style.height = 0;
+  target.style.paddingTop = 0;
+  target.style.paddingBottom = 0;
+  target.style.marginTop = 0;
+  target.style.marginBottom = 0;
+  target.offsetHeight;
+  target.style.boxSizing = 'border-box';
+  target.style.transitionProperty = "height, margin, padding";
+  target.style.transitionDuration = duration + 'ms';
+  target.style.height = height + 'px';
+  target.style.removeProperty('padding-top');
+  target.style.removeProperty('padding-bottom');
+  target.style.removeProperty('margin-top');
+  target.style.removeProperty('margin-bottom');
+  window.setTimeout( () => {
+    target.style.removeProperty('height');
+    target.style.removeProperty('overflow');
+    target.style.removeProperty('transition-duration');
+    target.style.removeProperty('transition-property');
+  }, duration);
+}
+
+let slideToggle = (target, duration = 500) => {
+  if (window.getComputedStyle(target).display === 'none') {
+    return slideDown(target, duration);
+  } else {
+    return slideUp(target, duration);
+  }
+}
+
+let getSiblings = function (e) {
+  let siblings = []; 
+  if(!e.parentNode) {
+      return siblings;
+  }
+  let sibling  = e.parentNode.firstChild;
+  while (sibling) {
+      if (sibling.nodeType === 1 && sibling !== e) {
+          siblings.push(sibling);
+      }
+      sibling = sibling.nextSibling;
+  }
+  return siblings;
+};
+
 function footerType() {
   let bodyClass = document.querySelector('body').classList;
   document.querySelector('footer .container').children.length < 2 ? bodyClass.add('footer--simple') : bodyClass.add('footer--complete');
@@ -30,6 +109,49 @@ function createBlackTouch() {
   div.classList.add('black');
   document.body.appendChild(div);
 }
+
+// Drawer：Start
+function toggleDrawer() {
+  const hamburger = document.querySelector('.hamburger');
+  const drawer = document.querySelector('.menubar--left');
+  const black = document.querySelector('.black');
+  hamburger?.addEventListener('click', () => {
+    drawer.classList.toggle('opened');
+    black.classList.toggle('opened');
+  })
+  black.addEventListener('click', () => {
+    drawer.classList.toggle('opened');
+    black.classList.toggle('opened');
+  })
+}
+function toggleDrawerLi() {
+  const drawerLi = document.querySelectorAll('.menubar--left > ul> li > div > .icon');
+  drawerLi.forEach(item => {
+    item.addEventListener('click', (e) => {
+      let subChannel = e.target.parentElement.nextElementSibling;
+      let siblingUl = getSiblings(e.target.parentElement.parentElement.parentElement);
+      let siblingli = getSiblings(e.target.parentElement.parentElement);
+      siblingUl.forEach(ul => {
+        for (let i = 0; i < ul.children.length; i++) {
+          const li = ul.children[i];
+          if ( li.children.length > 1 ) {
+            li.children[0].children[1].classList.remove('active');
+            slideUp(li.children[1], 200);
+          }
+        }
+      });
+      siblingli.forEach(element => {
+        if ( element.children.length > 1 ) {
+          element.children[0].children[1].classList.remove('active');
+          slideUp(element.children[1], 200);
+        }
+      });
+      e.target.classList.toggle('active');
+      slideToggle(subChannel, 200);
+    })
+  });
+}
+// Drawer：End
 
 // Tab 切換：Start
 function changTab() {
@@ -84,7 +206,7 @@ function changTab() {
         tab_nav.li = e.target.parentNode.parentNode.children;
         tab_nav.current = e.target.parentNode;
       }
-      for (let i = 0; i < tab_nav.li.length; i++) {
+      for (let i = 0; i < tab_nav.li?.length; i++) {
         const item = tab_nav.li[i];
         item.classList.remove('active');
         for (let j = 0; j < item.parentNode.parentNode.parentNode.children[2].children.length; j++) {
@@ -105,10 +227,12 @@ function changTab() {
 // Tab 切換：End
 
 function init() {
+  createBlackTouch();
   footerType();
   buttonRipple();
+  toggleDrawer();
+  toggleDrawerLi();
   changTab();
-  createBlackTouch();
 }
 
 init();

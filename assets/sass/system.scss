@@ -195,6 +195,11 @@ table {
   }
 }
 
+.col-type {
+  display: flex;
+  flex-direction: column;
+}
+
 .bg-background {
   img {
     max-width: 100%;

@@ -3210,8 +3210,13 @@ footer {
   background-color: #EEEEEE;
 }
 
-.message .message__txt {
-  padding-bottom: 30px;
+.message.message--alert, .message.message--dialog, .message.message--notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 12;
 }
 
 .message .message__txt > * {
@@ -3236,17 +3241,39 @@ footer {
   margin-left: 15px;
 }
 
-.message.message--alert {
-  position: fixed;
-  top: 50%;
-  left: 50%;
+.message.message--alert, .message.message--dialog {
   max-width: 560px;
   width: calc(100% - 30px);
   padding: 30px;
   background-color: #ffffff;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 12;
+}
+
+.message.message--notification {
+  padding: 30px;
+  color: #ffffff;
+  background-color: #48545D;
+}
+
+.message.message--alert .message__txt {
+  padding-bottom: 30px;
+}
+
+.message.message--dialog .icon-cancel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  font-size: 1.375rem;
+  cursor: pointer;
+}
+
+.message.message--dialog .message__txt {
+  padding-bottom: 20px;
+}
+
+.message.message--dialog .message__txt h2 {
+  padding-right: 50px;
+  margin-bottom: 20px;
 }
 
 .message.message--cookie {
@@ -3456,6 +3483,7 @@ a:focus {
   text-align: center;
   overflow: hidden;
   z-index: 0;
+  cursor: pointer;
 }
 
 .btn > span {
@@ -4097,6 +4125,386 @@ input[type*='number']::-webkit-outer-spin-button {
 
 .tab .tab__content .tab__content__pane.active {
   display: block;
+}
+
+nav a {
+  display: block;
+}
+
+nav.menubar--left {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  font-size: 1rem;
+  border: solid #D3D5D7;
+  border-width: 0 1px;
+  background-color: #ffffff;
+  overflow: scroll;
+  -webkit-transition: left 0.3s;
+  transition: left 0.3s;
+  z-index: 12;
+}
+
+@media screen and (min-width: 1024px) {
+  nav.menubar--left {
+    overflow: hidden scroll;
+  }
+}
+
+nav.menubar--left ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav.menubar--left ul li {
+  line-height: 1;
+}
+
+nav.menubar--left ul li.subtitle {
+  padding: 8px 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background-color: #fafafa;
+}
+
+@media (min-width: 768px) {
+  nav.menubar--left ul li.subtitle {
+    font-weight: 500;
+  }
+}
+
+nav.menubar--left ul li .li__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav.menubar--left ul li .li__group a {
+  color: #171717;
+}
+
+nav.menubar--left ul li .li__group:hover a,
+nav.menubar--left ul li .li__group:hover i, nav.menubar--left ul li .li__group.active a,
+nav.menubar--left ul li .li__group.active i {
+  color: #D60C18;
+}
+
+nav.menubar--left ul li .li__group a.sns-facebook:hover > i,
+nav.menubar--left ul li .li__group a.sns-facebook:hover > span {
+  color: #1877f2;
+}
+
+nav.menubar--left ul li .li__group a.sns-instagram:hover > i,
+nav.menubar--left ul li .li__group a.sns-instagram:hover > span {
+  color: #dd2a7b;
+}
+
+nav.menubar--left ul li .li__group a.sns-facebook:hover > i,
+nav.menubar--left ul li .li__group a.sns-facebook:hover > span {
+  color: #1877f2;
+}
+
+nav.menubar--left ul li .li__group a.sns-line:hover > i,
+nav.menubar--left ul li .li__group a.sns-line:hover > span {
+  color: #00c200;
+}
+
+nav.menubar--left ul li.now {
+  background-color: #D60C18;
+}
+
+nav.menubar--left ul li.now > .li__group > a,
+nav.menubar--left ul li.now > .li__group > i {
+  color: #ffffff;
+}
+
+nav.menubar--left > ul + ul {
+  border-top: 1px solid #D3D5D7;
+}
+
+nav.menubar--left > ul > li .li__group {
+  position: relative;
+}
+
+nav.menubar--left > ul > li .li__group > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 17px 80px 17px 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav.menubar--left > ul > li .li__group > a.sns i + span {
+  margin-left: 5px;
+}
+
+nav.menubar--left > ul > li .li__group > i.more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 17px 25px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+nav.menubar--left > ul > li .li__group > i.more.active {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+nav.menubar--left > ul > li > ul {
+  display: none;
+  background-color: #EEEEEE;
+}
+
+nav.menubar--left > ul > li > ul > li .li__group > a {
+  padding: 17px 50px;
+}
+
+nav.menubar--left.opened {
+  left: 0;
+}
+
+nav.menubar--belt {
+  background-color: #ffffff;
+}
+
+nav.menubar--belt ul {
+  content: '';
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav.menubar--belt ul li {
+  position: relative;
+  text-align: center;
+}
+
+nav.menubar--belt ul li a {
+  display: block;
+  padding: 18px 10px;
+  line-height: 1.15;
+  word-break: keep-all;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+}
+
+nav.menubar--belt ul li i {
+  -webkit-transition: color 0.15s;
+  transition: color 0.15s;
+}
+
+nav.menubar--belt > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav.menubar--belt > ul > li {
+  min-width: 120px;
+}
+
+nav.menubar--belt > ul > li > a {
+  color: #171717;
+}
+
+nav.menubar--belt > ul > li:hover > a,
+nav.menubar--belt > ul > li:hover > i.icon, nav.menubar--belt > ul > li.active > a,
+nav.menubar--belt > ul > li.active > i.icon {
+  color: #D60C18;
+}
+
+nav.menubar--belt > ul > li:hover > ul, nav.menubar--belt > ul > li.active > ul {
+  display: block;
+}
+
+nav.menubar--belt > ul > li > ul {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  min-width: 120%;
+  background-color: #ffffff;
+  z-index: 9;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+nav.menubar--belt > ul > li > ul.belt--third {
+  left: 0;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+nav.menubar--belt > ul > li > ul.belt--third li a {
+  text-align: left;
+}
+
+nav.menubar--belt > ul > li > ul li:not(.third):hover > a, nav.menubar--belt > ul > li > ul li:not(.third).active > a {
+  color: #ffffff;
+  background-color: #D60C18;
+  border-color: #D60C18;
+}
+
+nav.menubar--belt > ul > li > ul li.third:hover > a,
+nav.menubar--belt > ul > li > ul li.third:hover > i, nav.menubar--belt > ul > li > ul li.third.active > a,
+nav.menubar--belt > ul > li > ul li.third.active > i {
+  color: #D60C18;
+}
+
+nav.menubar--belt > ul > li > ul li.third > a {
+  padding-right: 35px;
+}
+
+nav.menubar--belt > ul > li > ul li.third > i.icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  padding: 0 15px;
+  font-size: 0.875rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+nav.menubar--belt > ul > li > ul li:first-child > a {
+  padding-top: 17px;
+  border-width: 1px 1px 0;
+}
+
+nav.menubar--belt > ul > li > ul li:last-child > a {
+  padding-bottom: 17px;
+  border-width: 0 1px 1px;
+}
+
+nav.menubar--belt > ul > li > ul > li:hover > ul, nav.menubar--belt > ul > li > ul > li.active > ul {
+  display: block;
+}
+
+nav.menubar--belt > ul > li > ul > li a {
+  color: #171717;
+  border: solid #D3D5D7;
+}
+
+nav.menubar--belt > ul > li > ul > li > a {
+  border-width: 0 1px;
+}
+
+nav.menubar--belt > ul > li > ul > li > ul {
+  position: absolute;
+  top: 0;
+  left: calc(100% - 1px);
+  width: 100%;
+  background-color: #ffffff;
+}
+
+nav.menubar--belt > ul > li > ul > li > ul > li > a {
+  border-width: 0 1px;
+}
+
+.tooltips {
+  position: relative;
+}
+
+.tooltips::before {
+  content: attr(data-tooltips);
+  position: absolute;
+  padding: 5px 10px;
+  max-width: 200px;
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  background: #48545D;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  z-index: 2;
+}
+
+.tooltips:hover:before, .tooltips.active:before {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltips--top:before {
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 5px;
+  -webkit-transform: translateX(-50%) translateY(2px);
+          transform: translateX(-50%) translateY(2px);
+}
+
+@media (min-width: 1024px) {
+  .tooltips--top:hover:before, .tooltips--top.active:before {
+    -webkit-transform: translateX(-50%) translateY(0);
+            transform: translateX(-50%) translateY(0);
+  }
+}
+
+.tooltips--bottom:before {
+  top: 100%;
+  left: 50%;
+  margin-top: 5px;
+  -webkit-transform: translateX(-50%) translateY(-2px);
+          transform: translateX(-50%) translateY(-2px);
+}
+
+@media (min-width: 1024px) {
+  .tooltips--bottom:hover:before, .tooltips--bottom.active:before {
+    -webkit-transform: translateX(-50%) translateY(0);
+            transform: translateX(-50%) translateY(0);
+  }
+}
+
+.tooltips--left:before {
+  top: 50%;
+  right: 100%;
+  margin-right: 5px;
+  -webkit-transform: translateX(2px) translateY(-50%);
+          transform: translateX(2px) translateY(-50%);
+}
+
+@media screen and (min-width: 768px) {
+  .tooltips--left:hover:before, .tooltips--left.active:before {
+    -webkit-transform: translateX(0) translateY(-50%);
+            transform: translateX(0) translateY(-50%);
+  }
+}
+
+.tooltips--right:before {
+  top: 50%;
+  left: 100%;
+  margin-left: 5px;
+  -webkit-transform: translateX(-2px) translateY(-50%);
+          transform: translateX(-2px) translateY(-50%);
+}
+
+@media screen and (min-width: 768px) {
+  .tooltips--right:hover:before, .tooltips--right.active:before {
+    -webkit-transform: translateX(0) translateY(-50%);
+            transform: translateX(0) translateY(-50%);
+  }
 }
 
 hr {

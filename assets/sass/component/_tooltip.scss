@@ -1,0 +1,91 @@
+$cubic: cubic-bezier(.64, .09, .08, 1);
+.tooltips {
+    position: relative;
+    &::before {
+        content: attr(data-tooltips);
+        position: absolute;
+        padding: 5px 10px;
+        max-width: 200px;
+        color: $white;
+        font-size: $h5;
+        line-height: 1.45;
+        background: $gray-500;
+        white-space: nowrap;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.2s $cubic, transform 0.2s $cubic;
+        z-index: 2;
+    }
+    &:hover,
+    &.active {
+        &:before {
+            display: block;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    &--top {
+        &:before {
+            bottom: 100%;
+            left: 50%;
+            margin-bottom: 5px;
+            transform: translateX(-50%) translateY(2px);
+        }
+        &:hover,
+        &.active {
+            &:before {
+                @include media-breakpoint-up(md) {
+                    transform: translateX(-50%) translateY(0);
+                }
+            }
+        }
+    }
+    &--bottom {
+        &:before {
+            top: 100%;
+            left: 50%;
+            margin-top: 5px;
+            transform: translateX(-50%) translateY(-2px);
+        }
+        &:hover,
+        &.active {
+            &:before {
+                @include media-breakpoint-up(md) {
+                    transform: translateX(-50%) translateY(0);
+                }
+            }
+        }
+    }
+    &--left {
+        &:before {
+            top: 50%;
+            right: 100%;
+            margin-right: 5px;
+            transform: translateX(2px) translateY(-50%);
+        }
+        &:hover,
+        &.active {
+            &:before {
+                @media screen and (min-width: 768px) {
+                    transform: translateX(0) translateY(-50%);
+                }
+            }
+        }
+    }
+    &--right {
+        &:before {
+            top: 50%;
+            left: 100%;
+            margin-left: 5px;
+            transform: translateX(-2px) translateY(-50%);
+        }
+        &:hover,
+        &.active {
+            &:before {
+                @media screen and (min-width: 768px) {
+                    transform: translateX(0) translateY(-50%);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Fields 文字框</title>
+    <link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/base16/unikitty-light.min.css">
+    <link rel="stylesheet" href="../assets/css/cw.css">
+    <link rel="stylesheet" href="../assets/css/system.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a class="logo" href="https://www.cw.com.tw/">
+                <img src="../assets/images/common/logo.svg" alt="天下雜誌紅底白字版 LOGO">
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <aside class="col-md-auto"></aside>
+                <article class="col-md pl-md-0">
+                    <section>
+                        <h1 class="mt-0 mb-10">Text Fields 文字框</h1>
+                        <p>
+                            文字框（Text Fields）讓使用者可以在此輸入和編輯文字。
+                        </p>
+                    </section>
+                    <section>
+                        <div class="tab">
+                            <div class="tab__nav">
+                                <ul>
+                                    <li class="active">
+                                        <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M374.24,266.74l12.57-12.57h.01v-.02l44.34-44.33h.01l44.34-44.35h0l24.36-24.36c7.82-7.82,12.12-18.21,12.12-29.27s-4.31-21.45-12.12-29.27L429.44,12.13C421.62,4.31,411.22,0,400.17,0s-21.45,4.31-29.27,12.12l-125.64,125.64L159.98,52.48c-14.28-14.28-32.17-24.44-51.74-29.39L18.68,.46c-5.12-1.29-10.55,.2-14.28,3.94C.66,8.13-.84,13.56,.46,18.68L23.1,108.24c4.95,19.57,15.11,37.47,29.39,51.74l85.28,85.28L12.12,370.9C4.31,378.72,0,389.11,0,400.17s4.31,21.45,12.12,29.27l70.44,70.44c7.82,7.82,18.21,12.13,29.27,12.13s21.45-4.31,29.27-12.12l68.68-68.68s.02-.02,.03-.03,.02-.02,.03-.03l56.9-56.9,115.5,115.5c14.82,14.82,34.28,22.23,53.75,22.23s38.93-7.41,53.75-22.23c29.64-29.64,29.64-77.86,0-107.49l-115.5-115.5ZM52.18,100.88L35.71,35.71l65.18,16.48c14.33,3.62,27.43,11.06,37.88,21.51l11.83,11.83-65.07,65.07-11.83-11.83c-10.45-10.45-17.89-23.55-21.51-37.88Zm54.55,70.92l65.07-65.07,52.24,52.24-65.07,65.07-52.24-52.24Zm5.1,310.2c-3.04,0-5.9-1.19-8.06-3.34l-70.44-70.44c-2.15-2.15-3.34-5.01-3.34-8.06s1.18-5.91,3.34-8.06L392.11,33.34c2.15-2.15,5.02-3.34,8.06-3.34s5.9,1.19,8.06,3.34l70.44,70.44c2.15,2.15,3.34,5.01,3.34,8.06s-1.19,5.91-3.34,8.06l-13.75,13.75-45.76-45.76c-5.86-5.86-15.35-5.86-21.21,0-5.86,5.86-5.86,15.35,0,21.21l45.76,45.76-23.14,23.14-23.58-23.58c-5.86-5.86-15.36-5.86-21.21,0-5.86,5.86-5.86,15.35,0,21.21l23.58,23.58-23.14,23.14-45.76-45.76c-5.86-5.86-15.36-5.86-21.21,0-5.86,5.86-5.86,15.35,0,21.21l45.76,45.76-23.14,23.14-23.58-23.58c-5.86-5.86-15.36-5.86-21.21,0s-5.86,15.36,0,21.21l23.58,23.58-22.74,22.74-45.76-45.76c-5.86-5.86-15.35-5.86-21.21,0-5.86,5.86-5.86,15.36,0,21.21l45.76,45.76-23.14,23.14-23.58-23.58c-5.86-5.86-15.35-5.86-21.21,0s-5.86,15.36,0,21.21l23.58,23.58-23.14,23.14-45.76-45.76c-5.86-5.86-15.35-5.86-21.21,0s-5.86,15.36,0,21.21l45.76,45.76-23.14,23.14-23.58-23.58c-5.86-5.86-15.35-5.86-21.21,0s-5.86,15.36,0,21.21l23.58,23.58-13.75,13.75c-2.15,2.15-5.01,3.34-8.06,3.34h0Zm186.62-139.47s.04-.04,.06-.06,.04-.04,.06-.06l43.87-43.87,.02-.02,.02-.02,10.54-10.54,63.56,63.56-65.07,65.07-63.56-63.56,10.5-10.5Zm170.07,126c-17.94,17.94-47.13,17.94-65.07,0l-30.73-30.73,65.07-65.07,30.73,30.73c17.94,17.94,17.94,47.13,0,65.07Z"/></svg><span>Design</span>
+                                    </li>
+                                    <li>
+                                        <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M467,0H45C20.19,0,0,20.19,0,45V467c0,24.81,20.19,45,45,45H467c24.81,0,45-20.19,45-45V45c0-24.81-20.19-45-45-45Zm15,467c0,8.27-6.73,15-15,15H45c-8.27,0-15-6.73-15-15V150H482V467Zm0-347H30V45c0-8.27,6.73-15,15-15H467c8.27,0,15,6.73,15,15V120Z"/><path d="M127.21,316l49.39-49.39c5.86-5.86,5.86-15.36,0-21.21-5.86-5.86-15.35-5.86-21.21,0l-60,60c-5.86,5.86-5.86,15.36,0,21.21l60,60c5.86,5.86,15.35,5.86,21.21,0s5.86-15.36,0-21.21l-49.39-49.39Z"/><path d="M416.61,305.39l-60-60c-5.86-5.86-15.36-5.86-21.21,0s-5.86,15.36,0,21.21l49.39,49.39-49.39,49.39c-5.86,5.86-5.86,15.36,0,21.21s15.36,5.86,21.21,0l60-60c5.86-5.86,5.86-15.36,0-21.21Z"/><path d="M290.74,211.77c-7.86-2.62-16.35,1.63-18.97,9.49l-60,180c-2.62,7.86,1.63,16.35,9.49,18.97,7.86,2.62,16.35-1.63,18.97-9.49l60-180c2.62-7.86-1.63-16.36-9.49-18.97Z"/><path d="M106,60h-30c-8.28,0-15,6.72-15,15s6.72,15,15,15h30c8.28,0,15-6.72,15-15s-6.72-15-15-15Z"/><path d="M196,60h-30c-8.28,0-15,6.72-15,15s6.72,15,15,15h30c8.28,0,15-6.72,15-15s-6.72-15-15-15Z"/><path d="M286,60h-30c-8.28,0-15,6.72-15,15s6.72,15,15,15h30c8.28,0,15-6.72,15-15s-6.72-15-15-15Z"/></svg><span>Html</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <i class="icon icon-right tab__nav--next"></i>
+                            <div class="tab__content py-20">
+                                <div class="tab__content__pane active">
+                                    <h2 class="mt-0 mb-10">Usage</h2>
+                                    <p class="mt-10 mb-20">
+                                        文字框常出現在表單當中。
+                                    </p>
+                                    <img src="../assets/system/textfield-usage-desktop.png" width="100%" alt="">
+                                    <hr class="my-40">
+                                    <h2 class="mt-0 mb-10">Interactive Demo</h2>
+                                    <p class="mt-10 mb-20">
+                                        可以在此查看文字框的樣式及各種組合。
+                                    </p>
+                                    <div class="bg-background">
+                                    </div>
+                                    <hr class="my-40">
+                                    <h2 class="mt-0 mb-10">Type</h2>
+                                    <p class="mt-10 mb-20">
+                                        文字框有兩種樣式，提供同樣的功能，可依據畫面需求選擇樣式。
+                                    </p>
+                                    <div class="py-20">
+                                        <h3 class="mt-0 mb-10">Contained</h3>
+                                        <p class="mt-10 mb-20">
+                                            當頁面上有許多其他內容及元件時，使用 Contained textfield 能在畫面上突出。
+                                        </p>
+                                        <div class="table--scroll">
+                                            <table class="table-textfield">
+                                                <tr>
+                                                    <td width="33.3333%">
+                                                        <h4 class="mt-0 mb-20">Default</h4>
+                                                    </td>
+                                                    <td width="33.3333%">
+                                                        <h4 class="mt-0 mb-20">Hover</h4>
+                                                    </td>
+                                                    <td width="33.3333%">
+                                                        <h4 class="mt-0 mb-20">Focused</h4>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h4 class="mt-0 mb-20">Activated</h4>
+                                                    </td>
+                                                    <td>
+                                                        <h4 class="mt-0 mb-20">Error</h4>
+                                                    </td>
+                                                    <td>
+                                                        <h4 class="mt-0 mb-20">Disable</h4>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="table--scroll mt-20">
+                                            <table class="table-textfield">
+                                                <tr>
+                                                    <td width="33.3333%">
+                                                        <h4 class="mt-0 mb-20">Default</h4>
+                                                    </td>
+                                                    <td width="33.3333%">
+                                                        <h4 class="mt-0 mb-20">Hover</h4>
+                                                    </td>
+                                                    <td width="33.3333%">
+                                                        <h4 class="mt-0 mb-20">Focused</h4>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h4 class="mt-0 mb-20">Activated</h4>
+                                                    </td>
+                                                    <td>
+                                                        <h4 class="mt-0 mb-20">Error</h4>
+                                                    </td>
+                                                    <td>
+                                                        <h4 class="mt-0 mb-20">Disable</h4>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="py-20">
+                                        <h3 class="mt-0 mb-10">Outline</h3>
+                                        <p class="mt-10 mb-20">
+                                            當頁面上要同時顯示許多輸入框，如表單，使用 Outlined textfield 降低強調性、簡化排版。
+                                        </p>
+                                        <div class="table--scroll">
+                                            <table class="table-textfield">
+                                                <tr>
+                                                    <td width="33.3333%">
+                                                        <h4 class="mt-0 mb-20">Default</h4>
+                                                    </td>
+                                                    <td width="33.3333%">
+                                                        <h4 class="mt-0 mb-20">Hover</h4>
+                                                    </td>
+                                                    <td width="33.3333%">
+                                                        <h4 class="mt-0 mb-20">Focused</h4>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h4 class="mt-0 mb-20">Activated</h4>
+                                                    </td>
+                                                    <td>
+                                                        <h4 class="mt-0 mb-20">Error</h4>
+                                                    </td>
+                                                    <td>
+                                                        <h4 class="mt-0 mb-20">Disable</h4>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="table--scroll mt-20">
+                                            <table class="table-textfield">
+                                                <tr>
+                                                    <td width="33.3333%">
+                                                        <h4 class="mt-0 mb-20">Default</h4>
+                                                    </td>
+                                                    <td width="33.3333%">
+                                                        <h4 class="mt-0 mb-20">Hover</h4>
+                                                    </td>
+                                                    <td width="33.3333%">
+                                                        <h4 class="mt-0 mb-20">Focused</h4>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h4 class="mt-0 mb-20">Activated</h4>
+                                                    </td>
+                                                    <td>
+                                                        <h4 class="mt-0 mb-20">Error</h4>
+                                                    </td>
+                                                    <td>
+                                                        <h4 class="mt-0 mb-20">Disable</h4>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <hr class="my-40">
+                                    <h2 class="mt-0 mb-10">Anatomy</h2>
+                                    <p class="mt-10 mb-20">
+                                        Text Field 包含了 placeholder 和內容文字，也可加入輔助 icon 及文字。
+                                    </p>
+                                    <div class="bg-background">
+                                        <img class="d-md-block d-none mx-auto" src="../assets/system/textfield-filled-anatomy-desktop.svg" alt="">
+                                        <img class="d-md-none mx-auto" src="../assets/system/textfield-filled-anatomy-mobile.svg" alt="">
+                                    </div>
+                                    <div class="bg-background mt-20">
+                                        <img class="d-md-block d-none mx-auto" src="../assets/system/textfield-outlined-anatomy-desktop.svg" alt="">
+                                        <img class="d-md-none mx-auto" src="../assets/system/textfield-outlined-anatomy-mobile.svg" alt="">
+                                    </div>
+                                    <hr class="my-40">
+                                    <h2 class="dont mt-40 mb-20">Don't</h2>
+                                    <div class="bg-background">
+                                        <img class="d-md-block d-none mx-auto" src="../assets/system/textfield-dont-desktop.svg" alt="">
+                                        <img class="d-md-none mx-auto" src="../assets/system/textfield-dont-mobile.svg" alt="">
+                                    </div>
+                                    <p class="mt-20 mb-0">
+                                        不要使用過長的 placeholder。<br/>
+                                        不要在 placeholder 及 input 前面加上 icon。<br/>
+                                        不要將兩種樣式混用。
+                                    </p>
+                                </div>
+                                <div class="tab__content__pane">
+<pre>
+<code class="language-xml p-20 bg-background"></code>
+</pre>
+<script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+</script>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container py-10">
+            <span class="h6">Copyright © 2022 天下雜誌</span>
+        </div>
+    </footer>
+    <script src="../assets/js/system.js"></script>
+    <script src="../assets/js/cw.js"></script>
+</body>
+</html>

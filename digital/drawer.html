@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>頁籤 Tabs</title>
+    <title>導覽 Drawer</title>
     <link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/base16/unikitty-light.min.css">
@@ -26,9 +26,11 @@
                 <aside class="col-md-auto"></aside>
                 <article class="col-md pl-md-0">
                     <section>
-                        <h1 class="mt-0 mb-10">頁籤 Tabs</h1>
+                        <h1 class="mt-0 mb-10">導覽 Drawer</h1>
                         <p>
-                            分頁標籤（Tabs）將內容整理，分佈在不同的畫面、資料庫及其他的互動上。
+                            導覽（Drawers）提供使用者路徑，到達想要前往的頁面。<br/>
+                            導覽依據對使用者的重要性進行排序，例如：優先排序使用者最常前往的頁面、相關頁面分組。<br/>
+                            導覽也提供功能的欄位，例如搜尋。
                         </p>
                     </section>
                     <section>
@@ -48,90 +50,217 @@
                                 <div class="tab__content__pane active">
                                     <h2 class="mt-0 mb-10">Usage</h2>
                                     <p class="mt-10 mb-20">
-                                        每個標籤的內容應該要與其他的分頁標籤有明顯的不同。例如：分頁標籤可以呈現不同類型、主題的內容，避免使用分頁標籤來比較標籤中的內容。
+                                        通過漢堡選單圖示（☰），使用者可以自由控制是否出現。
                                     </p>
-                                    <img src="../assets/system/tab-usage-desktop.png" width="100%" alt="">
-                                    <hr class="my-40">
-                                    <h2 class="mt-0 mb-10">Types</h2>
-                                    <p class="mt-10 mb-20">
-                                        Tabs 包含兩種樣式：Fixed Tabs 固定標籤與Scrollable tabs 可滾動標籤。
-                                    </p>
-                                    <div class="row">
-                                        <div class="col-md-2 mt-20 col-type">
-                                            <h3 class="mt-0 mb-10">Fixed tabs</h3>
-                                            <p class="mt-10 mb-20">
-                                                固定標籤：在螢幕上顯示所有的標籤，每個標籤的寬度固定。每個標籤的寬度由螢幕寬度除以標籤數。不會滾動以顯示更多標籤。
-                                            </p>
-                                            <div class="bg-background px-30 py-40 mt-auto">
-                                                <img src="../assets/system/tab-type-fixed.svg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2 mt-20 col-type">
-                                            <h3 class="mt-0 mb-10">Scrollable tabs</h3>
-                                            <p class="mt-10 mb-20">
-                                                滾動標籤：標籤的顯示沒有固定寬度。它們是可滾動的，因此某些標籤在滾動之前將保持在屏幕外。
-                                            </p>
-                                            <div class="bg-background px-30 py-40 mt-auto">
-                                                <img src="../assets/system/tab-type-scrollable.svg" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <img src="../assets/system/drawer-usage-desktop.png" width="100%" alt="">
                                     <hr class="my-40">
                                     <h2 class="mt-0 mb-10">Anatomy</h2>
                                     <p class="mt-10 mb-20">
-                                        Tabs 包含兩種狀態：所在位置及其他位置，所在位置的狀態需變色即加上底線，以利區分。
+                                        Dialog 須包含了標題、說明文字、關閉icon和兩個動作按鈕。<br/>
+                                        也可以視情況加入文字連結、輸入框。
                                     </p>
                                     <div class="bg-background">
-                                        <img class="d-md-block d-none mx-auto" src="../assets/system/tab-anatomy-desktop.svg" alt="">
-                                        <img class="d-md-none mx-auto" src="../assets/system/tab-anatomy-mobile.svg" alt="">
+                                        <img class="d-md-block d-none mx-auto" src="../assets/system/drawer-anatomy-desktop.svg" alt="">
+                                        <img class="d-md-none mx-auto" src="../assets/system/drawer-anatomy-desktop.svg" alt="">
                                     </div>
                                     <h2 class="dont mt-40 mb-20">Don't</h2>
-                                    <div class="bg-background py-md-40 p-20">
-                                        <img class="mx-auto" src="../assets/system/tab-dont.svg" alt="">
+                                    <div class="bg-background">
+                                        <img class="d-md-block d-none mx-auto" src="../assets/system/drawer-dont-desktop.svg" alt="">
+                                        <img class="d-md-none mx-auto" src="../assets/system/drawer-dont-mobile.svg" alt="">
                                     </div>
                                     <p class="mt-20 mb-0">
-                                        標籤不可包含 icon。<br/>
-                                        文案應該清楚簡潔地描述它們所代表的內容。
+                                        分隔線用來分隔群組，不要用來分隔單個項目。<br/>
+                                        文字過長請用刪節號（⋯）截斷，不要超過一行或將字縮小。<br/>
+                                        項目不能加icon。
                                     </p>
                                 </div>
                                 <div class="tab__content__pane">
-                                    <h2 class="mt-0 mb-10">Html</h2>
-<pre><code class="language-xml p-20 bg-background">&lt;div class="tab"&gt;
-  &lt;div class="tab__nav"&gt;
-    &lt;ul&gt;
-      &lt;li class="active"&gt;
-        &lt;span&gt;二聯發票&lt;/span&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;span&gt;公司發票&lt;/span&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;span&gt;捐贈發票&lt;/span&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-  &lt;i class="icon icon-right tab__nav--next"&gt;&lt;/i&gt;
-  &lt;div class="tab__content"&gt;
-    &lt;div class="tab__content__pane active"&gt;
-      &lt;h3 class="my-0"&gt;第一項標題假字&lt;/h3&gt;
-      &lt;p class="mb-0"&gt;
-          假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字。
-      &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="tab__content__pane"&gt;
-      &lt;h3 class="my-0"&gt;第二項標題假字&lt;/h3&gt;
-      &lt;p class="mb-0"&gt;
-          假字假字假字假字假字假字假字假字，假字假字假字假字假字假字假字假字假字假字假字假字假字。
-      &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="tab__content__pane"&gt;
-      &lt;h3 class="my-0"&gt;第三項標題假字&lt;/h3&gt;
-      &lt;p class="mb-0"&gt;
-          假字假字假字假字，假字假字假字假字假字假字假字，假字假字假字假字假字假字假字假字假字。假字假字假字。
-      &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+<pre><code class="language-xml p-20 bg-background">&lt;nav class="menubar menubar--left"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;div class="li__group"&gt;
+        &lt;a href="#!"&gt;回首頁&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;div class="li__group"&gt;
+        &lt;a href="#!"&gt;English&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul&gt;
+    &lt;li class="subtitle"&gt;多媒體&lt;/li&gt;
+    &lt;li&gt;
+      &lt;div class="li__group"&gt;
+        &lt;a href="#!"&gt;
+          數位專輯
+        &lt;/a&gt;
+        &lt;i class="icon icon-down more"&gt;&lt;/i&gt;
+      &lt;/div&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;div class="li__group"&gt;
+            &lt;a href="#!"&gt;
+              互動專題
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class="li__group"&gt;
+            &lt;a href="#!"&gt;
+              深度專題
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class="li__group"&gt;
+            &lt;a href="#!"&gt;
+              品牌專區
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;div class="li__group"&gt;
+        &lt;a href="#!"&gt;
+          數據圖表
+        &lt;/a&gt;
+        &lt;i class="icon icon-down more"&gt;&lt;/i&gt;
+      &lt;/div&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;div class="li__group"&gt;
+            &lt;a href="#!"&gt;
+              資料新聞
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class="li__group"&gt;
+            &lt;a href="#!"&gt;
+              數字說話
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class="li__group"&gt;
+            &lt;a href="#!"&gt;
+              圖表動畫
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;div class="li__group"&gt;
+        &lt;a href="#!"&gt;
+          調查報導
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;div class="li__group"&gt;
+        &lt;a href="#!" target="_blank"&gt;
+          天下影音
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;div class="li__group"&gt;
+        &lt;a href="#!"&gt;
+          雜誌
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul&gt;
+    &lt;li class="subtitle"&gt;多媒體&lt;/li&gt;
+    &lt;li&gt;
+      &lt;div class="li__group"&gt;
+        &lt;a href="#!"&gt;
+          數位專輯
+        &lt;/a&gt;
+        &lt;i class="icon icon-down more"&gt;&lt;/i&gt;
+      &lt;/div&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;div class="li__group"&gt;
+            &lt;a href="#!"&gt;
+              互動專題
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class="li__group"&gt;
+            &lt;a href="#!"&gt;
+              深度專題
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class="li__group"&gt;
+            &lt;a href="#!"&gt;
+              品牌專區
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;div class="li__group"&gt;
+        &lt;a href="#!"&gt;
+          數據圖表
+        &lt;/a&gt;
+        &lt;i class="icon icon-down more"&gt;&lt;/i&gt;
+      &lt;/div&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;div class="li__group"&gt;
+            &lt;a href="#!"&gt;
+              資料新聞
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class="li__group"&gt;
+            &lt;a href="#!"&gt;
+              數字說話
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;div class="li__group"&gt;
+            &lt;a href="#!"&gt;
+              圖表動畫
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;div class="li__group"&gt;
+        &lt;a href="#!"&gt;
+          調查報導
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;div class="li__group"&gt;
+        &lt;a href="#!" target="_blank"&gt;
+          天下影音
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;div class="li__group"&gt;
+        &lt;a href="#!"&gt;
+          雜誌
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
 </code></pre>
 <script type="text/javascript">
     hljs.initHighlightingOnLoad();

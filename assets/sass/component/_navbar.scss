@@ -1,0 +1,276 @@
+nav {
+    a {
+        display: block;
+    }
+    &.menubar--left {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 300px;
+        height: 100%;
+        font-size: 1rem;
+        border: solid $gray-200;
+        border-width: 0 1px;
+        background-color: $white;
+        overflow: scroll;
+        transition: left 0.3s;
+        z-index: 12;
+        @media screen and (min-width: 1024px) {
+            overflow: hidden scroll;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                line-height: 1;
+                &.subtitle {
+                    padding: 8px 10px;
+                    font-size: 0.875rem;
+                    @include typo-weight;
+                    background-color: $gray;
+                }
+                .li__group {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    a {
+                        color: $black;
+                    }
+                    &:hover,
+                    &.active {
+                        a,
+                        i {
+                            color: $primary;
+                        }
+                    }
+                    a {
+                        &.sns {
+                            &-facebook {
+                                &:hover {
+                                    > i,
+                                    > span {
+                                        color: $facebook;
+                                    }
+                                }
+                            }
+                            &-instagram {
+                                &:hover {
+                                    > i,
+                                    > span {
+                                        color: $instagram;
+                                    }
+                                }
+                            }
+                            &-facebook {
+                                &:hover {
+                                    > i,
+                                    > span {
+                                        color: $facebook;
+                                    }
+                                }
+                            }
+                            &-line {
+                                &:hover {
+                                    > i,
+                                    > span {
+                                        color: $line;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.now {
+                    background-color: $primary;
+                    > .li__group {
+                        > a,
+                        > i {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+        > ul {
+            + ul {
+                border-top: 1px solid $gray-200;
+            }
+            > li {
+                .li__group {
+                    position: relative;
+                    > a {
+                        display: flex;
+                        width: 100%;
+                        padding: 17px 80px 17px 25px;
+                        align-items: center;
+                        &.sns {
+                            i + span {
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                    > i.more {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        padding: 17px 25px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        transition: all 0.3s;
+                        &.active {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+                > ul {
+                    display: none;
+                    background-color: $gray-100;
+                    > li {
+                        .li__group {
+                            > a {
+                                padding: 17px 50px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.opened {
+            left: 0;
+        }
+    }
+    &.menubar--belt {
+        background-color: $white;
+        ul {
+            content: '';
+            display: none;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                position: relative;
+                text-align: center;
+                a {
+                    display: block;
+                    padding: 18px 10px;
+                    line-height: 1.15;
+                    word-break: keep-all;
+                    transition: all 0.15s;
+                }
+                i {
+                    transition: color 0.15s;
+                }
+            }
+        }
+        > ul {
+            display: flex;
+            > li {
+                min-width: 120px;
+                > a {
+                    color: $black;
+                }
+                &:hover,
+                &.active {
+                    > a,
+                    > i.icon {
+                        color: $primary;
+                    }
+                    > ul {
+                        display: block;
+                    }
+                }
+                > ul {
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    min-width: 120%;
+                    background-color: $white;
+                    z-index: 9;
+                    transform: translateX(-50%);
+                    &.belt--third {
+                        left: 0;
+                        transform: translateX(0%);
+                        li {
+                            a {
+                                text-align: left;
+                            }
+                        }
+                    }
+                    li {
+                        &:not(.third) {
+                            &:hover,
+                            &.active {
+                                > a {
+                                    color: $white;
+                                    background-color: $primary;
+                                    border-color: $primary;
+                                }
+                            }
+                        }
+                        &.third {
+                            &:hover,
+                            &.active {
+                                > a,
+                                > i {
+                                    color: $primary;
+                                }
+                            }
+                            > a {
+                                padding-right: 35px;
+                            }
+                            > i.icon {
+                                position: absolute;
+                                top: 50%;
+                                right: 0;
+                                padding: 0 15px;
+                                font-size: 0.875rem;
+                                transform: translateY(-50%);
+                            }
+                        }
+                        &:first-child {
+                            > a {
+                                padding-top: 17px;
+                                border-width: 1px 1px 0;
+                            }
+                        }
+                        &:last-child {
+                            > a {
+                                padding-bottom: 17px;
+                                border-width: 0 1px 1px;
+                            }
+                        }
+                    }
+                    > li {
+                        &:hover,
+                        &.active {
+                            > ul {
+                                display: block;
+                            }
+                        }
+                        a {
+                            color: $black;
+                            border: solid $gray-200;
+                        }
+                        > a {
+                            border-width: 0 1px;
+                        }
+                        > ul {
+                            position: absolute;
+                            top: 0;
+                            left: calc(100% - 1px);
+                            width: 100%;
+                            background-color: $white;
+                            > li {
+                                > a {
+                                    border-width: 0 1px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>頁籤 Tabs</title>
+    <title>對話框 Dialog</title>
     <link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/base16/unikitty-light.min.css">
@@ -26,9 +26,9 @@
                 <aside class="col-md-auto"></aside>
                 <article class="col-md pl-md-0">
                     <section>
-                        <h1 class="mt-0 mb-10">頁籤 Tabs</h1>
+                        <h1 class="mt-0 mb-10">對話框 Dialog</h1>
                         <p>
-                            分頁標籤（Tabs）將內容整理，分佈在不同的畫面、資料庫及其他的互動上。
+                            對話框在畫面中屬於最高層級，會阻止應用程序使用，使用者需要關閉對話框或對當前訊息執行動作，對話框才會消失。
                         </p>
                     </section>
                     <section>
@@ -48,87 +48,72 @@
                                 <div class="tab__content__pane active">
                                     <h2 class="mt-0 mb-10">Usage</h2>
                                     <p class="mt-10 mb-20">
-                                        每個標籤的內容應該要與其他的分頁標籤有明顯的不同。例如：分頁標籤可以呈現不同類型、主題的內容，避免使用分頁標籤來比較標籤中的內容。
+                                        對話框含有標題、內文及一或兩種需另開分頁的動作可執行，動作不可超過兩種，有叉叉可關閉對話框。
                                     </p>
-                                    <img src="../assets/system/tab-usage-desktop.png" width="100%" alt="">
+                                    <div class="border-gray-100">
+                                        <img class="mb-20" src="../assets/system/dialog-usage-desktop-1.png" width="100%" alt="">
+                                        <img src="../assets/system/dialog-usage-desktop-2.png" width="100%" alt="">
+                                    </div>
                                     <hr class="my-40">
-                                    <h2 class="mt-0 mb-10">Types</h2>
+                                    <h2 class="mt-0 mb-10">Ｗhen to use</h2>
                                     <p class="mt-10 mb-20">
-                                        Tabs 包含兩種樣式：Fixed Tabs 固定標籤與Scrollable tabs 可滾動標籤。
+                                        Dialog 需要使用者執行任務、決策或確認的關鍵訊息。
                                     </p>
-                                    <div class="row">
-                                        <div class="col-md-2 mt-20 col-type">
-                                            <h3 class="mt-0 mb-10">Fixed tabs</h3>
-                                            <p class="mt-10 mb-20">
-                                                固定標籤：在螢幕上顯示所有的標籤，每個標籤的寬度固定。每個標籤的寬度由螢幕寬度除以標籤數。不會滾動以顯示更多標籤。
-                                            </p>
-                                            <div class="bg-background px-30 py-40 mt-auto">
-                                                <img src="../assets/system/tab-type-fixed.svg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2 mt-20 col-type">
-                                            <h3 class="mt-0 mb-10">Scrollable tabs</h3>
-                                            <p class="mt-10 mb-20">
-                                                滾動標籤：標籤的顯示沒有固定寬度。它們是可滾動的，因此某些標籤在滾動之前將保持在屏幕外。
-                                            </p>
-                                            <div class="bg-background px-30 py-40 mt-auto">
-                                                <img src="../assets/system/tab-type-scrollable.svg" alt="">
-                                            </div>
-                                        </div>
+                                    <table class="my-20">
+                                        <tr>
+                                            <th width="145">元件</th>
+                                            <th>動作</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Alert</td>
+                                            <td>有警告意味，使用者需選擇動作才會消失</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dialog</td>
+                                            <td>使用者需做選擇動作或按關閉 icon 才會消失</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Notification</td>
+                                            <td>使用者不需做任何動作，會自動消失</td>
+                                        </tr>
+                                    </table>
+                                    <div class="btn__group">
+                                        <a href="../digital/alert.html" class="btn btn--outlined">
+                                            Alert
+                                        </a>
+                                        <a href="../digital/notification.html" class="btn btn--outlined">
+                                            Notification
+                                        </a>
                                     </div>
                                     <hr class="my-40">
                                     <h2 class="mt-0 mb-10">Anatomy</h2>
                                     <p class="mt-10 mb-20">
-                                        Tabs 包含兩種狀態：所在位置及其他位置，所在位置的狀態需變色即加上底線，以利區分。
+                                        Dialog 須包含了標題、說明文字、關閉icon和兩個動作按鈕。<br/>
+                                        也可以視情況加入文字連結、輸入框。
                                     </p>
                                     <div class="bg-background">
-                                        <img class="d-md-block d-none mx-auto" src="../assets/system/tab-anatomy-desktop.svg" alt="">
-                                        <img class="d-md-none mx-auto" src="../assets/system/tab-anatomy-mobile.svg" alt="">
+                                        <img class="d-md-block d-none mx-auto" src="../assets/system/dialog-anatomy-desktop.svg" width="100%" alt="">
+                                        <img class="d-md-none mx-auto" src="../assets/system/dialog-anatomy-desktop.svg" width="100%" alt="">
                                     </div>
                                     <h2 class="dont mt-40 mb-20">Don't</h2>
-                                    <div class="bg-background py-md-40 p-20">
-                                        <img class="mx-auto" src="../assets/system/tab-dont.svg" alt="">
+                                    <div class="bg-background">
+                                        <img class="mx-auto" src="../assets/system/dialog-dont-desktop.svg" alt="">
                                     </div>
                                     <p class="mt-20 mb-0">
-                                        標籤不可包含 icon。<br/>
-                                        文案應該清楚簡潔地描述它們所代表的內容。
+                                        不能加入 icon。不要使用過長的標題。
                                     </p>
                                 </div>
                                 <div class="tab__content__pane">
-                                    <h2 class="mt-0 mb-10">Html</h2>
-<pre><code class="language-xml p-20 bg-background">&lt;div class="tab"&gt;
-  &lt;div class="tab__nav"&gt;
-    &lt;ul&gt;
-      &lt;li class="active"&gt;
-        &lt;span&gt;二聯發票&lt;/span&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;span&gt;公司發票&lt;/span&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;span&gt;捐贈發票&lt;/span&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-  &lt;i class="icon icon-right tab__nav--next"&gt;&lt;/i&gt;
-  &lt;div class="tab__content"&gt;
-    &lt;div class="tab__content__pane active"&gt;
-      &lt;h3 class="my-0"&gt;第一項標題假字&lt;/h3&gt;
-      &lt;p class="mb-0"&gt;
-          假字假字假字假字假字假字假字假字假字假字假字假字假字假字假字。
-      &lt;/p&gt;
+<pre><code class="language-xml p-20 bg-background">&lt;div class="message message--dialog"&gt;
+  &lt;div class="message__container"&gt;
+    &lt;i class="icon icon-cancel message__close"&gt;&lt;/i&gt;
+    &lt;div class="message__txt"&gt;
+      &lt;h2&gt;不限篇數瀏覽&lt;/h2&gt;
+      &lt;p&gt;訂閱全閱讀，每月 249 元，即可享全站不限篇數閱讀&lt;/p&gt;
     &lt;/div&gt;
-    &lt;div class="tab__content__pane"&gt;
-      &lt;h3 class="my-0"&gt;第二項標題假字&lt;/h3&gt;
-      &lt;p class="mb-0"&gt;
-          假字假字假字假字假字假字假字假字，假字假字假字假字假字假字假字假字假字假字假字假字假字。
-      &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="tab__content__pane"&gt;
-      &lt;h3 class="my-0"&gt;第三項標題假字&lt;/h3&gt;
-      &lt;p class="mb-0"&gt;
-          假字假字假字假字，假字假字假字假字假字假字假字，假字假字假字假字假字假字假字假字假字。假字假字假字。
-      &lt;/p&gt;
+    &lt;div class="message__btn"&gt;
+      &lt;button type="button" class="btn btn--outlined"&gt;了解更多&lt;/button&gt;
+      &lt;button type="button" class="btn btn--contained"&gt;立即購買&lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
