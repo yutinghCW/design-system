@@ -1,0 +1,36 @@
+.select__group {
+    select {
+        min-width: 140px;
+        padding: 1rem 2rem 1rem 1rem;
+        font-weight: inherit;
+        line-height: 1;
+        border: 1px solid;
+        background-size: 0.78125rem;
+        background-position: calc(100% - 0.78125rem) center;
+        background-repeat: no-repeat;
+        opacity: 1;
+        cursor: pointer;
+        @at-root .select__group--filled#{&} {
+            background-color: $gray-100;
+            background-image: url(../images/common/down.svg);
+            border-color: $gray-100;
+        }
+        @at-root .select__group--outlined#{&} {
+            color: $secondary-variant;
+            background-color: transparent;
+            background-image: url(../images/common/down.svg);
+            border-color: $secondary;
+        }
+        &:hover, &:focus {
+            color: $surface;
+        }
+        &:disabled {
+            color: $gray-200;
+            background-image: url(../images/common/down--disable.svg);
+            border-color: $gray-100;
+        }
+        @at-root .select__group--error#{&} {
+            color: $primary;
+        }
+    }
+}

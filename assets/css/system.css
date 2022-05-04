@@ -661,6 +661,7 @@ table {
 
 table th, table td {
   padding: 12px;
+  vertical-align: top;
 }
 
 table th:first-child, table td:first-child {
