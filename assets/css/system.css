@@ -509,16 +509,17 @@ aside > ul a.active, aside > ul span.active {
   color: #D60C18;
 }
 
-.tab .tab__nav {
+.tab .tab__nav--page {
   border-width: 0 0 1px;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: -20px;
   margin-right: -20px;
+  border-bottom: 1px solid #D3D5D7;
 }
 
 @media (min-width: 1024px) {
-  .tab .tab__nav {
+  .tab .tab__nav--page {
     padding-left: 100px;
     padding-right: calc((100vw - 1160px) / 2);
     margin-left: -100px;
@@ -526,7 +527,7 @@ aside > ul a.active, aside > ul span.active {
   }
 }
 
-.tab .tab__nav ul li {
+.tab .tab__nav--page ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -539,7 +540,7 @@ aside > ul a.active, aside > ul span.active {
 }
 
 @media (min-width: 1024px) {
-  .tab .tab__nav ul li {
+  .tab .tab__nav--page ul li {
     -webkit-box-flex: 0;
         -ms-flex: none;
             flex: none;
@@ -547,7 +548,7 @@ aside > ul a.active, aside > ul span.active {
   }
 }
 
-.tab .tab__nav ul li svg {
+.tab .tab__nav--page ul li svg {
   width: 1rem;
   height: auto;
   margin-right: 10px;
@@ -555,7 +556,7 @@ aside > ul a.active, aside > ul span.active {
   transition: fill 0.3s;
 }
 
-.tab .tab__nav ul li:hover svg, .tab .tab__nav ul li.active svg {
+.tab .tab__nav--page ul li:hover svg, .tab .tab__nav--page ul li.active svg {
   fill: #D60C18;
 }
 
@@ -566,6 +567,80 @@ aside > ul a.active, aside > ul span.active {
 .tab .tab__content .tab__content__pane {
   padding-left: 0;
   padding-right: 0;
+}
+
+.col--interactive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #EEEEEE;
+}
+
+.col--interactive > div {
+  width: 100%;
+}
+
+.col--interactive .tab {
+  max-width: 570px;
+  border-right: 1px solid #EEEEEE;
+}
+
+.col--interactive .tab .tab__nav {
+  border-bottom: 1px solid #EEEEEE;
+}
+
+@media (min-width: 1024px) {
+  .col--interactive .tab .tab__nav ul li {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 150px;
+  }
+}
+
+.col--interactive .tab .tab__content__pane {
+  min-height: 260px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.col--interactive .tab .tab__content__pane.active {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.col--interactive .tab .form__group {
+  width: 230px;
+}
+
+.col--interactive .configuration {
+  max-width: calc(100% - 570px);
+}
+
+.col--interactive .configuration .config__title {
+  padding: 0 20px;
+  font-size: 1rem;
+  line-height: 3.1875;
+  border-bottom: 3px solid transparent;
+}
+
+.col--interactive .configuration .config__content {
+  border-top: 1px solid #EEEEEE;
+}
+
+.col--interactive .configuration .config__content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.col--interactive .configuration .config__content ul li {
+  margin-top: 10px;
 }
 
 .dont {

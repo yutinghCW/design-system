@@ -111,12 +111,13 @@ aside {
 }
 
 .tab {
-  .tab__nav {
+  .tab__nav--page {
     border-width: 0 0 1px;
     padding-left: 20px;
     padding-right: 20px;
     margin-left: -20px;
     margin-right: -20px;
+    border-bottom: 1px solid $gray-200;
     @include media-breakpoint-up(md) {
       padding-left: 100px;
       padding-right: calc((100vw - 1160px) / 2);
@@ -152,6 +153,58 @@ aside {
     .tab__content__pane {
       padding-left: 0;
       padding-right: 0;
+    }
+  }
+}
+
+.col--interactive {
+  display: flex;
+  border: 1px solid $gray-100;
+  > div {
+    width: 100%;
+  }
+  .tab {
+    max-width: 570px;
+    border-right: 1px solid $gray-100;
+    .tab__nav {
+      border-bottom: 1px solid $gray-100;
+      ul {
+        li {
+          @include media-breakpoint-up(md) {
+            flex: none;
+            width: 150px;
+          }
+        }
+      }
+    }
+    .tab__content__pane {
+      min-height: 260px;
+      align-items: center;
+      justify-content: center;
+      &.active {
+        display: flex !important;
+      }
+    }
+    .form__group {
+      width: 230px;
+    }
+  }
+  .configuration {
+    max-width: calc(100% - 570px);
+    .config__title {
+      padding: 0 20px;
+      font-size: 1rem;
+      line-height: 3.1875;
+      border-bottom: 3px solid transparent;
+    }
+    .config__content {
+      border-top: 1px solid $gray-100;
+      ul {
+        @include list(0, 0, none);
+        li {
+          margin-top: 10px;
+        }
+      }
     }
   }
 }
