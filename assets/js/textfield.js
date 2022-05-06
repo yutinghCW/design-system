@@ -14,9 +14,5 @@ const app = createApp({
     mounted() {
         hljs.initHighlightingOnLoad();
     },
-    methods: {
-        login() {
-        },
-    }
 })
 app.mount('#app')

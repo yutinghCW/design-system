@@ -80,7 +80,7 @@
                                                                 'helper__group': option.counter && state === 'helper' || option.counter && state === 'error'
                                                             }"
                                                         >
-                                                            <input type="email" class="form__group__input form__group__input--default" v-model="value">
+                                                            <input type="email" class="form__group__input form__group__input--default" v-model="value" maxlength="30">
                                                             <div class="form__group__placeholder">請輸入 e-mail</div>
                                                             <i class="form__group__icon icon"
                                                                 :class="{'icon-eyeon': state !== 'error', 'icon-exclamation-circle': state === 'error'}"
@@ -90,7 +90,7 @@
                                                                 :class="{'form__group__help--highlight': state === 'error'}"
                                                                 v-if="state === 'helper' || state === 'error'"
                                                             >* 此為必填欄位</span>
-                                                            <span class="form__group__counter" v-if="option.counter">0/30</span>
+                                                            <span class="form__group__counter" v-if="option.counter">{{value.length}}/30</span>
                                                         </label>
                                                     </div>
                                                 </div>
