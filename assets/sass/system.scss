@@ -67,6 +67,20 @@ main {
   }
 }
 
+article {
+  p, ul, ol {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  ul, ol {
+    padding-left: 1.25rem;
+    li::marker {
+      color: $primary;
+      font-size: $h6;
+    }
+  }
+}
+
 aside {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -199,11 +213,15 @@ aside {
     }
     .config__content {
       border-top: 1px solid $gray-100;
-      ul {
-        @include list(0, 0, none);
-        li {
-          margin-top: 10px;
-        }
+    }
+  }  
+}
+.configuration {
+  .config__content {
+    ul {
+      @include list(0, 0, none);
+      li {
+        margin-top: 10px;
       }
     }
   }
@@ -254,7 +272,7 @@ table {
   flex-direction: column;
 }
 
-.bg-background {
+section, .bg-background {
   img {
     max-width: 100%;
   }

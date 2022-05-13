@@ -24,7 +24,7 @@
         <div class="container">
             <div class="row">
                 <aside class="col-md-auto"></aside>
-                <article class="col-md pl-md-0">
+                <article id="app" class="col-md pl-md-0">
                     <section>
                         <h1 class="mt-0 mb-10">Text Fields 文字框</h1>
                         <p>
@@ -35,17 +35,17 @@
                         <div class="tab">
                             <div class="tab__nav tab__nav--page">
                                 <ul>
-                                    <li class="active">
+                                    <li :class="{'active': tab1}" @click="tab1 = !tab1">
                                         <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M374.24,266.74l12.57-12.57h.01v-.02l44.34-44.33h.01l44.34-44.35h0l24.36-24.36c7.82-7.82,12.12-18.21,12.12-29.27s-4.31-21.45-12.12-29.27L429.44,12.13C421.62,4.31,411.22,0,400.17,0s-21.45,4.31-29.27,12.12l-125.64,125.64L159.98,52.48c-14.28-14.28-32.17-24.44-51.74-29.39L18.68,.46c-5.12-1.29-10.55,.2-14.28,3.94C.66,8.13-.84,13.56,.46,18.68L23.1,108.24c4.95,19.57,15.11,37.47,29.39,51.74l85.28,85.28L12.12,370.9C4.31,378.72,0,389.11,0,400.17s4.31,21.45,12.12,29.27l70.44,70.44c7.82,7.82,18.21,12.13,29.27,12.13s21.45-4.31,29.27-12.12l68.68-68.68s.02-.02,.03-.03,.02-.02,.03-.03l56.9-56.9,115.5,115.5c14.82,14.82,34.28,22.23,53.75,22.23s38.93-7.41,53.75-22.23c29.64-29.64,29.64-77.86,0-107.49l-115.5-115.5ZM52.18,100.88L35.71,35.71l65.18,16.48c14.33,3.62,27.43,11.06,37.88,21.51l11.83,11.83-65.07,65.07-11.83-11.83c-10.45-10.45-17.89-23.55-21.51-37.88Zm54.55,70.92l65.07-65.07,52.24,52.24-65.07,65.07-52.24-52.24Zm5.1,310.2c-3.04,0-5.9-1.19-8.06-3.34l-70.44-70.44c-2.15-2.15-3.34-5.01-3.34-8.06s1.18-5.91,3.34-8.06L392.11,33.34c2.15-2.15,5.02-3.34,8.06-3.34s5.9,1.19,8.06,3.34l70.44,70.44c2.15,2.15,3.34,5.01,3.34,8.06s-1.19,5.91-3.34,8.06l-13.75,13.75-45.76-45.76c-5.86-5.86-15.35-5.86-21.21,0-5.86,5.86-5.86,15.35,0,21.21l45.76,45.76-23.14,23.14-23.58-23.58c-5.86-5.86-15.36-5.86-21.21,0-5.86,5.86-5.86,15.35,0,21.21l23.58,23.58-23.14,23.14-45.76-45.76c-5.86-5.86-15.36-5.86-21.21,0-5.86,5.86-5.86,15.35,0,21.21l45.76,45.76-23.14,23.14-23.58-23.58c-5.86-5.86-15.36-5.86-21.21,0s-5.86,15.36,0,21.21l23.58,23.58-22.74,22.74-45.76-45.76c-5.86-5.86-15.35-5.86-21.21,0-5.86,5.86-5.86,15.36,0,21.21l45.76,45.76-23.14,23.14-23.58-23.58c-5.86-5.86-15.35-5.86-21.21,0s-5.86,15.36,0,21.21l23.58,23.58-23.14,23.14-45.76-45.76c-5.86-5.86-15.35-5.86-21.21,0s-5.86,15.36,0,21.21l45.76,45.76-23.14,23.14-23.58-23.58c-5.86-5.86-15.35-5.86-21.21,0s-5.86,15.36,0,21.21l23.58,23.58-13.75,13.75c-2.15,2.15-5.01,3.34-8.06,3.34h0Zm186.62-139.47s.04-.04,.06-.06,.04-.04,.06-.06l43.87-43.87,.02-.02,.02-.02,10.54-10.54,63.56,63.56-65.07,65.07-63.56-63.56,10.5-10.5Zm170.07,126c-17.94,17.94-47.13,17.94-65.07,0l-30.73-30.73,65.07-65.07,30.73,30.73c17.94,17.94,17.94,47.13,0,65.07Z"/></svg><span>Design</span>
                                     </li>
-                                    <li>
+                                    <li :class="{'active': !tab1}" @click="tab1 = !tab1">
                                         <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M467,0H45C20.19,0,0,20.19,0,45V467c0,24.81,20.19,45,45,45H467c24.81,0,45-20.19,45-45V45c0-24.81-20.19-45-45-45Zm15,467c0,8.27-6.73,15-15,15H45c-8.27,0-15-6.73-15-15V150H482V467Zm0-347H30V45c0-8.27,6.73-15,15-15H467c8.27,0,15,6.73,15,15V120Z"/><path d="M127.21,316l49.39-49.39c5.86-5.86,5.86-15.36,0-21.21-5.86-5.86-15.35-5.86-21.21,0l-60,60c-5.86,5.86-5.86,15.36,0,21.21l60,60c5.86,5.86,15.35,5.86,21.21,0s5.86-15.36,0-21.21l-49.39-49.39Z"/><path d="M416.61,305.39l-60-60c-5.86-5.86-15.36-5.86-21.21,0s-5.86,15.36,0,21.21l49.39,49.39-49.39,49.39c-5.86,5.86-5.86,15.36,0,21.21s15.36,5.86,21.21,0l60-60c5.86-5.86,5.86-15.36,0-21.21Z"/><path d="M290.74,211.77c-7.86-2.62-16.35,1.63-18.97,9.49l-60,180c-2.62,7.86,1.63,16.35,9.49,18.97,7.86,2.62,16.35-1.63,18.97-9.49l60-180c2.62-7.86-1.63-16.36-9.49-18.97Z"/><path d="M106,60h-30c-8.28,0-15,6.72-15,15s6.72,15,15,15h30c8.28,0,15-6.72,15-15s-6.72-15-15-15Z"/><path d="M196,60h-30c-8.28,0-15,6.72-15,15s6.72,15,15,15h30c8.28,0,15-6.72,15-15s-6.72-15-15-15Z"/><path d="M286,60h-30c-8.28,0-15,6.72-15,15s6.72,15,15,15h30c8.28,0,15-6.72,15-15s-6.72-15-15-15Z"/></svg><span>Html</span>
                                     </li>
                                 </ul>
                             </div>
                             <i class="icon icon-right tab__nav--next"></i>
                             <div class="tab__content py-20">
-                                <div class="tab__content__pane active">
+                                <div class="tab__content__pane" :class="{'active': tab1}">
                                     <h2 class="mt-0 mb-10">Usage</h2>
                                     <p class="mt-10 mb-20">
                                         文字框常出現在表單當中。
@@ -60,61 +60,61 @@
                                         <div class="tab">
                                             <div class="tab__nav">
                                                 <ul>
-                                                    <li :class="{'active': tab}" @click="tab = !tab">
+                                                    <li :class="{'active': tab2}" @click="tab2 = !tab2">
                                                         <span>Contained</span>
                                                     </li>
-                                                    <li :class="{'active': !tab}" @click="tab = !tab">
+                                                    <li :class="{'active': !tab2}" @click="tab2 = !tab2">
                                                         <span>Outline</span>
                                                     </li>
                                                 </ul>
                                             </div>
                                             <i class="icon icon-right tab__nav--next"></i>
                                             <div class="tab__content">
-                                                <div class="tab__content__pane p-20" :class="{'active': tab}">
+                                                <div class="tab__content__pane p-20" :class="{'active': tab2}">
                                                     <div class="form__group form__group--filled"
-                                                        :class="{'form__group--hasicon': option.icon, 'form__group--error': state === 'error'}"
+                                                        :class="{'form__group--hasicon': option1.icon, 'form__group--error': state1 === 'error'}"
                                                     >
                                                         <label class="label form__group--default"
                                                             :class="{
-                                                                'hasValue': value,
-                                                                'helper__group': option.counter && state === 'helper' || option.counter && state === 'error'
+                                                                'hasValue': value1,
+                                                                'helper__group': option1.counter && state1 === 'helper' || option1.counter && state1 === 'error'
                                                             }"
                                                         >
-                                                            <input type="email" class="form__group__input form__group__input--default" v-model="value" maxlength="30">
+                                                            <input type="email" class="form__group__input form__group__input--default" v-model="value1" maxlength="30">
                                                             <div class="form__group__placeholder">請輸入 e-mail</div>
                                                             <i class="form__group__icon icon"
-                                                                :class="{'icon-eyeon': state !== 'error', 'icon-exclamation-circle': state === 'error'}"
-                                                                v-if="option.icon"
+                                                                :class="{'icon-eyeon': state1 !== 'error', 'icon-exclamation-circle': state1 === 'error'}"
+                                                                v-if="option1.icon"
                                                             ></i>
                                                             <span class="form__group__help"
-                                                                :class="{'form__group__help--highlight': state === 'error'}"
-                                                                v-if="state === 'helper' || state === 'error'"
+                                                                :class="{'form__group__help--highlight': state1 === 'error'}"
+                                                                v-if="state1 === 'helper' || state1 === 'error'"
                                                             >* 此為必填欄位</span>
-                                                            <span class="form__group__counter" v-if="option.counter">{{value.length}}/30</span>
+                                                            <span class="form__group__counter" v-if="option1.counter">{{value1.length}}/30</span>
                                                         </label>
                                                     </div>
                                                 </div>
-                                                <div class="tab__content__pane p-20" :class="{'active': !tab}">
+                                                <div class="tab__content__pane p-20" :class="{'active': !tab2}">
                                                     <div class="form__group form__group--outlined"
-                                                        :class="{'form__group--hasicon': option.icon, 'form__group--error': state === 'error'}"
+                                                        :class="{'form__group--hasicon': option1.icon, 'form__group--error': state1 === 'error'}"
                                                     >
                                                         <label class="label form__group--default"
                                                             :class="{
-                                                                'hasValue': value,
-                                                                'helper__group': option.counter && state === 'helper' || option.counter && state === 'error'
+                                                                'hasValue': value1,
+                                                                'helper__group': option1.counter && state1 === 'helper' || option1.counter && state1 === 'error'
                                                             }"
                                                         >
-                                                            <input type="email" class="form__group__input form__group__input--default" v-model="value">
+                                                            <input type="email" class="form__group__input form__group__input--default" v-model="value1">
                                                             <div class="form__group__placeholder">請輸入 e-mail</div>
                                                             <i class="form__group__icon icon"
-                                                                :class="{'icon-eyeon': state !== 'error', 'icon-exclamation-circle': state === 'error'}"
-                                                                v-if="option.icon"
+                                                                :class="{'icon-eyeon': state1 !== 'error', 'icon-exclamation-circle': state1 === 'error'}"
+                                                                v-if="option1.icon"
                                                             ></i>
                                                             <span class="form__group__help"
-                                                                :class="{'form__group__help--highlight': state === 'error'}"
-                                                                v-if="state === 'helper' || state === 'error'"
+                                                                :class="{'form__group__help--highlight': state1 === 'error'}"
+                                                                v-if="state1 === 'helper' || state1 === 'error'"
                                                             >* 此為必填欄位</span>
-                                                            <span class="form__group__counter" v-if="option.counter">0/30</span>
+                                                            <span class="form__group__counter" v-if="option1.counter">0/30</span>
                                                         </label>
                                                     </div>
                                                 </div>
@@ -130,7 +130,7 @@
                                                     <li>
                                                         <label>
                                                             <span class="label--check">
-                                                                <input type="checkbox" name="config_option" v-model="option.counter">
+                                                                <input type="checkbox" name="config_option" v-model="option1.counter">
                                                                 <span class="label__check__mark"></span>
                                                                 <span class="label__check__txt">Character counter</span>
                                                             </span>
@@ -139,7 +139,7 @@
                                                     <li>
                                                         <label>
                                                             <span class="label--check">
-                                                                <input type="checkbox" name="config_option" v-model="option.icon">
+                                                                <input type="checkbox" name="config_option" v-model="option1.icon">
                                                                 <span class="label__check__mark"></span>
                                                                 <span class="label__check__txt">Trailing icon</span>
                                                             </span>
@@ -151,7 +151,7 @@
                                                     <li>
                                                         <label>
                                                             <span class="label--radio">
-                                                                <input type="radio" name="config_assistive" value="none" v-model="state">
+                                                                <input type="radio" name="config_assistive" value="none" v-model="state1">
                                                                 <span class="label__radio__mark"></span>
                                                                 <span class="label__radio__txt">None</span>
                                                             </span>
@@ -160,7 +160,7 @@
                                                     <li>
                                                         <label>
                                                             <span class="label--radio">
-                                                                <input type="radio" name="config_assistive" value="helper" v-model="state">
+                                                                <input type="radio" name="config_assistive" value="helper" v-model="state1">
                                                                 <span class="label__radio__mark"></span>
                                                                 <span class="label__radio__txt">Helper text</span>
                                                             </span>
@@ -169,7 +169,7 @@
                                                     <li>
                                                         <label>
                                                             <span class="label--radio">
-                                                                <input type="radio" name="config_assistive" value="error" v-model="state">
+                                                                <input type="radio" name="config_assistive" value="error" v-model="state1">
                                                                 <span class="label__radio__mark"></span>
                                                                 <span class="label__radio__txt">Error text</span>
                                                             </span>
@@ -349,9 +349,129 @@
                                         不要將兩種樣式混用。
                                     </p>
                                 </div>
-                                <div class="tab__content__pane">
+                                <div class="tab__content__pane" :class="{'active': !tab1}">
+                                    <h2 class="mt-0 mb-10">Configuration</h2>
+                                    <div class="configuration">
+                                        <div class="config__content">
+                                            <div class="row">
+                                                <div class="col-xl-1 col-md-2">
+                                                    <ul class="mt-20">
+                                                        <li class="h4 my-0">Type</li>
+                                                        <li>
+                                                            <label>
+                                                                <span class="label--radio">
+                                                                    <input type="radio" name="config_type-code" value="contained" v-model="type2">
+                                                                    <span class="label__radio__mark"></span>
+                                                                    <span class="label__radio__txt">Contained</span>
+                                                                </span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label>
+                                                                <span class="label--radio">
+                                                                    <input type="radio" name="config_type-code" value="outlined" v-model="type2">
+                                                                    <span class="label__radio__mark"></span>
+                                                                    <span class="label__radio__txt">Outlined</span>
+                                                                </span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-xl-1 col-md-2">
+                                                    <ul class="mt-20">
+                                                        <li class="h4 my-0">Statement</li>
+                                                        <li>
+                                                            <label>
+                                                                <span class="label--check">
+                                                                    <input type="checkbox" name="config_statement" v-model="value2">
+                                                                    <span class="label__check__mark"></span>
+                                                                    <span class="label__check__txt">Have value</span>
+                                                                </span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label>
+                                                                <span class="label--check">
+                                                                    <input type="checkbox" name="config_statement" v-model="disabled2">
+                                                                    <span class="label__check__mark"></span>
+                                                                    <span class="label__check__txt">Disabled</span>
+                                                                </span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-xl-1 col-md-2">
+                                                    <ul class="mt-20">
+                                                        <li class="h4 my-0">Options</li>
+                                                        <li>
+                                                            <label>
+                                                                <span class="label--check">
+                                                                    <input type="checkbox" name="config_option" v-model="option2.counter">
+                                                                    <span class="label__check__mark"></span>
+                                                                    <span class="label__check__txt">Character counter</span>
+                                                                </span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label>
+                                                                <span class="label--check">
+                                                                    <input type="checkbox" name="config_option" v-model="option2.icon">
+                                                                    <span class="label__check__mark"></span>
+                                                                    <span class="label__check__txt">Trailing icon</span>
+                                                                </span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-xl-1 col-md-2">
+                                                    <ul class="mt-20">
+                                                        <li class="h4 my-0">Assistive text</li>
+                                                        <li>
+                                                            <label>
+                                                                <span class="label--radio">
+                                                                    <input type="radio" name="config_assistive-code" value="none" v-model="state2">
+                                                                    <span class="label__radio__mark"></span>
+                                                                    <span class="label__radio__txt">None</span>
+                                                                </span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label>
+                                                                <span class="label--radio">
+                                                                    <input type="radio" name="config_assistive-code" value="helper" v-model="state2">
+                                                                    <span class="label__radio__mark"></span>
+                                                                    <span class="label__radio__txt">Helper text</span>
+                                                                </span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label>
+                                                                <span class="label--radio">
+                                                                    <input type="radio" name="config_assistive-code" value="error" v-model="state2">
+                                                                    <span class="label__radio__mark"></span>
+                                                                    <span class="label__radio__txt">Error text</span>
+                                                                </span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="my-40">
+                                    <h2 class="mt-0 mb-10">Html</h2>
 <pre>
-<code class="language-xml p-20 bg-background"></code>
+<code class="language-xml d-block p-20 bg-background hljs">&lt;div class="form__group<span v-if="type2 === 'contained'"> form__group--filled</span><span v-else> form__group--outlined</span><span v-if="option2.icon"> form__group--hasicon</span><span v-if="state2 === 'error'"> form__group--error</span>"&gt;
+  &lt;label class="label form__group--default<span v-if="disabled2"> form__group--disabled</span><span v-if="value2"> hasValue</span><span v-if="option2.counter && state2 === 'helper' || option2.counter && state2 === 'error'"> helper__group</span>"&gt;
+    &lt;input type="email" class="form__group__input form__group__input--default"<span v-if="option2.counter"> maxlength="30"</span><span v-if="disabled2"> disabled</span>&gt;
+    &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;<span v-if="option2.icon">
+    &lt;i class="form__group__icon icon icon-eyeon"&gt;&lt;/i&gt;</span><span v-if="state2 === 'helper'">
+    &lt;span class="form__group__help"&gt;* 此為必填欄位&lt;/span&gt;</span><span v-else-if="state2 === 'error'">
+    &lt;span class="form__group__help form__group__help--highlight"&gt;* 此為必填欄位&lt;/span&gt;</span><span v-if="option2.counter">
+    &lt;span class="form__group__counter"&gt;0/30&lt;/span&gt;</span>
+  &lt;/label&gt;
+&lt;/div&gt;
+</code>
 </pre>
                                 </div>
                             </div>

@@ -11,6 +11,9 @@
 	}
 }
 @each $color, $value in $cw-colors {
+	.text-#{$color} {
+		color: nth($value, 1);
+	}
 	.bg-#{$color} {
 		color: nth($value, 2);
 		background-color: nth($value, 1);

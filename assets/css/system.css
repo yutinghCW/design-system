@@ -345,9 +345,17 @@
   background-color: #48545D;
 }
 
+.text-surface {
+  color: #003a9f;
+}
+
 .bg-surface {
   color: #ffffff;
   background-color: #003a9f;
+}
+
+.text-primary {
+  color: #D60C18;
 }
 
 .bg-primary {
@@ -355,9 +363,17 @@
   background-color: #D60C18;
 }
 
+.text-primary-variant {
+  color: #9D0505;
+}
+
 .bg-primary-variant {
   color: #ffffff;
   background-color: #9D0505;
+}
+
+.text-secondary {
+  color: #939EA7;
 }
 
 .bg-secondary {
@@ -365,14 +381,26 @@
   background-color: #939EA7;
 }
 
+.text-secondary-variant {
+  color: #48545D;
+}
+
 .bg-secondary-variant {
   color: #ffffff;
   background-color: #48545D;
 }
 
+.text-error {
+  color: #9D0505;
+}
+
 .bg-error {
   color: #ffffff;
   background-color: #9D0505;
+}
+
+.text-background {
+  color: #fafafa;
 }
 
 .bg-background {
@@ -423,6 +451,20 @@ main > .container > .row > article > section:first-child {
 
 main > .container > .row > article > section:last-child {
   padding-bottom: 40px;
+}
+
+article p, article ul, article ol {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+article ul, article ol {
+  padding-left: 1.25rem;
+}
+
+article ul li::marker, article ol li::marker {
+  color: #D60C18;
+  font-size: 0.75rem;
 }
 
 aside {
@@ -633,13 +675,13 @@ aside > ul a.active, aside > ul span.active {
   border-top: 1px solid #EEEEEE;
 }
 
-.col--interactive .configuration .config__content ul {
+.configuration .config__content ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.col--interactive .configuration .config__content ul li {
+.configuration .config__content ul li {
   margin-top: 10px;
 }
 
@@ -698,7 +740,7 @@ table tr + tr + tr td {
           flex-direction: column;
 }
 
-.bg-background img {
+section img, .bg-background img {
   max-width: 100%;
 }
 
