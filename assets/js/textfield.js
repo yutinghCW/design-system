@@ -2,7 +2,7 @@ import { createApp } from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.26/vue
 const app = createApp({
     data() {
         return {
-            tab1: false,
+            tab1: true,
             tab2: true,
             value1: '',
             option1: {
@@ -20,9 +20,6 @@ const app = createApp({
             state2: 'none',
             disabled2: false,
         }
-    },
-    mounted() {
-        // hljs.initHighlightingOnLoad();
     },
 })
 app.mount('#app')

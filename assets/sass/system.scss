@@ -1,4 +1,5 @@
 @import "import";
+@import "../../system/variable";
 
 @import "container";
 @import "grid";
@@ -30,6 +31,9 @@ main {
           &:first-child {
             padding-top: 40px;
             padding-bottom: 40px;
+            > *:last-child {
+              margin-bottom: 0;
+            }
           }
           &:last-child {
             padding-bottom: 40px;
@@ -78,6 +82,9 @@ article {
       color: $primary;
       font-size: $h6;
     }
+  }
+  h5.row {
+    align-items: center;
   }
 }
 
@@ -265,6 +272,17 @@ table {
       }
     }
   }
+  &.table-btn {
+    td {
+      height: 85px;
+      vertical-align: middle;
+    }
+  }
+  &.table-textfield {
+    th, td {
+      border-bottom: 1px solid $gray-100;
+    }
+  }
 }
 
 .col-type {
@@ -280,6 +298,30 @@ section, .bg-background {
 
 .border-gray-100 {
   border: 1px solid $gray-100;
+}
+
+.toggle__color {
+  font-size: 0;
+  button {
+    padding: 10px 25px;
+    margin: 0;
+    color: $gray-500;
+    font-size: 1rem;
+    border: 1px solid $gray-200;
+    &.active {
+      color: $white;
+      background-color: $gray-500;
+      border-color: $gray-500;
+    }
+  }
+}
+
+.color-board {
+  cursor: pointer;
+  @include media-breakpoint-down(md) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .btn__group {

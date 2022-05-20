@@ -28,52 +28,54 @@
                         <p>
                             《天下雜誌》使用顏色來傳達界面中的功能，便於我們建立系統性視覺範本，讓《天下》數位產品與使用者的互動能夠更容易、更可以被預測。白、黑、藍、紅，是《天下》數位產品的顏色。顏色沒有先後順序，重要的是哪種顏色最適合傳達你想要的信息。
                         </p>
-                        <p class="h5">
-                            ※ 點選顏色複製 hex 色碼
-                        </p>
                     </section>
                     <section>
+                        <div class="toggle__color mt-20 mb-5">
+                            <button type="button" value="hex" class="item active">HEX</button>
+                            <button type="button" value="rgb" class="item">RGB</button>
+                        </div>
+                        <div class="h5 mt-5 mb-20">※ 點選顏色複製色碼</div>
                         <h2 class="h3 mt-0 mb-10">主色</h2>
                         <div class="row mx-0 mb-20">
-                            <div class="col-md-1 py-10 bg-red-500">
+                            <div class="col-md-3 py-10 color-board bg-red-500">
                                 <div class="h4 my-0">Dark</div>
                                 <div class="h5 my-0">#9D0505</div>
                             </div>
-                            <div class="col-md-2 py-10 bg-red-300">
+                            <div class="col-md-6 py-10 color-board bg-red-300">
                                 <div class="h4 my-0">Main</div>
                                 <div class="h5 my-0">#D60C18</div>
                             </div>
-                            <div class="col-md-1 py-10 bg-red-100">
+                            <div class="col-md-3 py-10 color-board bg-red-100">
                                 <div class="h4 my-0">Faded</div>
                                 <div class="h5 my-0">#FEEBEC</div>
                             </div>
                         </div>
                         <h2 class="h3 mt-0 mb-10">輔色</h2>
                         <div class="row mx-0 mb-20">
-                            <div class="col-md py-10 bg-gray-500">
+                            <div class="col-md py-10 color-board bg-gray-500">
                                 <div class="h4 my-0">Dark</div>
                                 <div class="h5 my-0">#48545D</div>
                             </div>
-                            <div class="col-md py-10 bg-gray-400">
+                            <div class="col-md py-10 color-board bg-gray-400">
                                 <div class="h4 my-0">Main</div>
                                 <div class="h5 my-0">#939EA7</div>
                             </div>
-                            <div class="col-md py-10 bg-gray-300">
+                            <div class="col-md py-10 color-board bg-gray-300">
                                 <div class="h4 my-0">Bright</div>
                                 <div class="h5 my-0">#D3D5D7</div>
                             </div>
-                            <div class="col-md py-10 bg-gray-200">
+                            <div class="col-md py-10 color-board bg-gray-200">
                                 <div class="h4 my-0">Pastel</div>
                                 <div class="h5 my-0">#EEEEEE</div>
                             </div>
-                            <div class="col-md py-10 bg-gray-100">
+                            <div class="col-md py-10 color-board bg-gray-100">
                                 <div class="h4 my-0">Faded</div>
                                 <div class="h5 my-0">#F7F7F7</div>
                             </div>
                         </div>
                         <h2 class="h3 mt-0 mb-10">強調色</h2>
-                        <div class="row mx-0 mb-20 bg-surface">
-                            <div class="col py-15">
+                        <div class="row mx-0 mb-20">
+                            <div class="col py-15 color-board bg-surface">
                                 <div class="h4 my-0">Main</div>
                                 <div class="h5 my-0">#003A9F</div>
                             </div>
@@ -88,6 +90,13 @@
             <span class="h6">Copyright © 2022 天下雜誌</span>
         </div>
     </footer>
+    <div class="message message--center message--notification" id="messageCopied" style="display: none;">
+        <div class="message__txt">
+            <p class="my-0">
+                您已成功複製色碼
+            </p>
+        </div>
+    </div>
     <script src="../assets/js/system.js"></script>
     <script src="../assets/js/cw.js"></script>
 </body>

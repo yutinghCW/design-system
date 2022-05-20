@@ -1,0 +1,250 @@
+// 灰色階色碼
+$brand-gray-100:         #FFFFFF !default;
+$brand-gray-200:         #E3E6E9 !default;
+$brand-gray-300:         #C9CED3 !default;
+$brand-gray-400:         #AEB6BD !default;
+$brand-gray-500:         #939EA7 !default;
+$brand-gray-600:         #48545D !default;
+
+// 紅色階色碼
+$brand-red-100:          #F5CEB9 !default;
+$brand-red-200:          #EA9875 !default;
+$brand-red-300:          #E05F3C !default;
+$brand-red-400:          #D60C18 !default;
+$brand-red-500:          #9D0505 !default;
+
+// 行銷藍色階色碼
+$mkt-blue-100:           #D3ECF3 !default;
+$mkt-blue-200:           #A0D7E6 !default;
+$mkt-blue-300:           #5BC2D8 !default;
+$mkt-blue-400:           #00AECC !default;
+$mkt-blue-500:           #00859C !default;
+
+// 行銷棕色階色碼
+$mkt-natural-100:        #F1E9D5 !default;
+$mkt-natural-200:        #E2D3AA !default;
+$mkt-natural-300:        #D4BD7F !default;
+$mkt-natural-400:        #C7A956 !default;
+$mkt-natural-500:        #9F8743 !default;
+
+// 行銷黃色階色碼
+$mkt-yellow-100:         #FFF798 !default;
+$mkt-yellow-200:         #FFF000 !default;
+$mkt-yellow-300:         #F7B749 !default;
+
+// 新聞：時事
+$news-now-100:           #F5CEB9 !default;
+$news-now-200:           #EA9875 !default;
+$news-now-300:           #E05F3C !default;
+$news-now-400:           #D60C18 !default;
+$news-now-500:           #9D0505 !default;
+
+// 新聞：企業
+$news-business-100:      #DBE5CA !default;
+$news-business-200:      #B4CA92 !default;
+$news-business-300:      #88B05D !default;
+$news-business-400:      #539A34 !default;
+$news-business-500:      #3C7523 !default;
+
+// 新聞：財經
+$news-economic-100:     #FAEBC9 !default;
+$news-economic-200:     #F3D68D !default;
+$news-economic-300:     #EDC24E !default;
+$news-economic-400:     #E7AF00 !default;
+$news-economic-500:     #B98700 !default;
+
+// 新聞：人物
+$news-people-100:        #CCD7ED !default;
+$news-people-200:        #96AFDB !default;
+$news-people-300:        #578AC8 !default;
+$news-people-400:        #006CB7 !default;
+$news-people-500:        #00508C !default;
+
+// 新聞：政治社會
+$news-policy-100:        #E1D2E7 !default;
+$news-policy-200:        #C5A3CB !default;
+$news-policy-300:        #AB75B0 !default;
+$news-policy-400:        #914897 !default;
+$news-policy-500:        #6E3173 !default;
+
+// 新聞：國際兩岸
+$news-strait-100:        #DAEEEA !default;
+$news-strait-200:        #B0DBD4 !default;
+$news-strait-300:        #7CC8BE !default;
+$news-strait-400:        #2EB6A9 !default;
+$news-strait-500:        #1A8A81 !default;
+
+// 新聞：管理
+$news-manage-100:        #D3ECFB !default;
+$news-manage-200:        #9ED8F6 !default;
+$news-manage-300:        #54C2F1 !default;
+$news-manage-400:        #00AFEC !default;
+$news-manage-500:        #007FAA !default;
+
+// 新聞：健康
+$news-health-100:        #ECF3CF !default;
+$news-health-200:        #D7E598 !default;
+$news-health-300:        #C2D95B !default;
+$news-health-400:        #AACD03 !default;
+$news-health-500:        #7F9B00 !default;
+
+// 新聞：Off
+$news-off-100:           #F5ECD6 !default;
+$news-off-200:           #E9D8AB !default;
+$news-off-300:           #DDC481 !default;
+$news-off-400:           #D2B157 !default;
+$news-off-500:           #B29749 !default;
+
+// 新聞：Off
+$cwef-winter-100:        #5CB8E8 !default;
+$cwef-winter-200:        #0C3287 !default;
+$cwef-summer-100:        #00A0E9 !default;
+$cwef-summer-200:        #FFF000 !default;
+
+// 灰色階色碼 map
+$brand-grays: () !default;
+$brand-grays: map-merge((
+  "100": ($brand-gray-100, $black),
+  "200": ($brand-gray-200, $black),
+  "300": ($brand-gray-300, $black),
+  "400": ($brand-gray-400, $black),
+  "500": ($brand-gray-500, $white),
+  "600": ($brand-gray-600, $white)
+), $brand-grays);
+
+// 紅色階色碼 map
+$brand-reds: () !default;
+$brand-reds: map-merge((
+  "100": ($brand-red-100, $black),
+  "200": ($brand-red-200, $black),
+  "300": ($brand-red-300, $black),
+  "400": ($brand-red-400, $white),
+  "500": ($brand-red-500, $white)
+), $brand-reds);
+
+// 行銷藍色階色碼 map
+$mkt-blues: () !default;
+$mkt-blues: map-merge((
+  "100": ($mkt-blue-100, $black),
+  "200": ($mkt-blue-200, $black),
+  "300": ($mkt-blue-300, $black),
+  "400": ($mkt-blue-400, $white),
+  "500": ($mkt-blue-500, $white)
+), $mkt-blues);
+
+// 行銷棕色階色碼 map
+$mkt-naturals: () !default;
+$mkt-naturals: map-merge((
+  "100": ($mkt-natural-100, $black),
+  "200": ($mkt-natural-200, $black),
+  "300": ($mkt-natural-300, $black),
+  "400": ($mkt-natural-400, $white),
+  "500": ($mkt-natural-500, $white)
+), $mkt-naturals);
+
+// 行銷黃色階色碼 map
+$mkt-yellows: () !default;
+$mkt-yellows: map-merge((
+  "100": ($mkt-yellow-100, $black),
+  "200": ($mkt-yellow-200, $black),
+  "300": ($mkt-yellow-300, $black),
+), $mkt-yellows);
+
+// CWEF 色階
+$cwefs: () !default;
+$cwefs: map-merge((
+  "cwef-winter-100": ($cwef-winter-100, $black),
+  "cwef-winter-200": ($cwef-winter-200, $white),
+  "cwef-summer-100": ($cwef-summer-100, $black),
+  "cwef-summer-200": ($cwef-summer-200, $black)
+), $cwefs);
+
+// 新聞：時事
+$news-nows: () !default;
+$news-nows: map-merge((
+  "100": ($news-now-100, $black),
+  "200": ($news-now-200, $black),
+  "300": ($news-now-300, $black),
+  "400": ($news-now-400, $white),
+  "500": ($news-now-500, $white)
+), $news-nows);
+
+// 新聞：企業
+$news-businesses: () !default;
+$news-businesses: map-merge((
+  "100": ($news-business-100, $black),
+  "200": ($news-business-200, $black),
+  "300": ($news-business-300, $black),
+  "400": ($news-business-400, $white),
+  "500": ($news-business-500, $white)
+), $news-businesses);
+
+// 新聞：財經
+$news-economics: () !default;
+$news-economics: map-merge((
+  "100": ($news-economic-100, $black),
+  "200": ($news-economic-200, $black),
+  "300": ($news-economic-300, $black),
+  "400": ($news-economic-400, $white),
+  "500": ($news-economic-500, $white)
+), $news-economics);
+
+// 新聞：人物
+$news-peoples: () !default;
+$news-peoples: map-merge((
+  "100": ($news-people-100, $black),
+  "200": ($news-people-200, $black),
+  "300": ($news-people-300, $black),
+  "400": ($news-people-400, $white),
+  "500": ($news-people-500, $white)
+), $news-peoples);
+
+// 新聞：政治社會
+$news-policies: () !default;
+$news-policies: map-merge((
+  "100": ($news-policy-100, $black),
+  "200": ($news-policy-200, $black),
+  "300": ($news-policy-300, $black),
+  "400": ($news-policy-400, $white),
+  "500": ($news-policy-500, $white)
+), $news-policies);
+
+// 新聞：國際兩岸
+$news-straits: () !default;
+$news-straits: map-merge((
+  "100": ($news-strait-100, $black),
+  "200": ($news-strait-200, $black),
+  "300": ($news-strait-300, $black),
+  "400": ($news-strait-400, $white),
+  "500": ($news-strait-500, $white)
+), $news-straits);
+
+// 新聞：管理
+$news-manages: () !default;
+$news-manages: map-merge((
+  "100": ($news-manage-100, $black),
+  "200": ($news-manage-200, $black),
+  "300": ($news-manage-300, $black),
+  "400": ($news-manage-400, $white),
+  "500": ($news-manage-500, $white)
+), $news-manages);
+
+// 新聞：健康
+$news-healths: () !default;
+$news-healths: map-merge((
+  "100": ($news-health-100, $black),
+  "200": ($news-health-200, $black),
+  "300": ($news-health-300, $black),
+  "400": ($news-health-400, $white),
+  "500": ($news-health-500, $white)
+), $news-healths);
+
+// 新聞：Off
+$news-offs: () !default;
+$news-offs: map-merge((
+  "100": ($news-off-100, $black),
+  "200": ($news-off-200, $black),
+  "300": ($news-off-300, $black),
+  "400": ($news-off-400, $white),
+  "500": ($news-off-500, $white)
+), $news-offs);

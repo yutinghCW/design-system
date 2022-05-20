@@ -19,3 +19,93 @@
 		background-color: nth($value, 1);
 	}
 }
+@each $color, $value in $brand-reds {
+	.bg-brand-red-#{$color} {
+		color: nth($value, 2);
+		background-color: nth($value, 1);
+	}
+}
+@each $color, $value in $brand-grays {
+	.bg-brand-gray-#{$color} {
+		color: nth($value, 2);
+		background-color: nth($value, 1);
+	}
+}
+@each $color, $value in $mkt-blues {
+	.bg-mkt-blue-#{$color} {
+		color: nth($value, 2);
+		background-color: nth($value, 1);
+	}
+}
+@each $color, $value in $mkt-naturals {
+	.bg-mkt-natural-#{$color} {
+		color: nth($value, 2);
+		background-color: nth($value, 1);
+	}
+}
+@each $color, $value in $mkt-yellows {
+	.bg-mkt-yellow-#{$color} {
+		color: nth($value, 2);
+		background-color: nth($value, 1);
+	}
+}
+@each $color, $value in $cwefs {
+	.bg-#{$color} {
+		color: nth($value, 2);
+		background-color: nth($value, 1);
+	}
+}
+@each $color, $value in $news-nows {
+	.bg-news-now-#{$color} {
+		color: nth($value, 2);
+		background-color: nth($value, 1);
+	}
+}
+@each $color, $value in $news-businesses {
+	.bg-news-business-#{$color} {
+		color: nth($value, 2);
+		background-color: nth($value, 1);
+	}
+}
+@each $color, $value in $news-economics {
+	.bg-news-economic-#{$color} {
+		color: nth($value, 2);
+		background-color: nth($value, 1);
+	}
+}
+@each $color, $value in $news-peoples {
+	.bg-news-people-#{$color} {
+		color: nth($value, 2);
+		background-color: nth($value, 1);
+	}
+}
+@each $color, $value in $news-policies {
+	.bg-news-policy-#{$color} {
+		color: nth($value, 2);
+		background-color: nth($value, 1);
+	}
+}
+@each $color, $value in $news-straits {
+	.bg-news-strait-#{$color} {
+		color: nth($value, 2);
+		background-color: nth($value, 1);
+	}
+}
+@each $color, $value in $news-manages {
+	.bg-news-manage-#{$color} {
+		color: nth($value, 2);
+		background-color: nth($value, 1);
+	}
+}
+@each $color, $value in $news-healths {
+	.bg-news-health-#{$color} {
+		color: nth($value, 2);
+		background-color: nth($value, 1);
+	}
+}
+@each $color, $value in $news-offs {
+	.bg-news-off-#{$color} {
+		color: nth($value, 2);
+		background-color: nth($value, 1);
+	}
+}
