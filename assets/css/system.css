@@ -1124,10 +1124,27 @@ article p, article ul, article ol {
 }
 
 article ul, article ol {
-  padding-left: 1.25rem;
+  padding-left: 1.4rem;
 }
 
-article ul li::marker, article ol li::marker {
+article ul .row, article ol .row {
+  margin-left: -2.65rem;
+}
+
+article ul .row.row-board, article ol .row.row-board {
+  margin-left: -2.3375rem;
+}
+
+article ul .row.row-board > *, article ol .row.row-board > * {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+
+article ul {
+  list-style: disc;
+}
+
+article ul li::marker {
   color: #D60C18;
   font-size: 0.75rem;
 }
@@ -1142,8 +1159,8 @@ aside {
   padding-top: 40px;
   padding-bottom: 40px;
   padding-right: 40px;
-  background-color: #fafafa;
   width: 100%;
+  background-color: #fafafa;
 }
 
 aside ul {
@@ -1406,6 +1423,10 @@ table.table-btn td {
   vertical-align: middle;
 }
 
+table.table-select td {
+  vertical-align: middle;
+}
+
 table.table-textfield th, table.table-textfield td {
   border-bottom: 1px solid #EEEEEE;
 }
@@ -1426,6 +1447,10 @@ section img, .bg-background img {
 
 .border-gray-100 {
   border: 1px solid #EEEEEE;
+}
+
+.border-gray-200 {
+  border: 1px solid #D3D5D7;
 }
 
 .toggle__color {

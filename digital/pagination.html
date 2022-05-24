@@ -53,21 +53,103 @@
                                     <img src="../system/pagination-usage-desktop.png" width="100%" alt="">
                                     <hr class="my-40">
                                     <h2 class="mt-0 mb-10">Interactive Demo</h2>
-                                    <div class="py-40 border-gray-100">
+                                    <div id="app" class="py-40 border-gray-100">
                                         <ul class="pagination py-40">
-                                            <li class="pagination__item active">1</li>
-                                            <li class="pagination__item">
-                                                <a href="#!">2</a>
+                                            <li
+                                                class="pagination__item"
+                                                :class="{'active': pagination.now === 1}"
+                                                @click="pagination.now = 1"
+                                            >
+                                                <span v-if="pagination.now === 1">1</span>
+                                                <a href="#!" v-else>1</a>
                                             </li>
-                                            <li class="pagination__item">
-                                                <a href="#!">3</a>
+                                            <li
+                                                class="pagination__item"
+                                                v-if="pagination.now > 3"
+                                            >...</li>
+                                            <li
+                                                class="pagination__item"
+                                                :class="{'active': pagination.now === 2}"
+                                                @click="pagination.now = 2"
+                                                v-if="pagination.now < 4"
+                                            >
+                                                <span v-if="pagination.now === 2">2</span>
+                                                <a href="#!" v-else>2</a>
                                             </li>
-                                            <li class="pagination__item">
-                                                <a href="#!">4</a>
+                                            <li
+                                                class="pagination__item"
+                                                :class="{'active': pagination.now === 3}"
+                                                @click="pagination.now = 3"
+                                                v-if="pagination.now < 5"
+                                            >
+                                                <span v-if="pagination.now === 3">3</span>
+                                                <a href="#!" v-else>3</a>
                                             </li>
-                                            <li class="pagination__item">...</li>
-                                            <li class="pagination__item">
-                                                <a href="#!">6</a>
+                                            <li
+                                                class="pagination__item"
+                                                :class="{'active': pagination.now === 4}"
+                                                @click="pagination.now = 4"
+                                                v-if="pagination.now < 6"
+                                            >
+                                                <span v-if="pagination.now === 4">4</span>
+                                                <a href="#!" v-else>4</a>
+                                            </li>
+                                            <li
+                                                class="pagination__item"
+                                                :class="{'active': pagination.now === 5}"
+                                                @click="pagination.now = 5"
+                                                v-if="pagination.now === 4 || pagination.now === 5 || pagination.now === 6"
+                                            >
+                                                <span v-if="pagination.now === 5">5</span>
+                                                <a href="#!" v-else>5</a>
+                                            </li>
+                                            <li
+                                                class="pagination__item"
+                                                :class="{'active': pagination.now === 6}"
+                                                @click="pagination.now = 6"
+                                                v-if="pagination.now === 5 || pagination.now === 6 || pagination.now === 7"
+                                            >
+                                                <span v-if="pagination.now === 6">6</span>
+                                                <a href="#!" v-else>6</a>
+                                            </li>
+                                            <li
+                                                class="pagination__item"
+                                                :class="{'active': pagination.now === 7}"
+                                                @click="pagination.now = 7"
+                                                v-if="pagination.now === 6 || pagination.now === 7 || pagination.now === 8 || pagination.now === 9 || pagination.now === 10"
+                                            >
+                                                <span v-if="pagination.now === 7">7</span>
+                                                <a href="#!" v-else>7</a>
+                                            </li>
+                                            <li
+                                                class="pagination__item"
+                                                :class="{'active': pagination.now === 8}"
+                                                @click="pagination.now = 8"
+                                                v-if="pagination.now === 7 || pagination.now === 8 || pagination.now === 9 || pagination.now === 10"
+                                            >
+                                                <span v-if="pagination.now === 8">8</span>
+                                                <a href="#!" v-else>8</a>
+                                            </li>
+                                            <li
+                                                class="pagination__item"
+                                                :class="{'active': pagination.now === 9}"
+                                                @click="pagination.now = 9"
+                                                v-if="pagination.now === 8 || pagination.now === 9 || pagination.now === 10"
+                                            >
+                                                <span v-if="pagination.now === 9">9</span>
+                                                <a href="#!" v-else>9</a>
+                                            </li>
+                                            <li
+                                                class="pagination__item"
+                                                v-if="pagination.now < 8"
+                                            >...</li>
+                                            <li
+                                                class="pagination__item"
+                                                :class="{'active': pagination.now === 10}"
+                                                @click="pagination.now = 10"
+                                            >
+                                                <span v-if="pagination.now === 10">10</span>
+                                                <a href="#!" v-else>10</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -83,18 +165,38 @@
                                 <div class="tab__content__pane">
 <pre><code class="language-xml p-20 bg-background">&lt;ul class="pagination"&gt;
   &lt;li class="pagination__item active"&gt;1&lt;/li&gt;
-  &lt;li class="pagination__item"&gt;
-    &lt;a href="#!"&gt;2&lt;/a&gt;
+  &
+    t;li class="pagination__item"
+    :class="{'active': pagination.now === "&ga}t
+    @click="pagination.now = a"
+;
+    &lt;a href="#!"&gt;2&lt; v-if="paginataion.now  == "/a&gt;
   &lt;/li&gt;
-  &lt;li class="pagination__item"&gt;
-    &lt;a href="#!"&gt;3&lt;/a&gt;
+  &
+    t;li class="pagination__item"
+    :class="{'active': pagination.now === "&ga}t
+    @click="pagination.now = a"
+;
+    &lt;a href="#!"&gt;3&lt; v-if="paginataion.now  == "/a&gt;
   &lt;/li&gt;
-  &lt;li class="pagination__item"&gt;
-    &lt;a href="#!"&gt;4&lt;/a&gt;
+  &
+    t;li class="pagination__item"
+    :class="{'active': pagination.now === "&ga}t
+    @click="pagination.now = a"
+;
+    &lt;a href="#!"&gt;4&lt; v-if="paginataion.now  == "/a&gt;
   &lt;/li&gt;
-  &lt;li class="pagination__item"&gt;...&lt;/li&gt;
-  &lt;li class="pagination__item"&gt;
-    &lt;a href="#!"&gt;6&lt;/a&gt;
+  &
+    t;li class="pagination__item"
+    :class="{'active': pagination.now === "&gt;...&lt;/li&g }t
+    @click="pagination.now"=  "
+;
+  &
+    t;li class="pagination__item"
+    :classn.now === "&g="{'active': paginati v-if="pagination.now === "on.now === "&ga}t
+    @click="pagination.now = a"
+;
+    &lt;a href="#!"&gt;6&lt; v-if="paginataion.now  == "/a&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
@@ -116,5 +218,6 @@
     </footer>
     <script src="../assets/js/system.js"></script>
     <script src="../assets/js/cw.js"></script>
+    <script src="../assets/js/pagination.js" type="module"></script>
 </body>
 </html>

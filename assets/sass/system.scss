@@ -77,7 +77,20 @@ article {
     margin-bottom: 20px;
   }
   ul, ol {
-    padding-left: 1.25rem;
+    padding-left: 1.4rem;
+    .row {
+      margin-left: -2.65rem;
+      &.row-board {
+        margin-left: -2.3375rem;
+        > * {
+          padding-left: 0.9375rem;
+          padding-right: 0.9375rem;
+        }
+      }
+    }
+  }
+  ul {
+    list-style: disc;
     li::marker {
       color: $primary;
       font-size: $h6;
@@ -92,8 +105,8 @@ aside {
   padding-top: 40px;
   padding-bottom: 40px;
   padding-right: 40px;
-  background-color: $gray;
   width: 100%;
+  background-color: $gray;
   ul {
     margin: 0;
     list-style: none;
@@ -278,6 +291,11 @@ table {
       vertical-align: middle;
     }
   }
+  &.table-select {
+    td {
+      vertical-align: middle;
+    }
+  }
   &.table-textfield {
     th, td {
       border-bottom: 1px solid $gray-100;
@@ -298,6 +316,10 @@ section, .bg-background {
 
 .border-gray-100 {
   border: 1px solid $gray-100;
+}
+
+.border-gray-200 {
+  border: 1px solid $gray-200;
 }
 
 .toggle__color {
