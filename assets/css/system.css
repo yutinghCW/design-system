@@ -1555,6 +1555,33 @@ section img, .bg-background img {
   background-color: #D60C18;
 }
 
+.row-icons .col-auto {
+  width: calc(100% / 4);
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 360px) {
+  .row-icons .col-auto {
+    width: calc(100% / 5);
+  }
+}
+
+@media (min-width: 768px) {
+  .row-icons .col-auto {
+    width: calc(100% / 7);
+  }
+}
+
+@media (min-width: 1024px) {
+  .row-icons .col-auto {
+    width: calc(100% / 11);
+  }
+}
+
+.row-icons .col-auto i.icon {
+  display: block;
+}
+
 .download__group .item__image {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1566,12 +1593,15 @@ section img, .bg-background img {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 15px;
-  min-height: 150px;
+  height: 150px;
   margin-bottom: 20px;
 }
 
 .download__group .item__image img {
   max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 
 .download__group .download__item {
