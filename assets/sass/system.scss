@@ -10,16 +10,25 @@ main {
   display: flex;
   > .container {
     position: relative;
-    &::before {
-      @include beforeafter('', block);
-      position: absolute;
-      right: 100%;
-      width: 50%;
-      height: 100%;
-      background-color: $gray;
+    .article-page & {
+      &::before {
+        @include beforeafter('', block);
+        position: absolute;
+        right: 100%;
+        width: 50%;
+        height: 100%;
+        background-color: $gray;
+      }
     }
     > .row {
       min-height: 100%;
+      .index-page & {
+        justify-content: center;
+        .item-title {
+          align-items: center;
+          justify-content: center;
+        }
+      }
       > article {
         @include media-breakpoint-up(md) {
           max-width: calc(100% - 285px);
@@ -398,6 +407,42 @@ section, .bg-background {
       border-color: $primary-variant;
       &::before {
         background-color: $primary;
+      }
+    }
+  }
+}
+
+.download__group {
+  .item__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    min-height: 150px;
+    margin-bottom: 20px;
+    img {
+      max-width: 100%;
+    }
+  }
+  .download__item {
+    display: grid;
+    grid-template-columns: 22px auto;
+    align-items: center;
+    margin-top: 10px;
+    color: $black;
+    span {
+      grid-column-start: 2;
+    }
+    &:hover {
+      color: $primary;
+      svg {
+        circle {
+          stroke: $primary;
+        }
+        path {
+          fill: $primary;
+          stroke: $primary;
+        }
       }
     }
   }

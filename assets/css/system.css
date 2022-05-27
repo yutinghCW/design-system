@@ -1079,7 +1079,7 @@ main > .container {
   position: relative;
 }
 
-main > .container::before {
+.article-page main > .container::before {
   content: "";
   display: block;
   position: absolute;
@@ -1091,6 +1091,21 @@ main > .container::before {
 
 main > .container > .row {
   min-height: 100%;
+}
+
+.index-page main > .container > .row {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.index-page main > .container > .row .item-title {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (min-width: 1024px) {
@@ -1538,5 +1553,54 @@ section img, .bg-background img {
 
 .btn.btn--contained.pressed::before {
   background-color: #D60C18;
+}
+
+.download__group .item__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px;
+  min-height: 150px;
+  margin-bottom: 20px;
+}
+
+.download__group .item__image img {
+  max-width: 100%;
+}
+
+.download__group .download__item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 22px auto;
+      grid-template-columns: 22px auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+  color: #171717;
+}
+
+.download__group .download__item span {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+}
+
+.download__group .download__item:hover {
+  color: #D60C18;
+}
+
+.download__group .download__item:hover svg circle {
+  stroke: #D60C18;
+}
+
+.download__group .download__item:hover svg path {
+  fill: #D60C18;
+  stroke: #D60C18;
 }
 /*# sourceMappingURL=system.css.map */
