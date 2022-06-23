@@ -1,18 +1,32 @@
+let domain = '';
+
+if ( window.location.origin.indexOf('github.io') > 0 ) {
+  domain = 'https://yutinghcw.github.io/design-system';
+} else {
+  domain = window.location.origin;
+}
+
+console.log(domain);
+
+function insertChannelLink() {
+  document.querySelector('header a.channel').setAttribute('href', `${domain}/`);
+}
+
 function insertAside() {
   let str = `<ul>
-    <li><a href="/download.html">資源下載</a></li>
+    <li><a href="${domain}/download.html">資源下載</a></li>
     <li><span>品牌</span>
         <ul>
             <li><span>設計指南</span>
                 <ul>
-                    <li><a href="../brand/principle.html">設計原則與範例</a></li>
+                    <li><a href="${domain}/brand/principle.html">設計原則與範例</a></li>
                 </ul>
             </li>
             <li><span>LOGO CI</span>
                 <ul>
-                    <li><a href="../brand/specification.html">基本規範</a></li>
-                    <li><a href="../brand/graphic-application.html">平面應用</a></li>
-                    <li><a href="../brand/digital-application.html">數位應用</a></li>
+                    <li><a href="${domain}/brand/specification.html">基本規範</a></li>
+                    <li><a href="${domain}/brand/graphic-application.html">平面應用</a></li>
+                    <li><a href="${domain}/brand/digital-application.html">數位應用</a></li>
                 </ul>
             </li>
         </ul>
@@ -21,14 +35,14 @@ function insertAside() {
         <ul>
             <li><span>Foundations</span>
                 <ul>
-                    <li><a href="../graphic/color.html">Color</a></li>
-                    <li><a href="../graphic/typography.html">Typography</a></li>
+                    <li><a href="${domain}/graphic/color.html">Color</a></li>
+                    <li><a href="..${domain}graphic/typography.html">Typography</a></li>
                 </ul>
             </li>
             <li><span>Patterns</span>
                 <ul>
-                    <li><a href="../graphic/usage.html">Usage</a></li>
-                    <li><a href="../graphic/charts.html">Charts</a></li>
+                    <li><a href="${domain}/graphic/usage.html">Usage</a></li>
+                    <li><a href="${domain}/graphic/charts.html">Charts</a></li>
                 </ul>
             </li>
         </ul>
@@ -37,46 +51,46 @@ function insertAside() {
         <ul>
             <li><span>Foundations</span>
                 <ul>
-                    <li><a href="../digital/color.html">Color</a></li>
-                    <li><a href="../digital/typography.html">Typography</a></li>
-                    <li><a href="../digital/iconography.html">Iconography</a></li>
+                    <li><a href="${domain}/digital/color.html">Color</a></li>
+                    <li><a href="${domain}/digital/typography.html">Typography</a></li>
+                    <li><a href="${domain}/digital/iconography.html">Iconography</a></li>
                 </ul>
             </li>
             <li><span>Components</span>
                 <ul>
                     <li><span>Windows and Views</span>
                         <ul>
-                            <li><a href="../digital/alert.html">Alerts</a></li>
-                            <li><a href="../digital/cookie.html">Cookies</a></li>
-                            <li><a href="../digital/dialog.html">Dialogs</a></li>
-                            <li><a href="../digital/drawer.html">Drawer</a></li>
-                            <li><a href="../digital/menu.html">Menu</a></li>
-                            <li><a href="../digital/notification.html">Notification</a></li>
-                            <li><a href="../digital/tab.html">Tabs</a></li>
-                            <li><a href="../digital/tooltip.html">Tooltips</a></li>
+                            <li><a href="${domain}/digital/alert.html">Alerts</a></li>
+                            <li><a href="${domain}/digital/cookie.html">Cookies</a></li>
+                            <li><a href="${domain}/digital/dialog.html">Dialogs</a></li>
+                            <li><a href="${domain}/digital/drawer.html">Drawer</a></li>
+                            <li><a href="${domain}/digital/menu.html">Menu</a></li>
+                            <li><a href="${domain}/digital/notification.html">Notification</a></li>
+                            <li><a href="${domain}/digital/tab.html">Tabs</a></li>
+                            <li><a href="${domain}/digital/tooltip.html">Tooltips</a></li>
                         </ul>
                     </li>
                     <li><span>Controls</span>
                         <ul>
-                            <li><a href="../digital/accordion.html">Accordions</a></li>
-                            <li><a href="../digital/button.html">Buttons</a></li>
-                            <li><a href="../digital/checkbox.html">Checkboxes</a></li>
-                            <li><a href="../digital/pagination.html">Paginations</a></li>
-                            <li><a href="../digital/radio-button.html">Radio Buttons</a></li>
+                            <li><a href="${domain}/digital/accordion.html">Accordions</a></li>
+                            <li><a href="${domain}/digital/button.html">Buttons</a></li>
+                            <li><a href="${domain}/digital/checkbox.html">Checkboxes</a></li>
+                            <li><a href="${domain}/digital/pagination.html">Paginations</a></li>
+                            <li><a href="${domain}/digital/radio-button.html">Radio Buttons</a></li>
                         </ul>
                     </li>
                     <li><span>Fields and Labels</span>
                         <ul>
-                            <li><a href="../digital/search-field.html">Search Fields</a></li>
-                            <li><a href="../digital/text-field.html">Text Fields</a></li>
+                            <li><a href="${domain}/digital/search-field.html">Search Fields</a></li>
+                            <li><a href="${domain}/digital/text-field.html">Text Fields</a></li>
                         </ul>
                     </li>
                 </ul>
             </li>
             <li><span>Patterns</span>
                 <ul>
-                    <li><a href="../digital/generator/insider.html">insider 實驗產生器</a></li>
-                    <li><a href="../digital/generator/cwdaily.html">電子報產生器</a></li>
+                    <li><a href="${domain}/digital/generator/insider.html">insider 實驗產生器</a></li>
+                    <li><a href="${domain}/digital/generator/cwdaily.html">電子報產生器</a></li>
                 </ul>
             </li>
         </ul>
@@ -198,6 +212,7 @@ function toggleColorBoard() {
 }
 
 function init() {
+  insertChannelLink();
   insertAside();
   naviArrow();
   naviByLink();
