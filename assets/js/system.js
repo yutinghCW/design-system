@@ -6,15 +6,12 @@ if ( window.location.origin.indexOf('github.io') > 0 ) {
   domain = window.location.origin;
 }
 
-console.log(domain);
-
 function insertChannelLink() {
   document.querySelector('header a.channel').setAttribute('href', `${domain}/`);
 }
 
 function insertAside() {
   let str = `<ul>
-    <li><a href="${domain}/download.html">資源下載</a></li>
     <li><span>品牌</span>
         <ul>
             <li><span>設計指南</span>
@@ -95,6 +92,7 @@ function insertAside() {
             </li>
         </ul>
     </li>
+    <li><a href="${domain}/download.html">資源下載</a></li>
   </ul>`;
   document.querySelector('aside').innerHTML = str;
 }
