@@ -211,6 +211,11 @@ window.addEventListener('resize', function() {
 });
 
 document.querySelector('aside').addEventListener('click', function(e) {
+  let classArray = [];
+  for (let ary = 0; ary < e.target.parentElement.classList.length; ary++) {
+    const element = e.target.parentElement.classList[ary];
+    classArray.push(element);
+  }
   const lv1 = e.target.parentElement.parentElement.parentElement;
   if ( lv1.nodeName.toLowerCase() === 'aside' ) {
     for (let i = 0; i < lv1.children[0].children.length; i++) {
@@ -229,5 +234,7 @@ document.querySelector('aside').addEventListener('click', function(e) {
       }
     }
   }
-  e.target.parentElement.classList.toggle('opened');
+  if ( !classArray.includes('opened') ) {
+    e.target.parentElement.classList.toggle('opened');
+  }
 });
