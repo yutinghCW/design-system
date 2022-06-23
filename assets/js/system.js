@@ -1,5 +1,6 @@
 function insertAside() {
   let str = `<ul>
+    <li><a href="/download.html">資源下載</a></li>
     <li><span>品牌</span>
         <ul>
             <li><span>設計指南</span>
@@ -216,12 +217,14 @@ document.querySelector('aside').addEventListener('click', function(e) {
       let lv1element = lv1.children[0].children[i];
       lv1element.classList.remove('opened');
       // 第二層關閉
-      for (let j = 0; j < lv1element.children[1].children.length; j++) {
-        let lv2element = lv1element.children[1].children;
-        lv2element[j].classList.remove('opened');
-        // 第三層關閉
-        for (let k = 0; k < lv2element[j].children[1].children.length; k++) {
-          lv2element[j].children[1].children[k].classList.remove('opened');
+      if ( lv1element.children[1] ) {
+        for (let j = 0; j < lv1element.children[1].children.length; j++) {
+          let lv2element = lv1element.children[1].children;
+          lv2element[j].classList.remove('opened');
+          // 第三層關閉
+          for (let k = 0; k < lv2element[j].children[1].children.length; k++) {
+            lv2element[j].children[1].children[k].classList.remove('opened');
+          }
         }
       }
     }

@@ -1069,6 +1069,28 @@
   background-color: #B29749;
 }
 
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+
+header .container a.channel {
+  color: #D60C18;
+  -ms-flex-item-align: auto;
+      -ms-grid-row-align: auto;
+      align-self: auto;
+  font-weight: normal;
+}
+
+header .container a.channel:hover {
+  color: #9D0505;
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1099,6 +1121,29 @@ main > .container > .row {
           justify-content: center;
 }
 
+.index-page main > .container > .row .col-md-6 a {
+  position: relative;
+}
+
+.index-page main > .container > .row .col-md-6 a img.hover {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.index-page main > .container > .row .col-md-6 a:hover img.hover {
+  opacity: 1;
+}
+
+.index-page main > .container > .row .col-md-6 a:hover .item-title b {
+  border-bottom-color: #171717;
+}
+
 .index-page main > .container > .row .item-title {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1106,6 +1151,11 @@ main > .container > .row {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.index-page main > .container > .row .item-title b {
+  border: solid transparent;
+  border-width: 1px 0;
 }
 
 @media (min-width: 1024px) {
@@ -1265,9 +1315,9 @@ aside > ul a.active, aside > ul span.active {
 
 @media (min-width: 1024px) {
   .tab .tab__nav--page {
-    padding-left: 100px;
+    padding-left: 120px;
     padding-right: calc((100vw - 1160px) / 2);
-    margin-left: -100px;
+    margin-left: -120px;
     margin-right: calc((100vw - 1160px) / 2 * -1);
   }
 }

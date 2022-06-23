@@ -6,6 +6,23 @@
 
 @import "color";
 
+
+header {
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    a.channel {
+      color: $primary;
+      align-self: auto;
+      font-weight: normal;
+      &:hover {
+        color: $primary-variant;
+      }
+    }
+  }
+}
+
 main {
   display: flex;
   > .container {
@@ -24,9 +41,32 @@ main {
       min-height: 100%;
       .index-page & {
         justify-content: center;
+        .col-md-6 a {
+          position: relative;
+          img.hover {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            opacity: 0;
+            transform: translateX(-50%);
+            transition: opacity 0.3s;
+          }
+          &:hover {
+            img.hover {
+              opacity: 1;
+            }
+            .item-title b {
+              border-bottom-color: $black;
+            }
+          }
+        }
         .item-title {
           align-items: center;
           justify-content: center;
+          b {
+            border: solid transparent;
+            border-width: 1px 0;
+          }
         }
       }
       > article {
@@ -162,9 +202,9 @@ aside {
     margin-right: -20px;
     border-bottom: 1px solid $gray-200;
     @include media-breakpoint-up(md) {
-      padding-left: 100px;
+      padding-left: 120px;
       padding-right: calc((100vw - 1160px) / 2);
-      margin-left: -100px;
+      margin-left: -120px;
       margin-right: calc((100vw - 1160px) / 2 * -1);
     }
     ul {
