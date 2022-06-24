@@ -1,7 +1,10 @@
 let domain = '';
 
-if ( window.location.origin.indexOf('github.io') > 0 ) {
-  domain = 'https://yutinghcw.github.io/design-system';
+if (
+  window.location.origin.indexOf('github.io') > 0 ||
+  window.location.origin.indexOf('cw.com.tw') > 0
+) {
+  domain = '/design-system';
 } else {
   domain = window.location.origin;
 }
