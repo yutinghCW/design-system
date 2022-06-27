@@ -99,6 +99,7 @@ function insertAside() {
   </ul>`;
   document.querySelector('aside').innerHTML = str;
 }
+insertAside();
 
 function naviArrow() {
   let asideList = document.querySelectorAll('aside li');
@@ -214,7 +215,6 @@ function toggleColorBoard() {
 
 function init() {
   insertChannelLink();
-  insertAside();
   naviArrow();
   naviByLink();
   colorBoard();

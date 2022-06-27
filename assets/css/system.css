@@ -1126,7 +1126,7 @@ main > .container > .row {
 }
 
 .index-page main > .container > .row .col-md-6 a img {
-  width: calc(100% - 80px);
+  max-width: calc(100% - 80px);
 }
 
 .index-page main > .container > .row .col-md-6 a img.hover {
@@ -1169,6 +1169,12 @@ main > .container > .row {
 }
 
 @media (min-width: 1024px) {
+  main > .container > .row > article > section {
+    padding-left: 40px;
+  }
+}
+
+@media (min-width: 1280px) {
   main > .container > .row > article > section {
     padding-left: 100px;
   }
