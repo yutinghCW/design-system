@@ -43,6 +43,9 @@ main {
         justify-content: center;
         .col-md-6 a {
           position: relative;
+          img {
+            width: calc(100% - 80px);
+          }
           img.hover {
             position: absolute;
             top: 20px;

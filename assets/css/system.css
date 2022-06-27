@@ -1125,6 +1125,10 @@ main > .container > .row {
   position: relative;
 }
 
+.index-page main > .container > .row .col-md-6 a img {
+  width: calc(100% - 80px);
+}
+
 .index-page main > .container > .row .col-md-6 a img.hover {
   position: absolute;
   top: 20px;
