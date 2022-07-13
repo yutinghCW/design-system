@@ -19,10 +19,10 @@ function insertAside() {
         <ul>
             <li><span>設計指南</span>
                 <ul>
-                    <li><a href="${domain}/brand/principle.html">設計原則與範例</a></li>
+                    <li><a href="${domain}/brand/principle.html">設計原則</a></li>
                 </ul>
             </li>
-            <li><span>LOGO CI</span>
+            <li><span>識別規範</span>
                 <ul>
                     <li><a href="${domain}/brand/specification.html">基本規範</a></li>
                     <li><a href="${domain}/brand/graphic-application.html">平面應用</a></li>
@@ -33,63 +33,63 @@ function insertAside() {
     </li>
     <li><span>平面產品</span>
         <ul>
-            <li><span>Foundations</span>
+            <li><span>基本規範</span>
                 <ul>
-                    <li><a href="${domain}/graphic/color.html">Color</a></li>
-                    <li><a href="..${domain}graphic/typography.html">Typography</a></li>
+                    <li><a href="${domain}/graphic/color.html">顏色</a></li>
+                    <li><a href="..${domain}graphic/typography.html">文字</a></li>
                 </ul>
             </li>
-            <li><span>Patterns</span>
+            <li><span>應用規範</span>
                 <ul>
-                    <li><a href="${domain}/graphic/usage.html">Usage</a></li>
-                    <li><a href="${domain}/graphic/charts.html">Charts</a></li>
+                    <li><a href="${domain}/graphic/usage.html">社群圖卡</a></li>
+                    <li><a href="${domain}/graphic/charts.html">圖表</a></li>
                 </ul>
             </li>
         </ul>
     </li>
     <li><span>數位產品</span>
         <ul>
-            <li><span>Foundations</span>
+            <li><span>基本規範</span>
                 <ul>
-                    <li><a href="${domain}/digital/color.html">Color</a></li>
-                    <li><a href="${domain}/digital/typography.html">Typography</a></li>
-                    <li><a href="${domain}/digital/iconography.html">Iconography</a></li>
+                    <li><a href="${domain}/digital/color.html">顏色</a></li>
+                    <li><a href="${domain}/digital/typography.html">文字</a></li>
+                    <li><a href="${domain}/digital/iconography.html">圖示</a></li>
                 </ul>
             </li>
-            <li><span>Components</span>
+            <li><span>元件規範</span>
                 <ul>
-                    <li><span>Windows and Views</span>
+                    <li><span>視窗與顯示</span>
                         <ul>
-                            <li><a href="${domain}/digital/alert.html">Alerts</a></li>
+                            <li><a href="${domain}/digital/alert.html">警示框</a></li>
                             <li><a href="${domain}/digital/cookie.html">Cookies</a></li>
-                            <li><a href="${domain}/digital/dialog.html">Dialogs</a></li>
-                            <li><a href="${domain}/digital/drawer.html">Drawer</a></li>
-                            <li><a href="${domain}/digital/menu.html">Menu</a></li>
-                            <li><a href="${domain}/digital/notification.html">Notification</a></li>
-                            <li><a href="${domain}/digital/tab.html">Tabs</a></li>
-                            <li><a href="${domain}/digital/tooltip.html">Tooltips</a></li>
+                            <li><a href="${domain}/digital/dialog.html">對話框</a></li>
+                            <li><a href="${domain}/digital/drawer.html">導覽</a></li>
+                            <li><a href="${domain}/digital/menu.html">選單</a></li>
+                            <li><a href="${domain}/digital/notification.html">通知</a></li>
+                            <li><a href="${domain}/digital/tab.html">頁籤</a></li>
+                            <li><a href="${domain}/digital/tooltip.html">工具提示區</a></li>
                         </ul>
                     </li>
-                    <li><span>Controls</span>
+                    <li><span>操作</span>
                         <ul>
-                            <li><a href="${domain}/digital/accordion.html">Accordions</a></li>
-                            <li><a href="${domain}/digital/button.html">Buttons</a></li>
-                            <li><a href="${domain}/digital/checkbox.html">Checkboxes</a></li>
-                            <li><a href="${domain}/digital/pagination.html">Paginations</a></li>
-                            <li><a href="${domain}/digital/radio-button.html">Radio Buttons</a></li>
+                            <li><a href="${domain}/digital/accordion.html">折疊選單</a></li>
+                            <li><a href="${domain}/digital/button.html">按鈕</a></li>
+                            <li><a href="${domain}/digital/checkbox.html">核取方塊</a></li>
+                            <li><a href="${domain}/digital/pagination.html">分頁</a></li>
+                            <li><a href="${domain}/digital/radio-button.html">單選按鈕</a></li>
                         </ul>
                     </li>
-                    <li><span>Fields and Labels</span>
+                    <li><span>鍵入與標籤</span>
                         <ul>
-                            <li><a href="${domain}/digital/search-field.html">Search Fields</a></li>
-                            <li><a href="${domain}/digital/text-field.html">Text Fields</a></li>
+                            <li><a href="${domain}/digital/search-field.html">搜尋框</a></li>
+                            <li><a href="${domain}/digital/text-field.html">文字框</a></li>
                         </ul>
                     </li>
                 </ul>
             </li>
-            <li><span>Patterns</span>
+            <li><span>應用規範</span>
                 <ul>
-                    <li><a href="${domain}/digital/generator/insider.html">insider 實驗產生器</a></li>
+                    <li><a href="${domain}/digital/generator/insider.html">insider實驗產生器</a></li>
                     <li><a href="${domain}/digital/generator/cwdaily.html">電子報產生器</a></li>
                 </ul>
             </li>
